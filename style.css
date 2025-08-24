@@ -42,6 +42,84 @@ main {
     padding: 40px 0;
 }
 
+/* Search Section */
+.search-section {
+    margin-bottom: 40px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #0066CC;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f8f8f8;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-title {
+    font-weight: 600;
+    color: #0066CC;
+    margin-bottom: 4px;
+}
+
+.search-result-category {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
 /* Intro Section */
 .intro {
     text-align: center;
@@ -82,10 +160,27 @@ main {
     text-align: center;
 }
 
-.category-card:hover {
+.category-card:hover:not(.coming-soon) {
     border-color: #0066CC;
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+}
+
+/* Coming Soon Cards */
+.category-card.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f8f8f8;
+}
+
+.category-card.coming-soon:hover {
+    transform: none;
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+
+.category-card.coming-soon .prompt-count {
+    background: #999;
 }
 
 .category-icon {
