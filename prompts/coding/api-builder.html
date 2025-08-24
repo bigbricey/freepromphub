@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="REST API Builder - Generate complete REST APIs with authentication, validation, error handling, and documentation in any framework.">
+    <title>REST API Builder Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">REST API Builder</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">REST API Builder</h1>
+                <p class="prompt-description">
+                    Generate production-ready REST APIs with full CRUD operations, authentication, validation, error handling, and OpenAPI documentation. Save days of development time.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are an expert backend architect specializing in REST API design. You've built APIs that handle millions of requests per day. Create a complete, production-ready REST API based on my requirements.
+
+API REQUIREMENTS:
+Resource Name: [e.g., "users", "products", "orders"]
+Framework: [Express/FastAPI/Django/Spring Boot/etc.]
+Database: [PostgreSQL/MongoDB/MySQL/etc.]
+Authentication: [JWT/OAuth/API Key/None]
+
+Data Model:
+```
+[DESCRIBE YOUR DATA STRUCTURE]
+Example:
+- id: unique identifier
+- name: string, required
+- email: string, unique, required
+- status: enum (active, inactive)
+- createdAt: timestamp
+```
+
+Business Rules:
+[LIST ANY SPECIAL RULES OR CONSTRAINTS]
+
+Generate a complete REST API with:
+
+1. DATABASE SCHEMA
+Create the schema/model:
+```[sql/mongoose/prisma]
+// Complete schema definition
+```
+
+2. API ENDPOINTS
+Design RESTful endpoints following best practices:
+
+```
+GET    /api/v1/[resource]          - List all (with pagination, filtering, sorting)
+GET    /api/v1/[resource]/:id      - Get single resource
+POST   /api/v1/[resource]          - Create new resource
+PUT    /api/v1/[resource]/:id      - Update entire resource
+PATCH  /api/v1/[resource]/:id      - Partial update
+DELETE /api/v1/[resource]/:id      - Delete resource
+
+Additional endpoints if needed:
+POST   /api/v1/[resource]/:id/[action]  - Custom actions
+GET    /api/v1/[resource]/search        - Advanced search
+POST   /api/v1/[resource]/bulk          - Bulk operations
+```
+
+3. COMPLETE IMPLEMENTATION
+
+Model/Schema Layer:
+```[language]
+// Complete model with validations
+```
+
+Controller/Route Handler:
+```[language]
+// All CRUD operations with error handling
+
+// GET all with pagination
+async function getAll(req, res) {
+    // Implementation with pagination, filtering, sorting
+}
+
+// GET by ID
+async function getById(req, res) {
+    // Implementation with proper error handling
+}
+
+// POST create
+async function create(req, res) {
+    // Implementation with validation
+}
+
+// PUT update
+async function update(req, res) {
+    // Full update implementation
+}
+
+// PATCH partial update
+async function partialUpdate(req, res) {
+    // Partial update implementation
+}
+
+// DELETE
+async function remove(req, res) {
+    // Soft or hard delete implementation
+}
+```
+
+4. REQUEST VALIDATION
+Input validation for each endpoint:
+```[language]
+// Validation schemas/rules
+```
+
+5. AUTHENTICATION & AUTHORIZATION
+Middleware for protecting routes:
+```[language]
+// Auth middleware implementation
+// Role-based access control if needed
+```
+
+6. ERROR HANDLING
+Centralized error handling:
+```[language]
+// Error handling middleware
+// Custom error classes
+// Consistent error response format
+```
+
+7. RESPONSE FORMAT
+Standardized response structure:
+```json
+// Success response
+{
+    "success": true,
+    "data": {},
+    "meta": {
+        "page": 1,
+        "limit": 10,
+        "total": 100
+    }
+}
+
+// Error response
+{
+    "success": false,
+    "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "Validation failed",
+        "details": []
+    }
+}
+```
+
+8. DATABASE QUERIES
+Optimized queries with indexing:
+```[language]
+// Repository/Service layer
+// Includes transactions where needed
+```
+
+9. MIDDLEWARE STACK
+Complete middleware setup:
+```[language]
+// Rate limiting
+// CORS
+// Security headers
+// Request logging
+// Compression
+```
+
+10. TESTING
+Unit and integration tests:
+```[language]
+// Test suite for all endpoints
+// Mock data and fixtures
+// Edge case testing
+```
+
+11. API DOCUMENTATION
+OpenAPI/Swagger specification:
+```yaml
+# Complete OpenAPI 3.0 spec
+```
+
+12. ENVIRONMENT CONFIGURATION
+Environment variables and config:
+```env
+# .env.example
+DATABASE_URL=
+JWT_SECRET=
+PORT=
+```
+
+13. DOCKER SETUP
+Containerization:
+```dockerfile
+# Dockerfile
+# docker-compose.yml
+```
+
+14. DEPLOYMENT READY
+Production checklist:
+- [ ] Security headers configured
+- [ ] Rate limiting enabled
+- [ ] Input sanitization
+- [ ] SQL injection prevention
+- [ ] Error messages don't leak info
+- [ ] Logging configured
+- [ ] Monitoring setup
+- [ ] Backup strategy
+- [ ] CI/CD pipeline
+
+15. PERFORMANCE OPTIMIZATIONS
+- Database connection pooling
+- Caching strategy (Redis)
+- Query optimization
+- Pagination limits
+- Response compression
+
+16. EXAMPLE REQUESTS
+cURL commands for testing:
+```bash
+# Create
+curl -X POST http://localhost:3000/api/v1/[resource] \
+  -H "Content-Type: application/json" \
+  -d '{"field": "value"}'
+
+# Read
+curl http://localhost:3000/api/v1/[resource]
+
+# Update
+curl -X PUT http://localhost:3000/api/v1/[resource]/1 \
+  -H "Content-Type: application/json" \
+  -d '{"field": "new value"}'
+
+# Delete
+curl -X DELETE http://localhost:3000/api/v1/[resource]/1
+```
+
+Provide production-ready code that can be deployed immediately. Include all necessary files and configurations.</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Complete API generation with detailed explanations</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Best for complex business logic and clean architecture</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Cursor AI</h3>
+                            <p>Generate and edit APIs directly in your IDE</p>
+                            <a href="#" class="tool-link">Get Cursor →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="sql-optimizer.html" class="related-card">
+                            <h3>SQL Query Optimizer</h3>
+                            <p>Optimize your API's database queries</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Test your API endpoints</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Fix API bugs quickly</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

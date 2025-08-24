@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SQL Query Optimizer - Transform slow queries into lightning-fast ones. Fix N+1 problems, optimize JOINs, and improve database performance by 10-100x.">
+    <title>SQL Query Optimizer Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">SQL Query Optimizer</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">SQL Query Optimizer</h1>
+                <p class="prompt-description">
+                    Turn slow database queries into blazing fast ones. This prompt analyzes query performance, suggests indexes, rewrites inefficient queries, and can improve performance by 10-100x.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a database performance expert with 15+ years optimizing queries for high-traffic applications. You've worked with databases handling billions of records and know every optimization trick.
+
+Analyze and optimize my SQL query for maximum performance.
+
+DATABASE CONTEXT:
+Database System: [PostgreSQL/MySQL/SQLServer/Oracle]
+Table Sizes: [Approximate number of rows per table]
+Current Performance: [How long the query takes]
+Frequency: [How often this runs - once/minute/hour/day]
+
+CURRENT QUERY:
+```sql
+[PASTE YOUR SLOW QUERY HERE]
+```
+
+TABLE SCHEMAS:
+```sql
+[PASTE RELEVANT TABLE SCHEMAS WITH COLUMNS AND TYPES]
+```
+
+EXISTING INDEXES:
+```sql
+[LIST CURRENT INDEXES IF KNOWN]
+```
+
+Provide comprehensive optimization:
+
+1. PERFORMANCE ANALYSIS
+- Estimated query complexity: O(?)
+- Main bottlenecks identified:
+  - [ ] Full table scans
+  - [ ] Missing indexes
+  - [ ] Inefficient JOINs
+  - [ ] Subquery problems
+  - [ ] Function calls on columns
+  - [ ] Implicit type conversions
+  
+Explain plan analysis:
+```sql
+EXPLAIN ANALYZE [your query];
+-- Key findings from the plan
+```
+
+2. OPTIMIZED QUERY
+Rewrite the query for maximum performance:
+```sql
+-- Optimized version with comments explaining each optimization
+```
+
+Performance improvement: [Expected X times faster]
+
+3. REQUIRED INDEXES
+Create these indexes for optimal performance:
+```sql
+-- Index 1: For [purpose]
+CREATE INDEX idx_[name] ON [table]([columns])
+WHERE [condition] -- if partial index needed
+INCLUDE ([columns]) -- if covering index beneficial;
+
+-- Index 2: For [purpose]
+CREATE INDEX idx_[name] ON [table]([columns]);
+
+-- Analyze impact
+ANALYZE [table];
+```
+
+Why each index helps:
+- Index 1: [Explanation of how it speeds up the query]
+- Index 2: [Explanation]
+
+4. ALTERNATIVE APPROACHES
+If the query is fundamentally inefficient, here are better approaches:
+
+Option A: Using CTEs
+```sql
+WITH cte_name AS (
+    -- More efficient approach
+)
+SELECT ...
+```
+
+Option B: Using temporary tables
+```sql
+-- Create temp table approach
+```
+
+Option C: Denormalization
+```sql
+-- If applicable, suggest denormalized structure
+```
+
+5. QUERY BREAKDOWN
+Step-by-step optimization:
+
+Original problem:
+```sql
+-- Problematic part
+```
+
+Step 1 fix:
+```sql
+-- First optimization
+```
+
+Step 2 fix:
+```sql
+-- Second optimization
+```
+
+Final result:
+```sql
+-- Fully optimized
+```
+
+6. DATABASE CONFIGURATION
+Tune these database parameters:
+```ini
+# For PostgreSQL
+work_mem = [recommended value]
+shared_buffers = [recommended value]
+effective_cache_size = [recommended value]
+
+# For MySQL
+innodb_buffer_pool_size = [recommended value]
+join_buffer_size = [recommended value]
+```
+
+7. MONITORING QUERIES
+Queries to monitor performance:
+```sql
+-- Check query execution time
+-- Monitor index usage
+-- Identify slow queries
+```
+
+8. CACHING STRATEGY
+If this query runs frequently:
+- Materialized view approach:
+```sql
+CREATE MATERIALIZED VIEW mv_[name] AS
+[optimized query];
+
+-- Refresh strategy
+REFRESH MATERIALIZED VIEW CONCURRENTLY mv_[name];
+```
+
+- Application-level caching:
+  - Cache key: [suggestion]
+  - TTL: [recommended seconds]
+  - Invalidation strategy: [when to clear]
+
+9. PREVENTION TIPS
+Avoid these common mistakes:
+- Never: [Common bad pattern]
+  Instead: [Better pattern]
+- Never: [Another bad pattern]
+  Instead: [Better pattern]
+
+10. SCALING CONSIDERATIONS
+When your data grows 10x:
+- Partitioning strategy:
+```sql
+-- Partition tables if needed
+```
+- Sharding approach: [if applicable]
+- Read replica usage: [if applicable]
+
+11. QUICK WINS
+Immediate improvements (no schema changes):
+1. [Quick fix 1]
+2. [Quick fix 2]
+3. [Quick fix 3]
+
+12. TESTING THE OPTIMIZATION
+Benchmark your improvements:
+```sql
+-- Before optimization
+EXPLAIN (ANALYZE, BUFFERS) [original query];
+
+-- After optimization  
+EXPLAIN (ANALYZE, BUFFERS) [optimized query];
+
+-- Compare execution time, buffer hits, etc.
+```
+
+13. ROLLBACK PLAN
+If optimization causes issues:
+```sql
+-- Commands to safely rollback changes
+DROP INDEX IF EXISTS idx_[name];
+-- Restore original query in application
+```
+
+Provide specific, actionable optimizations. Focus on changes that give the biggest performance gains with the least effort.</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Excellent at explaining query optimization concepts</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Superior for complex query analysis and rewrites</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>DataGrip AI</h3>
+                            <p>Integrated database IDE with AI assistance</p>
+                            <a href="#" class="tool-link">Get DataGrip →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="api-builder.html" class="related-card">
+                            <h3>REST API Builder</h3>
+                            <p>Build APIs with optimized queries</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Debug database connection issues</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="python-automation.html" class="related-card">
+                            <h3>Python Automation</h3>
+                            <p>Automate database tasks</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Debug Master prompt - Fix any bug instantly with AI. Get step-by-step debugging solutions with root cause analysis and prevention tips.">
+    <title>Debug Master Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">Debug Master</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Debug Master</h1>
+                <p class="prompt-description">
+                    Turn AI into your debugging expert. This prompt analyzes any bug, identifies root causes, and provides step-by-step fixes with prevention strategies. Works with any language, framework, or error type.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a senior software engineer with 15+ years of debugging experience across all major languages and frameworks. Your specialty is quickly identifying root causes and providing clear, actionable solutions.
+
+I need you to help me debug an issue. I'll provide the error/bug details, and you'll give me a comprehensive debugging solution.
+
+BUG CONTEXT:
+Programming Language: [LANGUAGE]
+Framework/Library: [FRAMEWORK IF APPLICABLE]
+Development Environment: [LOCAL/STAGING/PRODUCTION]
+When Bug Occurs: [DESCRIBE WHEN IT HAPPENS]
+
+ERROR DETAILS:
+Error Message/Behavior: 
+[PASTE EXACT ERROR MESSAGE OR DESCRIBE UNEXPECTED BEHAVIOR]
+
+Relevant Code:
+```
+[PASTE THE CODE WHERE ERROR OCCURS]
+```
+
+What I've Already Tried:
+[LIST ANY DEBUGGING STEPS YOU'VE TAKEN]
+
+Please provide:
+
+1. ROOT CAUSE ANALYSIS
+- Identify the most likely cause of this bug
+- Explain WHY this error is occurring
+- List any secondary causes or contributing factors
+
+2. IMMEDIATE FIX
+Provide the exact code changes needed:
+```[language]
+// Show the corrected code here
+```
+Explain what each change does and why it's necessary
+
+3. STEP-BY-STEP DEBUGGING PROCESS
+If the immediate fix doesn't work, provide a systematic debugging approach:
+- Step 1: [First diagnostic step]
+- Step 2: [Next verification]
+- Step 3: [Further investigation]
+Continue until resolved...
+
+4. VERIFICATION TESTS
+Provide code to verify the fix works:
+```[language]
+// Test cases to confirm bug is fixed
+```
+
+5. RELATED ISSUES TO CHECK
+List other areas of the code that might have similar bugs:
+- Check: [Component/Function that might have same issue]
+- Review: [Related functionality]
+- Test: [Edge cases to verify]
+
+6. PREVENTION STRATEGIES
+How to prevent this bug in the future:
+- Code pattern to avoid: [Pattern]
+- Better approach: [Recommended pattern]
+- Testing strategy: [How to test for this]
+- Linting/Tools: [Tools that could catch this]
+
+7. DEBUGGING TOOLS & COMMANDS
+Specific tools/commands for this type of bug:
+- Debug command: [Exact command to run]
+- Browser DevTools: [What to look for]
+- Logging: [What to log and where]
+- Profiling: [If performance related]
+
+8. COMMON VARIATIONS
+This bug might also appear as:
+- Error: [Alternative error message]
+- Symptom: [Different manifestation]
+- Environment: [How it differs in other environments]
+
+9. QUICK REFERENCE
+For future debugging of similar issues:
+- Root cause keyword: [Main issue]
+- Solution pattern: [Fix approach]
+- Time to fix: [Estimated time]
+- Difficulty: [Easy/Medium/Hard]
+- Documentation: [Relevant docs links]
+
+Please be specific with code examples and avoid generic advice. Focus on solving THIS exact bug while also teaching me how to handle similar issues independently in the future.</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Excellent at explaining complex bugs with detailed solutions</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Superior for analyzing large codebases and finding subtle bugs</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>GitHub Copilot</h3>
+                            <p>Integrate directly into your IDE for real-time debugging</p>
+                            <a href="#" class="tool-link">Get Copilot →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Include the FULL error message - every character matters</li>
+                        <li>Provide 10-20 lines of context around the error, not just the error line</li>
+                        <li>Mention your environment (Node version, browser, OS) for environment-specific bugs</li>
+                        <li>If it's intermittent, note when it works vs when it fails</li>
+                        <li>Include any recent changes you made before the bug appeared</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="code-reviewer.html" class="related-card">
+                            <h3>Code Review Pro</h3>
+                            <p>Catch bugs before they happen</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Prevent bugs with comprehensive tests</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="refactor-legacy.html" class="related-card">
+                            <h3>Legacy Code Refactorer</h3>
+                            <p>Fix buggy legacy code permanently</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

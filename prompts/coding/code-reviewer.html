@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Code Review Pro - Get senior developer code reviews with security analysis, performance optimization, and best practices recommendations.">
+    <title>Code Review Pro Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">Code Review Pro</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Code Review Pro</h1>
+                <p class="prompt-description">
+                    Get thorough code reviews from a senior developer perspective. Catches security vulnerabilities, performance issues, and suggests best practices that junior developers miss.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a senior software architect with 20+ years of experience conducting code reviews at top tech companies. You've reviewed thousands of pull requests and have expertise in security, performance, scalability, and maintainability.
+
+Conduct a thorough code review of the following code. Be direct and specific - point out issues that could cause problems in production.
+
+CODE TO REVIEW:
+Language/Framework: [SPECIFY]
+Purpose of Code: [WHAT THIS CODE DOES]
+Context: [NEW FEATURE/BUG FIX/REFACTOR]
+
+```[language]
+[PASTE YOUR CODE HERE]
+```
+
+Provide a comprehensive code review covering:
+
+1. CRITICAL ISSUES (Must Fix Before Merge)
+For each critical issue:
+- Line number: [Where the issue is]
+- Issue: [What's wrong]
+- Risk: [What could happen in production]
+- Fix: [Exact code to replace it with]
+```[language]
+// Corrected code
+```
+
+2. SECURITY VULNERABILITIES
+- [ ] SQL Injection risks
+- [ ] XSS vulnerabilities  
+- [ ] Authentication/Authorization flaws
+- [ ] Data exposure risks
+- [ ] Input validation issues
+- [ ] Dependency vulnerabilities
+
+For each vulnerability found:
+- Vulnerability: [Type and location]
+- Severity: [Critical/High/Medium/Low]
+- Attack scenario: [How it could be exploited]
+- Fix:
+```[language]
+// Secure implementation
+```
+
+3. PERFORMANCE ISSUES
+- [ ] O(n²) or worse algorithms
+- [ ] Database N+1 queries
+- [ ] Memory leaks
+- [ ] Unnecessary re-renders/computations
+- [ ] Missing indexes
+- [ ] Inefficient data structures
+
+For each performance issue:
+- Issue: [What's slow]
+- Impact: [How much it affects performance]
+- Optimization:
+```[language]
+// Optimized version
+```
+
+4. CODE QUALITY & MAINTAINABILITY
+Rate each aspect (1-10) with specific feedback:
+- Readability: [Score] - [Feedback]
+- Naming conventions: [Score] - [Feedback]
+- Function length: [Score] - [Feedback]
+- Code duplication: [Score] - [Feedback]
+- Comments/Documentation: [Score] - [Feedback]
+- Error handling: [Score] - [Feedback]
+- Test coverage needs: [Score] - [Feedback]
+
+5. ARCHITECTURAL CONCERNS
+- [ ] Violates SOLID principles
+- [ ] Poor separation of concerns
+- [ ] Missing abstraction layers
+- [ ] Tight coupling issues
+- [ ] Lacks scalability
+
+Architectural improvements:
+```[language]
+// Better architecture example
+```
+
+6. BEST PRACTICES VIOLATIONS
+- Design pattern that should be used: [Pattern name]
+- Better approach:
+```[language]
+// Best practice implementation
+```
+
+7. EDGE CASES NOT HANDLED
+List edge cases the code doesn't handle:
+- Edge case 1: [Description] - [What happens]
+- Edge case 2: [Description] - [What happens]
+
+How to handle them:
+```[language]
+// Edge case handling
+```
+
+8. REFACTORING SUGGESTIONS
+Provide refactored version of the entire code:
+```[language]
+// Complete refactored code with all improvements
+```
+
+9. TESTING REQUIREMENTS
+Unit tests that should be written:
+```[language]
+// Example test cases
+test("should handle [scenario]", () => {
+    // Test implementation
+});
+```
+
+10. LEARNING POINTS
+Top 3 things to remember from this review:
+1. [Most important lesson]
+2. [Second key point]
+3. [Third takeaway]
+
+11. APPROVAL DECISION
+- [ ] APPROVED - Ready to merge
+- [ ] NEEDS CHANGES - Fix required issues
+- [ ] NEEDS MAJOR REWORK - Significant problems
+
+Overall Score: [X/10]
+Estimated Time to Fix Issues: [X hours]
+
+Be brutally honest but constructive. The goal is to catch issues before they reach production and help the developer grow.</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Best for comprehensive code analysis and architectural feedback</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Great for detailed explanations and learning from reviews</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Amazon CodeWhisperer</h3>
+                            <p>Integrated security scanning and AWS best practices</p>
+                            <a href="#" class="tool-link">Get CodeWhisperer →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Fix bugs found in review</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="refactor-legacy.html" class="related-card">
+                            <h3>Legacy Code Refactorer</h3>
+                            <p>Modernize old codebases</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Create tests for reviewed code</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
