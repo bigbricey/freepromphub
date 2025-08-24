@@ -1,0 +1,301 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    border-bottom: 2px solid #f0f0f0;
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.category-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.category-card:hover {
+    border-color: #0066CC;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.category-card p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.prompt-count {
+    background: #0066CC;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* Features Section */
+.features {
+    margin-bottom: 60px;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feature h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+}
+
+/* CTA Section */
+.cta {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid #f0f0f0;
+    padding: 30px 0;
+    background: #fafafa;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    color: #666;
+}
+
+footer nav {
+    display: flex;
+    gap: 20px;
+}
+
+footer nav a {
+    color: #0066CC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #0052A3;
+    text-decoration: underline;
+}
+
+/* Links */
+a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+    
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .category-card {
+        padding: 25px;
+    }
+    
+    .features h2 {
+        font-size: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta {
+        padding: 30px 20px;
+    }
+    
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    footer nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 0;
+    }
+    
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 30px 0;
+    }
+    
+    .intro {
+        margin-bottom: 30px;
+    }
+    
+    .category-icon {
+        font-size: 2.5rem;
+    }
+    
+    .category-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+}
