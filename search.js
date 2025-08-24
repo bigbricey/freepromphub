@@ -2,6 +2,38 @@
 document.addEventListener('DOMContentLoaded', function() {
     // All available prompts with their metadata
     const prompts = [
+        // Everyday Life Category (MOST POPULAR)
+        {
+            title: 'Weekly Meal Planner on a Budget',
+            category: 'Everyday',
+            url: '/prompts/everyday/meal-planner.html',
+            description: '7-day meals with grocery list'
+        },
+        {
+            title: 'Resume That Gets Interviews',
+            category: 'Everyday',
+            url: '/prompts/everyday/resume-fixer.html',
+            description: 'Beat ATS and impress hiring managers'
+        },
+        {
+            title: 'Fix My Budget in 30 Days',
+            category: 'Everyday',
+            url: '/prompts/everyday/budget-emergency.html',
+            description: 'Emergency budget when money is tight'
+        },
+        {
+            title: 'Difficult Conversation Script',
+            category: 'Everyday',
+            url: '/prompts/everyday/difficult-conversation.html',
+            description: 'Exact words for tough talks'
+        },
+        {
+            title: 'Get Fit in My Living Room',
+            category: 'Everyday',
+            url: '/prompts/everyday/workout-home.html',
+            description: 'No gym needed workout plan'
+        },
+        
         // Business Category
         {
             title: 'Marketing Strategy Generator',
