@@ -1,8 +1,8 @@
 # FreePromptHub Project Status & Tracking
 
 ## ✅ COMPLETED
-- [x] Domain purchased: freepromphub.com
-- [x] GitHub repo created: bigbricey/freepromphub
+- [x] Domain purchased: freeprompthub.com
+- [x] GitHub repo created: bigbricey/freeprompthub
 - [x] Vercel deployment connected (auto-deploys from GitHub)
 - [x] DNS configured and working
 - [x] Basic placeholder page live
