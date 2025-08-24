@@ -33,6 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
             url: '/prompts/everyday/workout-home.html',
             description: 'No gym needed workout plan'
         },
+        {
+            title: 'Side Hustle Starter Pack',
+            category: 'Everyday',
+            url: '/prompts/everyday/side-hustle.html',
+            description: 'Make extra money fast with what you have'
+        },
+        {
+            title: 'Clean & Organize My Chaos',
+            category: 'Everyday',
+            url: '/prompts/everyday/clean-organize.html',
+            description: 'Declutter any space step by step'
+        },
         
         // Business Category
         {
