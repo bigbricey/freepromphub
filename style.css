@@ -299,3 +299,315 @@ a:hover {
         font-size: 2rem;
     }
 }
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    padding: 20px 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+.breadcrumb .current {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Prompt Display */
+.prompt-display {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.prompt-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.prompt-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Prompt Content */
+.prompt-content {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.prompt-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.prompt-textarea {
+    width: 100%;
+    min-height: 400px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background: #fff;
+    resize: vertical;
+    color: #000;
+}
+
+.prompt-textarea:focus {
+    outline: none;
+    border-color: #0066CC;
+}
+
+/* Copy Button */
+.copy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0066CC;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy-button:hover {
+    background: #0052A3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.copy-button:active {
+    transform: translateY(0);
+}
+
+.copy-button .button-text {
+    display: inline-block;
+}
+
+.copy-button .success-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.3s ease;
+}
+
+.copy-button.copied .button-text {
+    display: none;
+}
+
+.copy-button.copied .success-message {
+    display: block;
+}
+
+.copy-button.copied {
+    background: #28a745;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Works Best With Section */
+.works-best-with {
+    margin-bottom: 50px;
+}
+
+.works-best-with h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.tool-card:hover {
+    border-color: #0066CC;
+}
+
+.tool-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.tool-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.tool-link {
+    color: #0066CC;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tool-link:hover {
+    text-decoration: underline;
+}
+
+/* Related Prompts Section */
+.related-prompts {
+    margin-bottom: 50px;
+}
+
+.related-prompts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.related-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-card:hover {
+    border-color: #0066CC;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+}
+
+.related-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.related-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.category-tag {
+    background: #e0e0e0;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+/* Mobile Responsive for Prompt Pages */
+@media (max-width: 768px) {
+    .prompt-title {
+        font-size: 2rem;
+    }
+    
+    .prompt-description {
+        font-size: 1.1rem;
+    }
+    
+    .prompt-content {
+        padding: 20px;
+    }
+    
+    .prompt-textarea {
+        min-height: 300px;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+    
+    .copy-button {
+        width: 100%;
+        padding: 15px 30px;
+    }
+    
+    .tools-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+    
+    .breadcrumb .separator {
+        margin: 0 5px;
+    }
+    
+    .prompt-title {
+        font-size: 1.75rem;
+    }
+    
+    .prompt-description {
+        font-size: 1rem;
+    }
+    
+    .prompt-textarea {
+        min-height: 250px;
+        font-size: 0.85rem;
+    }
+    
+    .works-best-with h2,
+    .related-prompts h2 {
+        font-size: 1.5rem;
+    }
+}
