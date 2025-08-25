@@ -63,7 +63,7 @@
 4. **Not checking live site** - pushing broken stuff
 
 ### WRONG Approach (Content):
-- SQL Query Optimizer prompts
+- SQL Query Optimizer prompts (Too technical!)
 - Complex business frameworks
 - Investment portfolio analyzers
 - Technical jargon-heavy prompts
@@ -78,6 +78,11 @@
 6. **Parenting Help**
 7. **Side Hustles** (quick money)
 8. **Organization** (decluttering)
+9. **Dating Profiles** (HUGE demand!)
+10. **Thank You Notes** (everyone struggles with this)
+11. **Birthday Messages** (stop being generic)
+12. **Complaint Emails** (get refunds!)
+13. **Social Media Captions** (for normal people, not influencers)
 
 ## Project Structure
 ```
@@ -100,7 +105,7 @@ FreePromptHub/
 
 ## Current Issues to Fix
 1. **everyday/index.html** - Using wrong template, looks like crap
-2. **Some 404s** - Check all prompt links work
+2. ~~**Some 404s** - Check all prompt links work~~ ✅ FIXED (Aug 24) - All coding prompts now work!
 3. **Need more categories** - Relationships, Parenting, Students
 
 ## Prompts Created
@@ -119,6 +124,36 @@ FreePromptHub/
 - email-templates.html ✅
 - social-media.html ✅
 - competitor-analysis.html ✅
+
+### Coding (10 total - ALL WORKING NOW! ✅):
+- debug-master.html ✅
+- code-reviewer.html ✅
+- api-builder.html ✅
+- sql-optimizer.html ✅
+- react-component.html ✅ (fixed Aug 24)
+- python-automation.html ✅ (fixed Aug 24)
+- algorithm-explainer.html ✅ (fixed Aug 24)
+- refactor-legacy.html ✅ (fixed Aug 24)
+- test-generator.html ✅ (fixed Aug 24)
+- regex-wizard.html ✅ (fixed Aug 24)
+
+### Content (10 total - COMPLETE! ✅):
+- blog-post.html ✅
+- copywriting.html ✅
+- newsletter.html ✅
+- youtube-script.html ✅
+- instagram-caption.html ✅ (added Aug 24 - PRACTICAL!)
+- thank-you-note.html ✅ (added Aug 24 - PRACTICAL!)
+- dating-profile.html ✅ (added Aug 24 - HIGH DEMAND!)
+- complaint-email.html ✅ (added Aug 24 - PRACTICAL!)
+- social-bio.html ✅ (added Aug 24 - PRACTICAL!)
+- birthday-message.html ✅ (added Aug 24 - EVERYONE NEEDS!)
+
+### Money (4 total - needs 6 more):
+- budget-optimizer.html ✅
+- debt-payoff.html ✅
+- emergency-fund.html ✅
+- investment-analyzer.html ✅
 
 ## Monetization Ideas
 - Meal planning apps ($30-60 commission)

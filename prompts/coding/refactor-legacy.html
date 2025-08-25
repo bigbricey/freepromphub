@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legacy Code Refactorer prompt - Transform spaghetti code into clean, maintainable architecture. Modernize legacy systems with best practices and design patterns.">
+    <title>Legacy Code Refactorer Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">Legacy Code Refactorer</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Legacy Code Refactorer</h1>
+                <p class="prompt-description">
+                    Transform legacy spaghetti code into clean, modern, maintainable architecture. Apply design patterns, SOLID principles, and best practices while preserving functionality and improving testability.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a senior software architect specializing in legacy code modernization. You excel at transforming messy, outdated code into clean, maintainable systems while preserving business logic and improving performance.
+
+I need you to refactor legacy code into modern, clean architecture.
+
+LEGACY CODE CONTEXT:
+Language/Framework: [LANGUAGE AND VERSION]
+Age of Codebase: [HOW OLD]
+Main Problems: [SPAGHETTI CODE / NO TESTS / POOR PERFORMANCE / ETC]
+Business Constraints: [MUST KEEP WORKING / GRADUAL MIGRATION / ETC]
+Target Architecture: [MICROSERVICES / CLEAN ARCHITECTURE / ETC]
+
+Current Code:
+```[language]
+[PASTE THE LEGACY CODE HERE]
+```
+
+Please provide:
+
+1. CODE ANALYSIS
+Identify all issues:
+```
+CRITICAL ISSUES (Fix immediately):
+- Issue 1: [Problem] → Impact: [What breaks]
+- Issue 2: [Problem] → Impact: [Security/Performance]
+
+CODE SMELLS (Refactor soon):
+- Smell 1: [Pattern] → Location: [Where]
+- Smell 2: [Anti-pattern] → Why it's bad: [Reason]
+
+TECHNICAL DEBT:
+- Debt 1: [Missing tests/docs/etc]
+- Debt 2: [Outdated dependencies]
+
+METRICS:
+- Cyclomatic Complexity: [Current score]
+- Code Duplication: [% duplicated]
+- Test Coverage: [Current %]
+- Coupling: [High/Medium/Low]
+```
+
+2. REFACTORING STRATEGY
+Step-by-step plan:
+```
+Phase 1: STABILIZE (Week 1)
+□ Add tests for current behavior
+□ Set up linting and formatting
+□ Document existing functionality
+□ Create safety net for refactoring
+
+Phase 2: EXTRACT (Week 2-3)
+□ Extract methods from large functions
+□ Separate concerns into modules
+□ Remove duplicate code
+□ Introduce interfaces/contracts
+
+Phase 3: RESTRUCTURE (Week 4-5)
+□ Apply design patterns
+□ Implement dependency injection
+□ Create proper layers
+□ Add proper error handling
+
+Phase 4: OPTIMIZE (Week 6)
+□ Performance improvements
+□ Remove unnecessary code
+□ Update dependencies
+□ Add monitoring
+```
+
+3. REFACTORED CODE
+Modern, clean implementation:
+```[language]
+// ============================================
+// CLEAN VERSION WITH PROPER ARCHITECTURE
+// ============================================
+
+// Domain Models
+class [Entity] {
+    // Business logic here
+}
+
+// Repository Pattern
+interface [Repository] {
+    // Data access abstraction
+}
+
+class [RepositoryImpl] implements [Repository] {
+    // Actual data access
+}
+
+// Service Layer
+class [Service] {
+    constructor(private repository: [Repository]) {
+        // Dependency injection
+    }
+    
+    // Business logic methods
+}
+
+// Controller/Handler
+class [Controller] {
+    constructor(private service: [Service]) {}
+    
+    // Request handling
+}
+
+// Dependency Injection Container
+const container = {
+    // Wire up dependencies
+};
+```
+
+4. DESIGN PATTERNS APPLIED
+Explain each pattern used:
+- **Pattern 1:** [Name]
+  - Why used: [Solves what problem]
+  - Implementation: [How applied]
+  
+- **Pattern 2:** [Name]
+  - Why used: [Benefit]
+  - Implementation: [Where in code]
+
+5. BEFORE/AFTER COMPARISON
+Show the transformation:
+```
+BEFORE:
+- Lines of Code: 500
+- Functions: 3 (avg 166 lines each)
+- Cyclomatic Complexity: 45
+- Test Coverage: 0%
+- Dependencies: Hardcoded
+- Error Handling: Try-catch everything
+
+AFTER:
+- Lines of Code: 350
+- Functions: 25 (avg 14 lines each)
+- Cyclomatic Complexity: 8
+- Test Coverage: 85%
+- Dependencies: Injected
+- Error Handling: Specific and meaningful
+```
+
+6. MIGRATION SCRIPT
+Safe transition plan:
+```[language]
+// Step 1: Run in parallel
+class LegacyAdapter {
+    // Wrap new code to work with old
+}
+
+// Step 2: Feature flag
+if (useNewImplementation) {
+    // New clean code
+} else {
+    // Old code (temporary)
+}
+
+// Step 3: Data migration
+async function migrateData() {
+    // Move from old structure to new
+}
+
+// Step 4: Cleanup
+// Remove old code after verification
+```
+
+7. UNIT TESTS
+Comprehensive test suite:
+```[language]
+describe('[Module] Tests', () => {
+    // Setup and teardown
+    
+    test('should handle normal case', () => {
+        // Arrange
+        // Act
+        // Assert
+    });
+    
+    test('should handle edge case', () => {
+        // Test edge scenarios
+    });
+    
+    test('should handle errors gracefully', () => {
+        // Test error scenarios
+    });
+});
+```
+
+8. DOCUMENTATION
+Clear documentation for maintenance:
+```markdown
+## Architecture Overview
+[Diagram or description of new structure]
+
+## Key Components
+- Component A: Responsible for...
+- Component B: Handles...
+
+## Data Flow
+1. Request comes in via...
+2. Processed by...
+3. Stored in...
+
+## Configuration
+- Environment variables needed
+- How to set up locally
+- Deployment instructions
+```
+
+9. PERFORMANCE IMPROVEMENTS
+Optimizations made:
+- **Before:** O(n²) nested loops
+  **After:** O(n log n) with better algorithm
+  
+- **Before:** 5 database calls per request
+  **After:** 1 optimized query
+  
+- **Before:** No caching
+  **After:** Redis cache layer
+
+- **Memory usage:** Reduced by 40%
+- **Response time:** Improved by 60%
+
+10. BREAKING CHANGES
+What changes for consumers:
+```
+API Changes:
+- Endpoint /old/path → /api/v2/resource
+- Parameter oldParam → newParam
+- Response format: XML → JSON
+
+Database Changes:
+- Table old_table → Split into table_a, table_b
+- Column changes: [list changes]
+
+Configuration:
+- New required env vars: [list]
+- Deprecated settings: [list]
+```
+
+11. ROLLBACK PLAN
+If something goes wrong:
+```bash
+# Quick rollback procedure
+1. Switch feature flag to 'old'
+2. Restore database backup (if needed)
+3. Deploy previous version
+4. Investigate issues in staging
+```
+
+12. MONITORING & METRICS
+Track the improvements:
+- Response time metrics
+- Error rate monitoring
+- Memory usage tracking
+- Code quality metrics
+- Test coverage reports
+
+Please ensure the refactored code:
+- Follows SOLID principles
+- Is easily testable
+- Has clear separation of concerns
+- Is well-documented
+- Maintains backward compatibility where needed</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Great for explaining refactoring patterns and strategies</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Excellent for complex architectural transformations</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Cursor IDE</h3>
+                            <p>Refactor code directly in your editor with AI assistance</p>
+                            <a href="#" class="tool-link">Get Cursor →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Include the full context - surrounding code helps identify patterns</li>
+                        <li>Mention any business logic that must be preserved</li>
+                        <li>Specify if you need to maintain API compatibility</li>
+                        <li>Note any performance requirements or constraints</li>
+                        <li>Include examples of how the code is currently called/used</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/coding/test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Add tests before refactoring</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/code-reviewer.html" class="related-card">
+                            <h3>Code Review Pro</h3>
+                            <p>Review refactored code quality</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Fix issues after refactoring</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

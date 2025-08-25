@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unit Test Generator prompt - Generate comprehensive test suites with edge cases, mocks, and 100% coverage. Never ship untested code again.">
+    <title>Unit Test Generator Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">Unit Test Generator</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Unit Test Generator</h1>
+                <p class="prompt-description">
+                    Generate comprehensive unit tests with edge cases, mocks, and assertions. Achieve high test coverage and catch bugs before production. Works with any testing framework and language.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a test-driven development expert who writes comprehensive, maintainable test suites. Create unit tests that catch bugs, document behavior, and ensure code reliability.
+
+I need comprehensive unit tests for the following code:
+
+TEST CONTEXT:
+Language: [PROGRAMMING LANGUAGE]
+Testing Framework: [JEST / PYTEST / JUNIT / MOCHA / ETC]
+Coverage Target: [PERCENTAGE]
+Mock Strategy: [MOCK ALL EXTERNAL / MINIMAL MOCKS / ETC]
+
+Code to Test:
+```[language]
+[PASTE YOUR CODE HERE]
+```
+
+Dependencies/Imports:
+```[language]
+[PASTE RELEVANT DEPENDENCIES IF ANY]
+```
+
+Please generate:
+
+1. COMPLETE TEST SUITE
+Full test implementation:
+```[language]
+// ============================================
+// UNIT TESTS FOR [MODULE/CLASS NAME]
+// ============================================
+
+import { describe, test, expect, beforeEach, afterEach, jest } from '[framework]';
+import { [ClassToTest] } from './[module]';
+// Import mocks and dependencies
+
+// Mock external dependencies
+jest.mock('./externalService', () => ({
+    // Mock implementation
+}));
+
+describe('[ClassToTest]', () => {
+    let instance;
+    let mockDependency;
+    
+    // Setup and teardown
+    beforeEach(() => {
+        // Reset mocks
+        jest.clearAllMocks();
+        
+        // Create fresh instance
+        mockDependency = {
+            method: jest.fn()
+        };
+        instance = new [ClassToTest](mockDependency);
+    });
+    
+    afterEach(() => {
+        // Cleanup
+    });
+    
+    // ========== HAPPY PATH TESTS ==========
+    describe('Happy Path', () => {
+        test('should [expected behavior] when [condition]', () => {
+            // Arrange
+            const input = /* test data */;
+            const expected = /* expected result */;
+            
+            // Act
+            const result = instance.method(input);
+            
+            // Assert
+            expect(result).toEqual(expected);
+            expect(mockDependency.method).toHaveBeenCalledWith(/* args */);
+            expect(mockDependency.method).toHaveBeenCalledTimes(1);
+        });
+        
+        test('should [another behavior] when [another condition]', () => {
+            // Test implementation
+        });
+    });
+    
+    // ========== EDGE CASES ==========
+    describe('Edge Cases', () => {
+        test('should handle empty input', () => {
+            // Test empty arrays, strings, objects
+        });
+        
+        test('should handle null/undefined', () => {
+            // Test null and undefined inputs
+        });
+        
+        test('should handle maximum values', () => {
+            // Test with MAX_SAFE_INTEGER, etc
+        });
+        
+        test('should handle minimum values', () => {
+            // Test with negative numbers, zero
+        });
+        
+        test('should handle special characters', () => {
+            // Test with unicode, emojis, etc
+        });
+    });
+    
+    // ========== ERROR CASES ==========
+    describe('Error Handling', () => {
+        test('should throw error when [invalid condition]', () => {
+            // Arrange
+            const invalidInput = /* invalid data */;
+            
+            // Act & Assert
+            expect(() => {
+                instance.method(invalidInput);
+            }).toThrow('[Expected Error Message]');
+        });
+        
+        test('should handle async errors gracefully', async () => {
+            // Mock rejection
+            mockDependency.asyncMethod.mockRejectedValue(new Error('Network error'));
+            
+            // Test error handling
+            await expect(instance.asyncMethod()).rejects.toThrow('Network error');
+        });
+    });
+    
+    // ========== ASYNC TESTS ==========
+    describe('Async Operations', () => {
+        test('should handle async operations correctly', async () => {
+            // Arrange
+            const mockData = { /* data */ };
+            mockDependency.fetchData.mockResolvedValue(mockData);
+            
+            // Act
+            const result = await instance.asyncMethod();
+            
+            // Assert
+            expect(result).toEqual(/* expected */);
+        });
+        
+        test('should handle concurrent async calls', async () => {
+            // Test race conditions
+        });
+    });
+    
+    // ========== INTEGRATION POINTS ==========
+    describe('Integration Points', () => {
+        test('should interact correctly with [dependency]', () => {
+            // Test dependency interactions
+        });
+        
+        test('should emit correct events', () => {
+            // Test event emissions
+        });
+    });
+});
+```
+
+2. TEST COVERAGE MATRIX
+What's being tested:
+```
+Method: [methodName]
+✅ Normal inputs
+✅ Edge cases (null, undefined, empty)
+✅ Boundary values
+✅ Error conditions
+✅ Async scenarios
+✅ Performance (if applicable)
+
+Method: [anotherMethod]
+✅ [Test scenarios]
+...
+
+COVERAGE SUMMARY:
+- Lines: 95%
+- Branches: 90%
+- Functions: 100%
+- Statements: 92%
+```
+
+3. MOCK IMPLEMENTATIONS
+Reusable mocks:
+```[language]
+// __mocks__/externalService.js
+export const mockExternalService = {
+    fetchData: jest.fn(() => Promise.resolve({ data: 'mock' })),
+    sendData: jest.fn(() => Promise.resolve({ success: true })),
+    // Add failure scenarios
+    fetchDataFailure: jest.fn(() => Promise.reject(new Error('Network error')))
+};
+
+// Mock factories for different scenarios
+export const createMockUser = (overrides = {}) => ({
+    id: 1,
+    name: 'Test User',
+    email: 'test@example.com',
+    ...overrides
+});
+
+export const createMockDatabase = () => ({
+    query: jest.fn(),
+    insert: jest.fn(),
+    update: jest.fn(),
+    delete: jest.fn()
+});
+```
+
+4. PARAMETERIZED TESTS
+Test multiple scenarios efficiently:
+```[language]
+describe.each([
+    ['empty string', '', 0],
+    ['single word', 'hello', 1],
+    ['multiple words', 'hello world', 2],
+    ['with punctuation', 'hello, world!', 2],
+    ['with numbers', 'hello 123 world', 3],
+])('wordCount(%s)', (description, input, expected) => {
+    test(`returns ${expected} for ${description}`, () => {
+        expect(wordCount(input)).toBe(expected);
+    });
+});
+```
+
+5. PERFORMANCE TESTS
+Ensure code performs well:
+```[language]
+test('should complete within performance budget', () => {
+    const startTime = performance.now();
+    const largeDataSet = Array(10000).fill(0).map((_, i) => i);
+    
+    // Act
+    instance.processData(largeDataSet);
+    
+    // Assert
+    const endTime = performance.now();
+    const executionTime = endTime - startTime;
+    expect(executionTime).toBeLessThan(100); // ms
+});
+```
+
+6. SNAPSHOT TESTS
+For UI or complex objects:
+```[language]
+test('should match snapshot', () => {
+    const result = instance.generateReport(data);
+    expect(result).toMatchSnapshot();
+});
+
+test('should match inline snapshot', () => {
+    expect(instance.formatData(input)).toMatchInlineSnapshot(`
+        Object {
+            "formatted": true,
+            "data": Array [1, 2, 3]
+        }
+    `);
+});
+```
+
+7. TEST UTILITIES
+Helper functions for tests:
+```[language]
+// testUtils.js
+export const waitFor = (condition, timeout = 5000) => {
+    // Polling utility
+};
+
+export const setupTestDatabase = async () => {
+    // Database setup for tests
+};
+
+export const cleanupTestData = async () => {
+    // Cleanup after tests
+};
+
+export const assertDeepEquals = (actual, expected) => {
+    // Custom deep equality assertion
+};
+```
+
+8. CI/CD INTEGRATION
+Run tests in pipeline:
+```yaml
+# .github/workflows/test.yml
+name: Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test -- --coverage
+      - name: Upload coverage
+        uses: codecov/codecov-action@v2
+```
+
+9. TEST DOCUMENTATION
+Explain test approach:
+```markdown
+## Testing Strategy
+- Unit tests for all public methods
+- Integration tests for API endpoints
+- E2E tests for critical user flows
+
+## Running Tests
+npm test           # Run all tests
+npm test:watch     # Watch mode
+npm test:coverage  # With coverage report
+
+## Writing Tests
+- Follow AAA pattern (Arrange, Act, Assert)
+- One assertion per test when possible
+- Use descriptive test names
+```
+
+10. COMMON TESTING PATTERNS
+Reusable patterns:
+- **Builder Pattern** for test data
+- **Object Mother** for complex objects
+- **Test Data Factory** for consistency
+- **Custom Matchers** for domain logic
+- **Test Fixtures** for static data
+
+Please ensure tests are:
+- Independent (no shared state)
+- Repeatable (same result every time)
+- Fast (milliseconds not seconds)
+- Descriptive (clear failure messages)
+- Maintainable (easy to update)</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Excellent for explaining testing concepts and patterns</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Superior for complex test scenarios and edge cases</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>GitHub Copilot</h3>
+                            <p>Generate tests directly in your IDE as you code</p>
+                            <a href="#" class="tool-link">Get Copilot →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Include the actual implementation code, not just the interface</li>
+                        <li>Specify your mocking preferences (full mocks vs minimal)</li>
+                        <li>Mention any specific edge cases you're concerned about</li>
+                        <li>Include external dependencies that need mocking</li>
+                        <li>Specify if you need integration tests vs pure unit tests</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/coding/debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Fix failing tests quickly</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/code-reviewer.html" class="related-card">
+                            <h3>Code Review Pro</h3>
+                            <p>Review test quality and coverage</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/refactor-legacy.html" class="related-card">
+                            <h3>Legacy Code Refactorer</h3>
+                            <p>Add tests to legacy code</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Regex Pattern Builder prompt - Create and explain complex regex patterns for any use case. Never struggle with regular expressions again.">
+    <title>Regex Pattern Builder Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">Regex Pattern Builder</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Regex Pattern Builder</h1>
+                <p class="prompt-description">
+                    Master regular expressions instantly. Generate complex regex patterns with explanations, test cases, and practical examples. Works with any regex flavor - JavaScript, Python, PCRE, and more.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a regex expert who can create, explain, and debug regular expressions for any use case. Make regex approachable by providing clear explanations and practical examples.
+
+I need a regex pattern for the following:
+
+REGEX REQUIREMENTS:
+What to Match: [DESCRIBE WHAT YOU WANT TO MATCH]
+What NOT to Match: [WHAT SHOULD BE EXCLUDED]
+Language/Tool: [JAVASCRIPT / PYTHON / PERL / GREP / SED / ETC]
+Examples of Valid Matches: [PROVIDE 3-5 EXAMPLES]
+Examples of Invalid Matches: [PROVIDE 3-5 EXAMPLES]
+Special Requirements: [CASE SENSITIVITY / MULTILINE / GLOBAL / ETC]
+
+Please provide:
+
+1. THE REGEX PATTERN
+Complete pattern with explanation:
+```regex
+/[YOUR PATTERN HERE]/[FLAGS]
+```
+
+For different flavors:
+- **JavaScript**: `/pattern/flags`
+- **Python**: `r"pattern"` with re.FLAGS
+- **PCRE/PHP**: `/pattern/flags`
+- **Java**: `Pattern.compile("pattern", FLAGS)`
+- **.NET**: `new Regex(@"pattern", Options)`
+
+2. PATTERN BREAKDOWN
+Explain each part:
+```
+^                    # Start of string
+([A-Z])              # Group 1: Capital letter
+[a-z]+               # One or more lowercase letters
+(?:ing|ed|s)?        # Non-capturing group: optional suffix
+\s*                  # Zero or more whitespace
+(\d{2,4})            # Group 2: 2-4 digits
+$                    # End of string
+
+Full pattern: /^([A-Z])[a-z]+(?:ing|ed|s)?\s*(\d{2,4})$/
+```
+
+3. VISUAL EXPLANATION
+Show how it matches:
+```
+Input: "Walking 2024"
+       ^^^^^^^  ^^^^
+       |        |
+       |        └─ (\d{2,4}) captures "2024"
+       └─ ([A-Z])[a-z]+(?:ing) matches "Walking"
+
+✅ MATCH
+
+Input: "walk 24"
+       ^^^^
+       |
+       └─ No capital letter at start
+       
+❌ NO MATCH
+```
+
+4. TEST CASES
+Comprehensive testing:
+```javascript
+// Test data with expected results
+const testCases = [
+    // Valid matches
+    { input: "[example1]", shouldMatch: true, groups: ["group1", "group2"] },
+    { input: "[example2]", shouldMatch: true, groups: ["group1", "group2"] },
+    
+    // Invalid matches
+    { input: "[invalid1]", shouldMatch: false },
+    { input: "[invalid2]", shouldMatch: false },
+    
+    // Edge cases
+    { input: "", shouldMatch: false },
+    { input: "[edge case]", shouldMatch: true/false }
+];
+
+// Test function
+function testRegex(pattern, testCases) {
+    testCases.forEach(test => {
+        const result = pattern.test(test.input);
+        const matches = test.input.match(pattern);
+        console.log(`Input: "${test.input}"`);
+        console.log(`Expected: ${test.shouldMatch}, Got: ${result}`);
+        if (matches) console.log(`Groups: ${matches.slice(1)}`);
+    });
+}
+```
+
+5. COMMON VARIATIONS
+Alternative patterns:
+```regex
+# Strict version (exact match):
+/^exact-pattern$/
+
+# Lenient version (partial match):
+/pattern/
+
+# Performance optimized:
+/(?:non-capturing|groups)/
+
+# Unicode support:
+/[\u{1F600}-\u{1F64F}]/u
+
+# Multiline mode:
+/^pattern$/m
+```
+
+6. REGEX FLAVORS
+How it differs across languages:
+
+**JavaScript:**
+```javascript
+const pattern = /your-pattern/gi;
+const matches = text.match(pattern);
+const replaced = text.replace(pattern, 'replacement');
+```
+
+**Python:**
+```python
+import re
+pattern = re.compile(r'your-pattern', re.IGNORECASE)
+matches = pattern.findall(text)
+replaced = pattern.sub('replacement', text)
+```
+
+**grep/sed:**
+```bash
+# grep with extended regex
+grep -E 'pattern' file.txt
+
+# sed substitution
+sed 's/pattern/replacement/g' file.txt
+```
+
+7. PERFORMANCE OPTIMIZATION
+Make it faster:
+```regex
+# Avoid catastrophic backtracking:
+❌ Bad:  /(x+)+y/
+✅ Good: /x+y/
+
+# Use atomic groups when possible:
+(?>atomic-group)
+
+# Lazy vs Greedy:
+.*?  # Lazy (matches minimum)
+.*   # Greedy (matches maximum)
+
+# Anchors improve performance:
+^start  # Faster than searching entire string
+```
+
+8. DEBUGGING TIPS
+Common issues and fixes:
+```
+Problem: Matches too much
+Fix: Use lazy quantifiers (??, *?, +?)
+
+Problem: Doesn't match multiline
+Fix: Add 'm' flag or use [\s\S] instead of .
+
+Problem: Case sensitivity
+Fix: Add 'i' flag or use [Aa] for specific chars
+
+Problem: Special characters not working
+Fix: Escape them: \. \* \+ \? \[ \] \( \) \{ \} \| \\ \^ \$
+```
+
+9. REAL-WORLD EXAMPLES
+Practical applications:
+
+**Email Validation:**
+```regex
+/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+```
+
+**URL Extraction:**
+```regex
+/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g
+```
+
+**Phone Numbers:**
+```regex
+/(?:\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})/
+```
+
+10. ONLINE TOOLS
+Test and refine:
+- regex101.com - Test with explanations
+- regexr.com - Visual regex builder
+- regexpal.com - Simple tester
+- regexcrossword.com - Learn through puzzles
+
+11. CHEAT SHEET
+Quick reference:
+```
+ANCHORS
+^     Start of string
+$     End of string
+\b    Word boundary
+\B    Not word boundary
+
+CHARACTER CLASSES
+.     Any character except newline
+\d    Digit [0-9]
+\D    Not digit
+\w    Word character [A-Za-z0-9_]
+\W    Not word character
+\s    Whitespace
+\S    Not whitespace
+
+QUANTIFIERS
+*     0 or more
++     1 or more
+?     0 or 1
+{n}   Exactly n
+{n,}  n or more
+{n,m} Between n and m
+
+GROUPS
+(...)   Capturing group
+(?:...) Non-capturing group
+(?=...) Positive lookahead
+(?!...) Negative lookahead
+(?<=..) Positive lookbehind
+(?<!..) Negative lookbehind
+```
+
+12. REPLACEMENT PATTERNS
+Using captured groups:
+```javascript
+// JavaScript
+text.replace(/(first)(second)/, '$2 $1');  // Swap groups
+
+// Python
+re.sub(r'(\w+) (\w+)', r'\2, \1', text)  # Last, First
+
+// sed
+sed 's/\(.*\) \(.*\)/\2 \1/' file.txt
+```
+
+Ensure the regex is:
+- As simple as possible
+- Well-documented
+- Tested with edge cases
+- Performant for large inputs
+- Compatible with specified language</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Great for explaining regex concepts step-by-step</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Excellent for complex patterns and edge cases</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Regex101</h3>
+                            <p>Test and debug patterns with visual explanations</p>
+                            <a href="#" class="tool-link">Try Regex101 →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Provide real examples of what should and shouldn't match</li>
+                        <li>Specify the programming language or tool you're using</li>
+                        <li>Mention if you need Unicode or special character support</li>
+                        <li>Include performance requirements for large text processing</li>
+                        <li>Ask for multiple variations (strict vs lenient) if unsure</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/coding/python-automation.html" class="related-card">
+                            <h3>Python Automation Script</h3>
+                            <p>Use regex in automation scripts</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Debug regex matching issues</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Test regex patterns thoroughly</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

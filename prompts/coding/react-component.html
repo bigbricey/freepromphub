@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="React Component Generator prompt - Create production-ready React components with TypeScript, hooks, and testing. Build faster with AI.">
+    <title>React Component Generator Prompt - Coding | FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">FreePromptHub</a></h1>
+            <p class="tagline">Professional prompts. No signup. No BS.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/coding/">Coding</a>
+                <span class="separator">›</span>
+                <span class="current">React Component Generator</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">React Component Generator</h1>
+                <p class="prompt-description">
+                    Generate production-ready React components with TypeScript, proper hooks usage, accessibility, and unit tests. Skip hours of boilerplate and get straight to building features.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a senior React developer with expertise in TypeScript, modern React patterns, and testing. Create production-ready components that follow best practices and are ready to ship.
+
+I need you to generate a complete React component based on my requirements.
+
+COMPONENT REQUIREMENTS:
+Component Name: [COMPONENT NAME]
+Purpose: [WHAT THIS COMPONENT DOES]
+Props Needed: [LIST KEY PROPS]
+State Management: [LOCAL STATE / CONTEXT / REDUX]
+Styling Approach: [CSS MODULES / STYLED-COMPONENTS / TAILWIND]
+Key Features: [LIST MAIN FEATURES]
+
+Please generate:
+
+1. TYPESCRIPT INTERFACE
+Define all props and types:
+```typescript
+interface [ComponentName]Props {
+  // All props with proper types
+  // Include JSDoc comments for complex props
+}
+
+// Additional types/interfaces if needed
+```
+
+2. MAIN COMPONENT
+Full component implementation:
+```tsx
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+// Additional imports
+
+const [ComponentName]: React.FC<[ComponentName]Props> = ({
+  // Destructured props with defaults
+}) => {
+  // State hooks
+  
+  // Effects
+  
+  // Callbacks and memoized values
+  
+  // Event handlers
+  
+  return (
+    // JSX with proper semantic HTML
+    // Accessibility attributes (aria-*, role, etc.)
+  );
+};
+
+export default [ComponentName];
+```
+
+3. STYLING
+Component styles using the specified approach:
+```[css/scss/styled]
+// Mobile-first responsive styles
+// Proper CSS organization
+// Animation/transitions if needed
+```
+
+4. CUSTOM HOOKS (if applicable)
+Extract reusable logic:
+```typescript
+const use[HookName] = (params) => {
+  // Hook implementation
+  return { /* values */ };
+};
+```
+
+5. UNIT TESTS
+Comprehensive test suite:
+```typescript
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import [ComponentName] from './[ComponentName]';
+
+describe('[ComponentName]', () => {
+  // Test default rendering
+  it('renders correctly with default props', () => {
+    // Test implementation
+  });
+  
+  // Test user interactions
+  it('handles [interaction] correctly', async () => {
+    // Test implementation
+  });
+  
+  // Test edge cases
+  it('handles edge case when [condition]', () => {
+    // Test implementation
+  });
+  
+  // Test accessibility
+  it('is accessible', () => {
+    // Test ARIA attributes
+  });
+});
+```
+
+6. STORYBOOK STORY (bonus)
+For component documentation:
+```typescript
+import type { Meta, StoryObj } from '@storybook/react';
+import [ComponentName] from './[ComponentName]';
+
+const meta: Meta<typeof [ComponentName]> = {
+  title: 'Components/[ComponentName]',
+  component: [ComponentName],
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    // Default props
+  },
+};
+
+export const [Variant]: Story = {
+  args: {
+    // Variant props
+  },
+};
+```
+
+7. USAGE EXAMPLE
+How to use in a parent component:
+```tsx
+import [ComponentName] from './components/[ComponentName]';
+
+function App() {
+  return (
+    <[ComponentName]
+      // Props with real values
+    />
+  );
+}
+```
+
+8. PERFORMANCE OPTIMIZATIONS
+- What's memoized and why
+- When to use React.memo()
+- Optimal re-render strategy
+- Bundle size considerations
+
+9. ACCESSIBILITY CHECKLIST
+□ Keyboard navigation works
+□ Screen reader friendly
+□ ARIA labels present
+□ Focus management correct
+□ Color contrast passes WCAG
+□ Responsive on all devices
+
+10. COMMON VARIATIONS
+Additional versions you might need:
+- Loading state version
+- Error state version
+- Empty state version
+- Mobile-specific version
+
+Please ensure the component:
+- Uses latest React 18+ features
+- Follows React best practices
+- Is fully typed with TypeScript
+- Handles all edge cases
+- Is production-ready</textarea>
+                    
+                    <button id="copy-button" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="works-best-with">
+                    <h2>Works Best With:</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>ChatGPT Plus</h3>
+                            <p>Great for generating complete components with explanations</p>
+                            <a href="#" class="tool-link">Try ChatGPT →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Claude Pro</h3>
+                            <p>Excellent for complex component logic and TypeScript</p>
+                            <a href="#" class="tool-link">Try Claude →</a>
+                        </div>
+                        <div class="tool-card">
+                            <h3>Cursor IDE</h3>
+                            <p>Generate components directly in your codebase</p>
+                            <a href="#" class="tool-link">Get Cursor →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Be specific about state management needs (local vs global)</li>
+                        <li>Mention if you need SSR/SSG compatibility for Next.js</li>
+                        <li>Specify any UI library you're using (Material-UI, Ant Design, etc.)</li>
+                        <li>Include accessibility requirements upfront</li>
+                        <li>Mention performance constraints if any (large lists, frequent updates)</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/coding/test-generator.html" class="related-card">
+                            <h3>Unit Test Generator</h3>
+                            <p>Create comprehensive test suites</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/api-builder.html" class="related-card">
+                            <h3>REST API Builder</h3>
+                            <p>Build the backend for your components</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                        <a href="/prompts/coding/debug-master.html" class="related-card">
+                            <h3>Debug Master</h3>
+                            <p>Fix React component bugs instantly</p>
+                            <span class="category-tag">Coding</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+            <nav>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
