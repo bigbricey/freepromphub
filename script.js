@@ -112,3 +112,31 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Back to Top Button Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create the back to top button
+    const backToTopButton = document.createElement('button');
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.innerHTML = '↑';
+    backToTopButton.setAttribute('aria-label', 'Back to top');
+    backToTopButton.setAttribute('title', 'Back to top');
+    document.body.appendChild(backToTopButton);
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    // Smooth scroll to top when clicked
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
