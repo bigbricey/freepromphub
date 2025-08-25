@@ -39,10 +39,15 @@
 #### PATH RULES - MEMORIZE THESE:
 - ✅ GOOD: `/prompts/everyday/meal-planner.html`
 - ❌ BAD: `meal-planner.html`
+- ❌ BAD: `prompts/everyday/meal-planner.html` (missing leading /)
 - ✅ GOOD: `/style.css`
 - ❌ BAD: `../../style.css`
+- ❌ BAD: `style.css` (missing leading /)
 - ✅ GOOD: `/prompts/everyday/`
 - ❌ BAD: `index.html`
+- ❌ BAD: `prompts/everyday/` (missing leading /)
+
+**THE SLASH RULE**: EVERY href and src should start with `/` for absolute paths!
 
 #### WORKING TEMPLATES TO COPY:
 - **Category Page:** `/prompts/business/index.html` (has nice cards and styling)
