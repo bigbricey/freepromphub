@@ -1,135 +1,61 @@
 // Search functionality for FreePromptHub
 document.addEventListener('DOMContentLoaded', function() {
-    // All available prompts with their metadata
-    const prompts = [
-        // Everyday Life Category (MOST POPULAR)
-        {
-            title: 'Weekly Meal Planner on a Budget',
-            category: 'Everyday',
-            url: '/prompts/everyday/meal-planner.html',
-            description: '7-day meals with grocery list'
-        },
-        {
-            title: 'Resume That Gets Interviews',
-            category: 'Everyday',
-            url: '/prompts/everyday/resume-fixer.html',
-            description: 'Beat ATS and impress hiring managers'
-        },
-        {
-            title: 'Fix My Budget in 30 Days',
-            category: 'Everyday',
-            url: '/prompts/everyday/budget-emergency.html',
-            description: 'Emergency budget when money is tight'
-        },
-        {
-            title: 'Difficult Conversation Script',
-            category: 'Everyday',
-            url: '/prompts/everyday/difficult-conversation.html',
-            description: 'Exact words for tough talks'
-        },
-        {
-            title: 'Get Fit in My Living Room',
-            category: 'Everyday',
-            url: '/prompts/everyday/workout-home.html',
-            description: 'No gym needed workout plan'
-        },
-        {
-            title: 'Side Hustle Starter Pack',
-            category: 'Everyday',
-            url: '/prompts/everyday/side-hustle.html',
-            description: 'Make extra money fast with what you have'
-        },
-        {
-            title: 'Clean & Organize My Chaos',
-            category: 'Everyday',
-            url: '/prompts/everyday/clean-organize.html',
-            description: 'Declutter any space step by step'
-        },
-        
-        // Business Category
-        {
-            title: 'Marketing Strategy Generator',
-            category: 'Business',
-            url: '/prompts/business/marketing-strategy.html',
-            description: '12-section marketing plan generator'
-        },
-        {
-            title: 'Business Plan Creator',
-            category: 'Business', 
-            url: '/prompts/business/business-plan.html',
-            description: 'One-page business plan generator'
-        },
-        {
-            title: 'Sales Email Templates',
-            category: 'Business',
-            url: '/prompts/business/email-templates.html',
-            description: 'Cold email and follow-up templates'
-        },
-        {
-            title: 'Social Media Content Calendar',
-            category: 'Business',
-            url: '/prompts/business/social-media.html',
-            description: '30-day content calendar creator'
-        },
-        {
-            title: 'Competitor Analysis',
-            category: 'Business',
-            url: '/prompts/business/competitor-analysis.html',
-            description: 'Comprehensive competitor research'
-        },
-        
-        // Money Category
-        {
-            title: 'Personal Budget Optimizer',
-            category: 'Money',
-            url: '/prompts/money/budget-optimizer.html',
-            description: '50/30/20 budget analysis and optimization'
-        },
-        {
-            title: 'Debt Payoff Strategy',
-            category: 'Money',
-            url: '/prompts/money/debt-payoff.html',
-            description: 'Avalanche vs snowball debt elimination'
-        },
-        {
-            title: 'Investment Portfolio Analyzer',
-            category: 'Money',
-            url: '/prompts/money/investment-analyzer.html',
-            description: 'Portfolio optimization and rebalancing'
-        },
-        {
-            title: 'Emergency Fund Calculator',
-            category: 'Money',
-            url: '/prompts/money/emergency-fund.html',
-            description: 'Personalized emergency fund planning'
-        },
-        
-        // Content Category
-        {
-            title: 'SEO Blog Post Writer',
-            category: 'Content',
-            url: '/prompts/content/blog-post.html',
-            description: 'Google-optimized blog content creator'
-        },
-        {
-            title: 'YouTube Script Generator',
-            category: 'Content',
-            url: '/prompts/content/youtube-script.html',
-            description: 'High-retention video scripts'
-        },
-        {
-            title: 'Email Newsletter Creator',
-            category: 'Content',
-            url: '/prompts/content/newsletter.html',
-            description: 'Engaging newsletter templates'
-        },
-        {
-            title: 'Sales Copy Writer',
-            category: 'Content',
-            url: '/prompts/content/copywriting.html',
-            description: 'High-converting sales copy'
-        }
+    // Build search index from sitemap, with a small fallback list to avoid 0 results
+    let prompts = [];
+    const fallbackPrompts = [
+        { title: 'Weekly Meal Planner on a Budget', category: 'Everyday', url: '/prompts/everyday/meal-planner.html', description: '7-day meals with grocery list' },
+        { title: 'Resume That Gets Interviews', category: 'Everyday', url: '/prompts/everyday/resume-fixer.html', description: 'Beat ATS and impress hiring managers' },
+        { title: 'Fix My Budget in 30 Days', category: 'Everyday', url: '/prompts/everyday/budget-emergency.html', description: 'Emergency budget when money is tight' },
+        { title: 'Marketing Strategy Generator', category: 'Business', url: '/prompts/business/marketing-strategy.html', description: '12-section marketing plan generator' },
+        { title: 'Sales Email Templates', category: 'Business', url: '/prompts/business/email-templates.html', description: 'Cold email and follow-up templates' },
+        { title: 'Personal Budget Optimizer', category: 'Money', url: '/prompts/money/budget-optimizer.html', description: '50/30/20 budget optimization' },
+        { title: 'Emergency Fund Calculator', category: 'Money', url: '/prompts/money/emergency-fund.html', description: 'Personalized emergency fund planning' },
+        { title: 'SEO Blog Post Writer', category: 'Content', url: '/prompts/content/blog-post.html', description: 'Google-optimized blog content creator' },
+        { title: 'YouTube Script Generator', category: 'Content', url: '/prompts/content/youtube-script.html', description: 'High-retention video scripts' },
+        { title: 'Debugging Assistant', category: 'Coding', url: '/prompts/coding/debug-master.html', description: 'Systematic bug investigation' }
     ];
+
+    const searchInput = document.getElementById('searchBar');
+    const searchResults = document.getElementById('searchResults');
+    if (!searchInput || !searchResults) return;
+
+    // Prefetch sitemap to populate prompts
+    let lastQuery = '';
+    fetch('/sitemap.xml')
+        .then(r => r.ok ? r.text() : Promise.reject(new Error('sitemap fetch failed')))
+        .then(xmlText => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(xmlText, 'application/xml');
+            const urlNodes = Array.from(doc.getElementsByTagName('loc'));
+            const urls = urlNodes.map(n => n.textContent || '');
+            const promptUrls = urls.filter(u => /\/prompts\/[a-z-]+\/.+\.html$/i.test(u));
+
+            const generated = promptUrls.map(u => {
+                const a = document.createElement('a');
+                a.href = u;
+                const path = a.pathname; // e.g., /prompts/everyday/meal-planner.html
+                const parts = path.split('/').filter(Boolean);
+                const category = parts[1] || '';
+                const file = (parts[2] || '').replace('.html','');
+                return {
+                    title: slugToTitle(file),
+                    category: slugToTitle(category),
+                    url: path,
+                    description: defaultDescriptionFor(category)
+                };
+            });
+
+            // Merge with fallback and de-dupe
+            const byUrl = new Map();
+            [...generated, ...fallbackPrompts].forEach(p => { if (!byUrl.has(p.url)) byUrl.set(p.url, p); });
+            prompts = Array.from(byUrl.values());
+
+            // If user already typed something, rerun search with new index
+            if (lastQuery) performSearch(lastQuery);
+        })
+        .catch(() => {
+            prompts = fallbackPrompts;
+        });
 
     const searchInput = document.getElementById('searchBar');
     const searchResults = document.getElementById('searchResults');
@@ -151,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Debounce search to avoid too many updates
         searchTimeout = setTimeout(() => {
+            lastQuery = query;
             performSearch(query);
         }, 200);
     });
@@ -200,5 +127,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function escapeRegex(str) {
         return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function slugToTitle(slug) {
+        if (!slug) return '';
+        return slug
+            .replace(/[-_]+/g, ' ')
+            .replace(/\b([a-z])/g, (m, c) => c.toUpperCase());
+    }
+
+    function defaultDescriptionFor(category) {
+        const map = {
+            'everyday': 'Practical everyday help',
+            'business': 'Marketing, sales, and strategy',
+            'money': 'Budgeting and personal finance',
+            'content': 'Writing and social media',
+            'coding': 'Programming and debugging',
+            'health': 'Fitness, nutrition, wellness',
+            'ai-art': 'Midjourney, DALL·E, SD prompts'
+        };
+        return map[category] || 'AI prompt';
     }
 });

@@ -140,3 +140,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Site-wide affiliate disclosure injection (keeps things honest and consistent)
+document.addEventListener('DOMContentLoaded', function() {
+    const footerContainer = document.querySelector('footer .container');
+    if (!footerContainer || document.querySelector('.site-disclosure')) return;
+    const disclosure = document.createElement('div');
+    disclosure.className = 'site-disclosure';
+    disclosure.style.marginTop = '10px';
+    disclosure.style.color = '#666';
+    disclosure.style.fontSize = '0.9rem';
+    disclosure.innerHTML = 'FreePromptHub is 100% free. Some links may be affiliate links. Your support keeps this free. <a href="/affiliate-disclosure.html">Learn more</a>.';
+    footerContainer.insertBefore(disclosure, footerContainer.querySelector('nav'));
+});

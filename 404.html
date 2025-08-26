@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | FreePromptHub</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .not-found { text-align:center; max-width:700px; margin:60px auto; }
+    .not-found h1 { font-size:2.2rem; margin-bottom:10px; }
+    .not-found p { color:#666; margin-bottom:20px; }
+    .quick-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:20px; }
+    .quick-links a { display:block; border:2px solid #e0e0e0; border-radius:10px; padding:14px; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="/">FreePromptHub</a></h1>
+      <p class="tagline">Professional prompts. No signup. No BS.</p>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="not-found">
+        <h1>404 – We couldn’t find that page</h1>
+        <p>Try search below or jump to a category. All links use absolute paths to avoid 404s.</p>
+        <div class="search-section">
+          <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search prompts..." class="search-input">
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+        <div class="quick-links">
+          <a href="/prompts/everyday/">🌟 Everyday</a>
+          <a href="/prompts/business/">💼 Business</a>
+          <a href="/prompts/money/">💰 Money</a>
+          <a href="/prompts/content/">✍️ Content</a>
+          <a href="/prompts/coding/">💻 Coding</a>
+          <a href="/prompts/health/">❤️ Health</a>
+          <a href="/prompts/ai-art/">🎨 AI Art</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/search.js"></script>
+</body>
+</html>
+
