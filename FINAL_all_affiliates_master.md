@@ -120,6 +120,16 @@
 - **Category:** Knee Pain
 - **Link:** https://c75e0a-khbmw5w89n7wlsway1s.hop.clickbank.net
 
+### 24. **Ultimate OFF-GRID Generator** (NEW)
+- **Price:** ~$45/sale (estimated)
+- **Category:** Green Products/Alternative Energy
+- **Link:** https://735a7e49edxx4n1kzaw92wdk4x.hop.clickbank.net
+
+### 25. **Home Power Shield** (NEW)
+- **Price:** ~$45/sale (estimated)
+- **Category:** Green Products/Alternative Energy
+- **Link:** https://cba35m3eqkyv8k1fylnoy14p47.hop.clickbank.net
+
 ---
 
 ## 🎯 YOUR STRATEGY: ONE PRODUCT PER CATEGORY
@@ -215,7 +225,14 @@ If each category gets just 1 sale per month:
 2. **3 ALREADY INSTALLED** (Health, Money, Relationships)
 3. **5 NEED INSTALLATION** (Business, Everyday, Content, Coding, AI Art)
 4. **TOTAL: 88 prompt pages** ready for monetization
-5. **23 TOTAL PRODUCTS** saved with correct hop links
+5. **25 TOTAL PRODUCTS** saved with correct hop links
+
+### FUTURE CATEGORY IDEAS WITH PRODUCTS READY:
+- **Emergency Prep** → Ultimate OFF-GRID Generator or Home Power Shield
+- **Green Living/Eco** → Home Power Shield
+- **Senior Health** → Ageless Knees, Quietum Plus, Joint Genesis
+- **Diabetes** → Gluco6 or Gluco Extend
+- **Sleep** → YU SLEEP ($155/sale!)
 
 ### INSTALLATION STATUS:
 - ✅ HEALTH → SleepLean (DONE)
