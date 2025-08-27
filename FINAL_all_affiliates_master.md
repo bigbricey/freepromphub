@@ -10,15 +10,8 @@
 - **Category:** Weight Loss
 - **Link:** https://932bfl2gkkmw0w7cympk893t13.hop.clickbank.net
 
-### 2. **The Lost Generator**
-- **Price:** $50.26/sale
-- **Category:** Survival/Emergency
-- **Link:** https://cda19j5hngum3q6fo9ykuiua-6.hop.clickbank.net
 
-### 3. **ProDentim**
-- **Price:** $132.19/sale
-- **Category:** Dental Health
-- **Link:** https://659ddlwdjhjkdudn4co61qx6ct.hop.clickbank.net
+
 
 ### 4. **HepatoBurn**
 - **Price:** $167.00/sale
@@ -58,7 +51,7 @@
 ### 11. **TedsWoodworking**
 - **Price:** $61.36/sale
 - **Category:** DIY/Woodworking
-- **Link:** https://7ca54ouacpux8odjs7-cmvvj54.hop.clickbank.net
+- **Link:** https://6c0e5c0dqlol4ufpg9yjr0xl50.hop.clickbank.net
 
 ### 12. **Soulmate Story**
 - **Price:** $45.37/sale
@@ -73,7 +66,7 @@
 ### 14. **Pineal Guardian X**
 - **Price:** $166.89/sale
 - **Category:** Memory/Brain
-- **Link:** https://7cfeeeyffmjtaqd5tcr20s7ry56.hop.clickbank.net
+- **Link:** https://5d5759ybhlmr7y9chqmmaezmee.hop.clickbank.net
 
 ### 15. **Quietum Plus**
 - **Price:** $125.57/sale
@@ -152,9 +145,6 @@
    - Ready to install
    - Link: https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net
 
-5. **EVERYDAY (20 pages)** → **TedsWoodworking** ($61/sale)
-   - Ready to install
-   - Link: https://7ca54ouacpux8odjs7-cmvvj54.hop.clickbank.net
 
 6. **CONTENT (10 pages)** → **Java Burn 2.0** ($141/sale)
    - CHANGED - Better match for writers who drink coffee
