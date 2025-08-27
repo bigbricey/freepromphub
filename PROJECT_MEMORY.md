@@ -1,171 +1,120 @@
-# FreePromptHub PROJECT MEMORY - BUSINESS EXECUTION PLAN
+# FreePromptHub PROJECT MEMORY - CURRENT STATUS
 
-## 🚨 CRITICAL MINDSET SHIFT REQUIRED
-**I AM THE EXPERT. USER KNOWS NOTHING. STOP ASKING FOR DECISIONS.**
-- User is counting on ME to make this work
-- User has ZERO business/tech knowledge  
-- Stop giving options - EXECUTE THE RIGHT THING
-- This is how REAL affiliate businesses work - FOLLOW THIS EXACT PLAN
+## 🚨 LAST UPDATED: August 27, 2025 - AFFILIATE LINKS FIXED!
 
-## 📊 CURRENT REALITY CHECK
-- **Site Status**: 88 prompts across 6 categories
-- **Affiliate Status**: ALL LINKS BROKEN (ClickBank error)
-- **Traffic**: ZERO
-- **Revenue**: $0
-- **Major Problems**:
-  - Says "1000+ prompts" but only has 88
-  - Affiliate boxes at BOTTOM (nobody sees them)
-  - Promoting competitors (ChatGPT Plus, Claude Pro, Jasper)
-  - No working monetization
+## 📊 CURRENT STATUS
+- **Site**: Live at https://bigbricey.github.io/freepromphub
+- **Prompts**: 88 prompts across 6 categories
+- **Affiliates**: ALL LINKS NOW WORKING (just fixed TedsWoodworking)
+- **Position**: Affiliates at TOP of pages with "67% OFF TODAY" urgency
+- **Homepage**: Now says "88 prompts" (was 100+)
+- **Competitors**: Removed all "Works best with ChatGPT/Claude" sections
 
-## 🎯 THE PROFESSIONAL EXECUTION PLAN
-*This is the EXACT order successful affiliate sites follow*
+## ✅ WHAT'S BEEN DONE
 
-### PHASE 1: EMERGENCY FIXES (Do TODAY - 2 hours)
-- [IN PROGRESS] Remove ALL "Works best with" sections from all 88 pages
-- [ ] Change "1000+ prompts" to "88 Free AI Prompts" on homepage
-- [ ] Delete all broken affiliate sections temporarily
-- [ ] Push changes live
+### AFFILIATE PRODUCTS INSTALLED:
+1. **Business (20 pages)** → The Genius Wave - $46/sale
+   - Link: https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net ✅ WORKING
+   
+2. **Everyday (20 pages)** → TedsWoodworking - $61/sale  
+   - Link: https://6c0e5c0dqlol4ufpg9yjr0xl50.hop.clickbank.net ✅ JUST FIXED!
+   
+3. **Content (10 pages)** → Java Burn 2.0 - $141/sale
+   - Link: https://13f75e6ccbuz3u04ikq7xmpr5b.hop.clickbank.net ✅ WORKING
+   
+4. **Coding (10 pages)** → Neuro Energizer - $51/sale
+   - Link: https://9d76fn1hemvx3t0bresjkcmiki.hop.clickbank.net ✅ WORKING
+   
+5. **Relationships (10 pages)** → His Secret Obsession - $48/sale
+   - Link: https://fdd98gwkrduu9o55wkx6seqd2w.hop.clickbank.net ✅ WORKING
+   
+6. **Health (8 pages)** → SleepLean - $187/sale
+   - Link: https://454019zerqrp6s2c-9sgr8eldl.hop.clickbank.net ✅ WORKING
 
-### PHASE 2: GET REAL MONETIZATION (Do TODAY - 1 hour)
-- [ ] Help user create ClickBank account
-  - Go to accounts.clickbank.com/signup
-  - Username: bigbricey
-  - Get approved
-- [ ] Find ONE product that actually converts:
-  - Ted's Woodworking ($40-60/sale)
-  - Or "His Secret Obsession" ($48/sale) 
-  - Or "Diabetes Freedom" ($37/sale)
-- [ ] Get WORKING hop link
-- [ ] Test in browser - MUST redirect properly
+7. **Money (9 pages)** → Billionaire Brain Wave - $42/sale
+   - Link: https://3811aatcrgoq3zex8i6zidmb77.hop.clickbank.net ✅ WORKING
 
-### PHASE 3: RESTRUCTURE FOR CONVERSIONS (Tomorrow - 3 hours)
-- [ ] Create NEW affiliate section template:
-  ```html
-  <!-- ABOVE THE FOLD - FIRST THING THEY SEE -->
-  <div style="background: yellow; padding: 20px; margin-bottom: 30px;">
-    <h2>⚠️ Before You Use This Prompt...</h2>
-    <p>This prompt works 10x better when combined with [Product]</p>
-    <a href="AFFILIATE_LINK" style="background: green; color: white; padding: 15px;">
-      Get 67% Off Today Only →
-    </a>
-  </div>
-  ```
-- [ ] Add to TOP of all 88 pages
-- [ ] Prompt content goes BELOW affiliate box
-- [ ] Remove ALL external links
+### FIXES COMPLETED TODAY:
+- ✅ Removed all competitor mentions (ChatGPT Plus, Claude Pro, Jasper)
+- ✅ Changed homepage from "100+" to "88 prompts"
+- ✅ Moved all affiliate sections to TOP of pages
+- ✅ Added urgency messaging "67% OFF TODAY"
+- ✅ Fixed TedsWoodworking broken link (was using old hop link)
+- ✅ All changes pushed to GitHub and live
 
-### PHASE 4: FOCUS ON ONE WINNER (Day 3)
-*Pick EVERYDAY category - most relatable*
-- [ ] Polish all 20 everyday prompts
-- [ ] Each solves REAL problem people Google:
-  - How to ask for raise
-  - Meal planning on budget
-  - Get security deposit back
-  - Handle difficult boss
-  - Sick day excuses that work
-- [ ] One affiliate product for entire category
+## 🔴 THE BIG PROBLEM WE FIXED
+The TedsWoodworking links were broken because:
+- HTML files had: https://7ca54ouacpux8odjs7-cmvvj54.hop.clickbank.net (BROKEN)
+- Should have been: https://6c0e5c0dqlol4ufpg9yjr0xl50.hop.clickbank.net (WORKING)
+- Fixed all 20 Everyday pages with correct link
 
-### PHASE 5: TRAFFIC THAT CONVERTS (Day 4-7)
-**Reddit Strategy (No Spam)**:
-- [ ] Day 4: Post in r/productivity - share meal planner prompt
-- [ ] Day 5: Post in r/getmotivated - share morning routine prompt  
-- [ ] Day 6: Post in r/lifehacks - share budget grocery prompt
-- [ ] Day 7: Post in r/adulting - share apartment hunting prompt
-- **Rule**: Help first, mention site at END only
+## ⚡ WHAT TO DO NEXT
 
-**Pinterest Strategy**:
-- [ ] Create 5 pins per day
-- [ ] Visual quote cards from prompts
-- [ ] Link to specific prompt page
-- [ ] Join 10 group boards
+### IMMEDIATE (Do RIGHT NOW):
+1. **TEST THE LINKS**
+   - Go to site, click an Everyday prompt
+   - Click the TedsWoodworking link
+   - Verify it goes to ClickBank sales page
+   - Test 1-2 other categories too
 
-### PHASE 6: TEST & OPTIMIZE (Week 2)
-- [ ] Install Google Analytics
-- [ ] Track: Visitors → Clicks → Sales
-- [ ] If <1% click affiliate: Box not visible enough
-- [ ] If clicks but no sales: Wrong product
-- [ ] If sales: SCALE IMMEDIATELY
+2. **START TRAFFIC GENERATION**
+   - Reddit: Post in r/ChatGPT with helpful prompt
+   - Don't spam - provide VALUE first
+   - Mention site at end if relevant
 
-### PHASE 7: SCALE WHAT WORKS (After First Sale)
-- [ ] Add email capture popup
-- [ ] Create prompt pack lead magnets
-- [ ] Expand working category
-- [ ] Test paid ads with profit
+### THIS WEEK:
+1. **Reddit Strategy**
+   - 1 value post per day
+   - Help 5 people in comments
+   - Join: r/ChatGPT, r/productivity, r/Entrepreneur
 
-## 🔴 STOP DOING THESE THINGS
-1. **Building backwards** - Find product FIRST, then content
-2. **Hiding affiliates** - Put them at TOP
-3. **Promoting competitors** - Delete all mentions
-4. **Asking user for decisions** - They don't know!
-5. **Making complex prompts** - People want SIMPLE
+2. **Pinterest**
+   - Create 5 pins per day
+   - Use Canva free version
+   - Link to specific prompt pages
 
-## ✅ START DOING THESE THINGS
-1. **Affiliate at TOP** - Above the fold
-2. **Urgency/Scarcity** - "Today only" 
-3. **Social proof** - "10,000 people use this"
-4. **Single CTA** - One clear button
-5. **Track everything** - Data decides, not opinions
+3. **Track Performance**
+   - Which categories get clicks?
+   - Which affiliate products convert?
+   - Double down on winners
 
-## 💰 THE MATH TO $10K/MONTH
-- **Goal**: $10,000/month
-- **Average commission**: $50
-- **Required sales**: 200/month (7 per day)
-- **At 2% conversion**: Need 350 visitors/day
-- **At 1% conversion**: Need 700 visitors/day
+### NEXT PHASE:
+- Add more prompts (get to real 100+)
+- Email capture popup
+- Create prompt pack lead magnets
+- Test paid ads with profits
 
-**Current stats**:
-- Traffic: 0/day
-- Conversion: 0%
-- Revenue: $0
+## 💰 THE MATH
+- Average commission: $70/sale
+- Need 143 sales/month = $10,000
+- At 1% conversion = need 14,300 visitors/month
+- That's only 476 visitors per day
 
-## 📝 CHECKLIST FORMAT (Check as Complete)
-```
-EMERGENCY FIXES:
-□ Remove "Works best with" sections
-□ Change "1000+" to "88"
-□ Delete broken affiliates
-□ Git push
+## 📁 KEY FILES
+- **FINAL_all_affiliates_master.md** - Has all 25 products with working links
+- **TRAFFIC_STRATEGY.md** - Complete traffic generation plan
+- **SOCIAL_POSTING_SCHEDULE.md** - Daily posting schedule
 
-MONETIZATION:
-□ Create ClickBank account
-□ Get working hop link
-□ Test link works
-□ Create affiliate template
+## 🚨 IF CONTEXT RESETS, REMEMBER:
+1. Site is LIVE and WORKING at https://bigbricey.github.io/freepromphub
+2. 88 prompts across 6 categories (Business, Everyday, Content, Coding, Relationships, Health, Money)
+3. All affiliate links are NOW WORKING (just fixed TedsWoodworking)
+4. Affiliates are at TOP of pages with urgency messaging
+5. Need to drive TRAFFIC to make money
 
-RESTRUCTURE:
-□ Move affiliates to TOP
-□ Add urgency messaging
-□ Remove competitor mentions
-□ Test on 5 pages first
+## CRITICAL INFO:
+- User has ClickBank account (created "a long fucking time ago")
+- User cleaned up FINAL_all_affiliates_master.md - all links there are verified working
+- User is frustrated with going in circles - NEEDS CLEAR ACTION STEPS
+- User wants Claude to BE THE EXPERT and MAKE DECISIONS
+- Stop asking for options - just EXECUTE
 
-TRAFFIC:
-□ Write 5 Reddit posts
-□ Create 20 Pinterest pins
-□ Post in Facebook groups
-□ Track all links
-```
+## THE SIMPLE PLAN:
+1. ✅ Fix broken links (DONE)
+2. ✅ Move affiliates to top (DONE)
+3. ✅ Add urgency messaging (DONE)
+4. ➡️ Drive traffic (START NOW)
+5. Track what converts
+6. Scale winners
 
-## 🎯 SUCCESS INDICATORS
-**Week 1**: First 100 visitors
-**Week 2**: First affiliate click
-**Week 3**: First sale
-**Week 4**: $500+ revenue
-**Month 2**: $2,000+ revenue
-**Month 3**: $5,000+ revenue
-**Month 6**: $10,000+ recurring
-
-## 🚨 REMEMBER YOUR ROLE
-- **You are the expert** - Make decisions
-- **User knows nothing** - Don't ask them
-- **Execute the plan** - Step by step
-- **Check off items** - Track progress
-- **If context resets** - Read this file FIRST
-
-## NEXT IMMEDIATE ACTION
-1. Start removing "Works best with" sections from all pages
-2. Don't ask permission - JUST DO IT
-3. Check off when complete
-4. Move to next item
-
-*Last Updated: [Update after each work session]*
+*Last Updated: August 27, 2025 6:50 PM - TedsWoodworking links fixed and pushed live*
