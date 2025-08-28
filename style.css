@@ -2084,3 +2084,41 @@ a.button:not(.disabled) {
     color: white !important;
     font-weight: 600 !important;
 }
+
+/* FIX FOR TRENDING PROMPTS SECTION */
+.trending-prompts,
+.trending-section,
+[class*="trending"] {
+    opacity: 1 !important;
+    color: #000000 !important;
+}
+
+.trending-prompts h3,
+.trending-section h3,
+h3:has-text("Trending"),
+h3:contains("Trending") {
+    color: #000000 !important;
+    opacity: 1 !important;
+    font-weight: 800 !important;
+    font-size: 1.8rem !important;
+}
+
+/* Force any element with "Trending Prompts" text to be visible */
+*:has-text("Trending Prompts"),
+*:contains("Trending Prompts") {
+    color: #000000 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+/* Target the specific section if it has inline styles */
+section.trending-prompts,
+div.trending-prompts {
+    opacity: 1 !important;
+}
+
+section.trending-prompts *,
+div.trending-prompts * {
+    opacity: 1 !important;
+    color: inherit !important;
+}
