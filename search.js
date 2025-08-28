@@ -17,10 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.getElementById('searchBar');
     const searchResults = document.getElementById('searchResults');
+    
     if (!searchInput || !searchResults) return;
 
-    // Prefetch sitemap to populate prompts
+    let searchTimeout;
     let lastQuery = '';
+
+    // Prefetch sitemap to populate prompts
     fetch('/sitemap.xml')
         .then(r => r.ok ? r.text() : Promise.reject(new Error('sitemap fetch failed')))
         .then(xmlText => {
@@ -57,13 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
             prompts = fallbackPrompts;
         });
 
-    const searchInput = document.getElementById('searchBar');
-    const searchResults = document.getElementById('searchResults');
-    
-    if (!searchInput || !searchResults) return;
-
-    let searchTimeout;
-
     searchInput.addEventListener('input', function(e) {
         clearTimeout(searchTimeout);
         const query = e.target.value.toLowerCase().trim();
@@ -80,6 +76,18 @@ document.addEventListener('DOMContentLoaded', function() {
             lastQuery = query;
             performSearch(query);
         }, 200);
+    });
+
+    // Also trigger search on Enter key
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const query = e.target.value.toLowerCase().trim();
+            if (query !== '') {
+                lastQuery = query;
+                performSearch(query);
+            }
+        }
     });
 
     // Close search results when clicking outside
@@ -141,11 +149,13 @@ document.addEventListener('DOMContentLoaded', function() {
             'everyday': 'Practical everyday help',
             'business': 'Marketing, sales, and strategy',
             'money': 'Budgeting and personal finance',
+            'relationships': 'Dating, family, friendships',
             'content': 'Writing and social media',
             'coding': 'Programming and debugging',
             'health': 'Fitness, nutrition, wellness',
             'ai-art': 'Midjourney, DALL·E, SD prompts'
         };
-        return map[category] || 'AI prompt';
+        const key = category.toLowerCase();
+        return map[key] || 'AI prompt';
     }
 });
