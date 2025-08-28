@@ -10,6 +10,7 @@
     --primary: #0066CC;
     --primary-dark: #0052A3;
     --text: #0f172a;
+    --text-nav: #1a1a1a;  /* Darker nav text for better contrast */
     --text-muted: #475569;
     --border: #e5e7eb;
     --bg: #ffffff;
@@ -58,14 +59,15 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: var(--text);
-    font-weight: 700;
+    color: #000000;  /* Pure black for maximum contrast */
+    font-weight: 800;  /* Increased from 700 */
     font-size: 1.5rem;
     transition: transform 0.2s;
 }
 
 .brand:hover {
     transform: scale(1.05);
+    color: var(--primary-dark);
 }
 
 .main-nav {
@@ -75,14 +77,23 @@ body {
 }
 
 .main-nav a {
-    color: var(--text);
+    color: var(--text-nav);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;  /* Increased from 500 for better readability */
+    font-size: 0.95rem;
     transition: color 0.2s;
+    padding: 5px 8px;  /* Add padding for larger click area */
 }
 
 .main-nav a:hover {
     color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Active/current page indicator */
+.main-nav a[aria-current="page"] {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .btn-primary {
