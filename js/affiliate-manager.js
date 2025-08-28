@@ -9,16 +9,16 @@
         // Business & Productivity
         business: {
             primary: {
-                title: "🧠 Unlock Your Business Genius",
-                description: "Want to think like a CEO? The Genius Wave uses neuroscience to unlock your brain's full potential - enhancing creativity, focus, and decision-making in just 7 minutes.",
-                cta: "Activate Your Genius Wave →",
+                title: "📚 Business Strategy Templates",
+                description: "Professional templates and frameworks for business planning, marketing, and operations. Save time with proven structures.",
+                cta: "View Templates →",
                 url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#4CAF50"
             },
             secondary: {
-                title: "📊 Master Business Intelligence",
-                description: "Transform your business decisions with AI-powered insights. Get the edge successful entrepreneurs use to stay ahead.",
-                cta: "Get Business Intelligence →",
+                title: "📊 Business Analytics Tools",
+                description: "Data-driven insights for better business decisions. Analyze performance and identify growth opportunities.",
+                cta: "Explore Tools →",
                 url: "https://example.clickbank.net",
                 color: "#2196F3"
             }
@@ -27,17 +27,17 @@
         // Money & Finance
         money: {
             primary: {
-                title: "💰 Billionaire Brain Wave",
-                description: "Discover the 7-minute ritual that attracts money effortlessly. Used by millionaires to manifest wealth through theta brain waves.",
-                cta: "Activate Wealth Frequency →",
-                url: "https://billionairebrain.clickbank.net",
+                title: "💰 Personal Finance Course",
+                description: "Learn practical money management strategies. Build savings, reduce debt, and plan for your financial future.",
+                cta: "Start Learning →",
+                url: "https://finance.clickbank.net",
                 color: "#FFD700"
             },
             secondary: {
-                title: "📈 Passive Income Blueprint",
-                description: "Learn the exact system to generate $10K/month passive income. No experience needed - just follow the proven formula.",
-                cta: "Start Earning Passive Income →",
-                url: "https://passiveincome.clickbank.net",
+                title: "📈 Investment Education",
+                description: "Understand investment basics and risk management. Make informed decisions about your portfolio.",
+                cta: "Learn Investing →",
+                url: "https://investing.clickbank.net",
                 color: "#00C853"
             }
         },
@@ -45,17 +45,17 @@
         // Health & Fitness
         health: {
             primary: {
-                title: "🔥 Java Burn - Coffee Metabolism Booster",
-                description: "Add to your morning coffee to boost metabolism 500%. Burns fat while you work - no diet or exercise changes needed.",
-                cta: "Boost Your Metabolism →",
-                url: "https://javaburn.clickbank.net",
+                title: "🥗 Nutrition Guide",
+                description: "Evidence-based nutrition information for better health. Practical meal planning and healthy eating strategies.",
+                cta: "Get Nutrition Guide →",
+                url: "https://nutrition.clickbank.net",
                 color: "#FF5722"
             },
             secondary: {
-                title: "⚡ Natural Energy Multiplier",
-                description: "Feel 20 years younger with this Nobel Prize-winning discovery. Boost energy, focus, and vitality in just days.",
-                cta: "Restore Your Energy →",
-                url: "https://energyboost.clickbank.net",
+                title: "💪 Fitness Program",
+                description: "Structured workout plans for different fitness levels. Build strength and improve your health sustainably.",
+                cta: "Start Fitness Journey →",
+                url: "https://fitness.clickbank.net",
                 color: "#FF9800"
             }
         },
@@ -63,17 +63,17 @@
         // Relationships & Dating
         relationships: {
             primary: {
-                title: "💕 His Secret Obsession",
-                description: "The #1 relationship guide that reveals the hero instinct in men. Make him devoted to you with these psychological triggers.",
-                cta: "Unlock His Devotion →",
-                url: "https://hissecret.clickbank.net",
+                title: "💕 Relationship Communication",
+                description: "Improve communication skills for better relationships. Learn active listening and conflict resolution techniques.",
+                cta: "Improve Communication →",
+                url: "https://relationships.clickbank.net",
                 color: "#E91E63"
             },
             secondary: {
-                title: "💫 Text Chemistry",
-                description: "Send these simple texts to make any man obsess over you. Works even if you're shy or think he's out of your league.",
-                cta: "Get The Texts →",
-                url: "https://textchem.clickbank.net",
+                title: "💬 Dating Confidence",
+                description: "Build confidence in dating and social situations. Practical tips for authentic connection.",
+                cta: "Build Confidence →",
+                url: "https://dating.clickbank.net",
                 color: "#9C27B0"
             }
         },
@@ -81,17 +81,17 @@
         // Content & Writing
         content: {
             primary: {
-                title: "✍️ AI Content Genius",
-                description: "Create viral content 10x faster with AI. Get 1 million views using these proven templates and formulas.",
-                cta: "Create Viral Content →",
-                url: "https://contentgenius.clickbank.net",
+                title: "✍️ Content Creation Course",
+                description: "Learn to create engaging content for blogs and social media. Practical writing techniques and strategies.",
+                cta: "Learn Content Creation →",
+                url: "https://content.clickbank.net",
                 color: "#3F51B5"
             },
             secondary: {
-                title: "📝 Copywriting Secrets",
-                description: "Write copy that converts at 10%+. The same formulas used by $100K/month copywriters revealed.",
-                cta: "Master Copywriting →",
-                url: "https://copywriting.clickbank.net",
+                title: "📝 Writing Skills Workshop",
+                description: "Improve your writing for business and marketing. Clear communication and persuasive writing techniques.",
+                cta: "Improve Writing →",
+                url: "https://writing.clickbank.net",
                 color: "#673AB7"
             }
         },
@@ -99,17 +99,17 @@
         // Coding & Tech
         coding: {
             primary: {
-                title: "💻 Code Like a Genius",
-                description: "Master any programming language 10x faster with neuroscience. Activate your coding brain for instant understanding.",
-                cta: "Unlock Coding Genius →",
-                url: "https://codegenius.clickbank.net",
+                title: "💻 Programming Fundamentals",
+                description: "Learn programming basics with structured lessons. Build practical skills for web development.",
+                cta: "Start Learning →",
+                url: "https://programming.clickbank.net",
                 color: "#00BCD4"
             },
             secondary: {
-                title: "🚀 $10K/Month Coding",
-                description: "Learn the exact skills to earn $10K/month as a developer. From zero to hired in 90 days guaranteed.",
-                cta: "Start Coding Career →",
-                url: "https://codingcareer.clickbank.net",
+                title: "🚀 Web Development Course",
+                description: "Comprehensive web development training. Learn HTML, CSS, JavaScript, and modern frameworks.",
+                cta: "Learn Web Dev →",
+                url: "https://webdev.clickbank.net",
                 color: "#009688"
             }
         },
@@ -117,17 +117,17 @@
         // Everyday Life
         everyday: {
             primary: {
-                title: "🎯 Life Optimization System",
-                description: "The Swiss Army knife for life's challenges. Get instant solutions to any problem with this proven framework.",
-                cta: "Optimize Your Life →",
-                url: "https://lifeoptimize.clickbank.net",
+                title: "🎯 Productivity System",
+                description: "Organize your life with proven productivity methods. Time management and goal-setting strategies.",
+                cta: "Get Organized →",
+                url: "https://productivity.clickbank.net",
                 color: "#795548"
             },
             secondary: {
-                title: "🧲 Law of Attraction Accelerator",
-                description: "Manifest anything in 24 hours using quantum physics. The secret celebrities use to get everything they want.",
-                cta: "Start Manifesting →",
-                url: "https://manifest.clickbank.net",
+                title: "📖 Personal Development",
+                description: "Build better habits and reach your goals. Practical self-improvement strategies that work.",
+                cta: "Start Growing →",
+                url: "https://development.clickbank.net",
                 color: "#607D8B"
             }
         },
@@ -135,17 +135,17 @@
         // AI Art & Creative
         'ai-art': {
             primary: {
-                title: "🎨 AI Art Profits",
-                description: "Make $5K/month selling AI art. Complete system includes prompts, platforms, and marketing strategies.",
-                cta: "Start AI Art Business →",
-                url: "https://aiartprofits.clickbank.net",
+                title: "🎨 Digital Art Course",
+                description: "Learn digital art creation techniques. From basics to advanced methods for creating stunning visuals.",
+                cta: "Learn Digital Art →",
+                url: "https://digitalart.clickbank.net",
                 color: "#FF4081"
             },
             secondary: {
-                title: "🖼️ Creative Genius Activation",
-                description: "Unlock your artistic potential with brain wave technology. Create masterpieces even with zero talent.",
-                cta: "Activate Creativity →",
-                url: "https://creativegenius.clickbank.net",
+                title: "🖼️ Creative Skills Training",
+                description: "Develop your creative abilities with structured practice. Techniques for visual thinking and design.",
+                cta: "Develop Creativity →",
+                url: "https://creative.clickbank.net",
                 color: "#7C4DFF"
             }
         },
@@ -153,17 +153,17 @@
         // Universal (fallback)
         universal: {
             primary: {
-                title: "🧠 The Genius Wave",
-                description: "NASA's secret brain wave technology now available to public. Activate your genius potential in just 7 minutes.",
-                cta: "Activate Your Genius →",
-                url: "https://geniuswave.clickbank.net",
+                title: "📚 Skills Development Library",
+                description: "Access courses and resources for personal and professional growth. Learn at your own pace.",
+                cta: "Browse Library →",
+                url: "https://learning.clickbank.net",
                 color: "#4CAF50"
             },
             secondary: {
-                title: "💡 Success Accelerator",
-                description: "The one tool successful people use to achieve anything 10x faster. Works for any goal or challenge.",
-                cta: "Accelerate Success →",
-                url: "https://success.clickbank.net",
+                title: "💡 Online Learning Platform",
+                description: "Expand your knowledge with quality educational content. Various subjects and skill levels available.",
+                cta: "Start Learning →",
+                url: "https://education.clickbank.net",
                 color: "#2196F3"
             }
         }
@@ -293,7 +293,7 @@
                     ${offer.cta}
                 </a>
                 <p style="${style === 'banner' ? 'color: rgba(255,255,255,0.8);' : 'color: var(--text-secondary);'} font-size: 12px; margin-top: 15px; position: relative; z-index: 1;">
-                    <em>*Sponsored - We may earn a commission if you purchase. This helps us keep all prompts free.</em>
+                    <em>*Partner content - We may earn a commission if you purchase. This helps us keep all prompts free.</em>
                 </p>
             `;
             
