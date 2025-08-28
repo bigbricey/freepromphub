@@ -102,7 +102,7 @@
     /* Critical CSS - Above-the-fold styles for FreePromptHub */
 /* This should be inlined in the <head> for optimal performance */
 
-:root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--shadow:0 2px 4px rgba(0,0,0,0.1);--radius:8px}
+:root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--shadow:0 2px 4px rgba(0,0,0,0.1);--radius:8px;--card-bg:#2a2e35;--card-text:#e9ecef}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -115,7 +115,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .btn-primary{background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.2s ease}
 .btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,102,204,0.3)}
 .mobile-menu-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;width:30px;height:30px;background:transparent;border:none;cursor:pointer;padding:0}
-.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:white;border-radius:var(--radius);margin:40px 0}
+.hero{text-align:center;padding:80px 20px;background:#2a2e35;color:#e9ecef;border-radius:var(--radius);margin:40px 0;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
 .hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:20px;font-weight:800;letter-spacing:-1px;line-height:1.1}
 .tagline{font-size:clamp(1rem,2vw,1.25rem);opacity:0.95;margin-bottom:30px;line-height:1.5}
 .hero-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
@@ -147,6 +147,67 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .trustbar{gap:15px}
 .trustbar li{font-size:0.9rem}
 }
+    </style>
+    <!-- Additional styling for better contrast -->
+    <style>
+        /* Fix overly bright white sections */
+        .features, .disclosure, .cta {
+            background: #2a2e35;
+            color: #e9ecef;
+            padding: 40px 20px;
+            border-radius: var(--radius);
+            margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .features h2, .cta h2, .disclosure strong {
+            color: #fff;
+        }
+        
+        .features-grid .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .disclosure a, .cta a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .disclosure a:hover, .cta a:hover {
+            color: #5dade2;
+        }
+        
+        /* Fix transparency section styling */
+        .disclosure {
+            background: #3a3f47;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Ensure hero buttons are visible */
+        .hero .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        
+        .hero .btn-primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        /* Fix the second button in hero */
+        .hero a[style*="background: transparent"] {
+            background: transparent !important;
+            color: white !important;
+            border: 2px solid white !important;
+        }
+        
+        .hero a[style*="background: transparent"]:hover {
+            background: rgba(255,255,255,0.1) !important;
+        }
     </style>
     <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/dark-mode.css">
@@ -284,7 +345,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
         <div class="container">
             <!-- NEW: Hero Section with Trust Signals -->
             <section class="hero">
-                <h1 style="color: white !important; opacity: 1 !important; visibility: visible !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Skip 100 Hours of Trial & Error</h1>
+                <h1 style="color: #ffffff !important; opacity: 1 !important; visibility: visible !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Skip 100 Hours of Trial & Error</h1>
                 <p class="tagline">Battle-tested prompts that turn ChatGPT and Claude from toys into tools. Save $297/month on prompt courses.</p>
                 <div class="hero-actions">
                     <a class="btn-primary" href="#categories">Browse All Prompts</a>
