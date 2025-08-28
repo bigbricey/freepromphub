@@ -156,8 +156,10 @@ main {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg) 100%);
+    background: #2a2e35;
     margin-bottom: 50px;
+    color: #e9ecef;
+    border-radius: var(--radius);
 }
 
 .hero h1 {
@@ -385,15 +387,17 @@ main {
 /* Features Section */
 .features {
     margin-bottom: 60px;
-    background: var(--bg-subtle);
+    background: #2a2e35;
     padding: 40px;
     border-radius: var(--radius);
+    color: #e9ecef;
 }
 
 .features h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
+    color: #ffffff;
 }
 
 .features-grid {
@@ -405,6 +409,9 @@ main {
 .feature {
     text-align: center;
     padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .feature-icon {
@@ -416,45 +423,58 @@ main {
 .feature h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .feature p {
-    color: var(--text-muted);
+    color: #b8bcc3;
 }
 
 /* CTA Section */
 .cta {
-    background: linear-gradient(180deg, #f8fafc, #eef2ff);
+    background: #2a2e35;
     border-radius: var(--radius);
     padding: 40px;
     text-align: center;
     margin-bottom: 40px;
+    color: #e9ecef;
 }
 
 .cta h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .cta p {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: #b8bcc3;
 }
 
 /* NEW: Affiliate Disclosure */
 .disclosure {
     margin: 40px auto;
     padding: 20px;
-    background: white;
-    border: 2px dashed var(--border);
+    background: #3a3f47;
+    border: 2px dashed #4a5568;
     border-radius: var(--radius);
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: #b8bcc3;
+    border-left: 4px solid var(--primary);
 }
 
 .disclosure strong {
     font-weight: 700;
-    color: var(--text);
+    color: #ffffff;
+}
+
+.disclosure a {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.disclosure a:hover {
+    color: #5dade2;
 }
 
 /* Footer */
