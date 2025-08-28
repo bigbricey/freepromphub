@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
                    prompt.description.toLowerCase().includes(query);
         });
 
+        // Track search with simple analytics
+        if (window.simpleAnalytics && window.simpleAnalytics.trackSearch) {
+            window.simpleAnalytics.trackSearch(results.length > 0);
+        }
+
         // Display results
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result => `

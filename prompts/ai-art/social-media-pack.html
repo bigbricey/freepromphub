@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    <meta name="description" content="Create consistent social media visuals with AI. Generate Instagram posts, stories, YouTube thumbnails, and complete brand packages that stop the scroll.">
+    <meta name="author" content="FreePromptHub">
+    <link rel="canonical" href="https://www.freeprompthub.com/prompts/ai-art/social-media-pack.html">
+    
+    <title>Social Media Image Pack - AI Art | FreePromptHub</title>
+    <style id="critical-css">
+    :root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--shadow:0 2px 4px rgba(0,0,0,0.1);--radius:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.site-header{background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 100%);padding:20px 0;border-bottom:2px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
+.header-content{display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:1.5rem;font-weight:800;color:#000;text-decoration:none;display:flex;align-items:center}
+.main-nav{display:flex;gap:30px;align-items:center}
+.main-nav a{color:#333;text-decoration:none;font-weight:500;transition:color 0.2s}
+.main-nav a:hover{color:var(--primary)}
+.btn-primary{background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+.mobile-menu-toggle{display:none}
+@media (max-width:768px){
+.mobile-menu-toggle{display:flex;flex-direction:column;justify-content:center;width:30px;height:30px;background:transparent;border:none;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:22px;height:2px;background:#333;margin:3px 0}
+.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:20px}
+.main-nav.active{display:flex}
+}
+    </style>
+    <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/style.css"></noscript>
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner" class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="/">
+                <span style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
+                FreePromptHub
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/prompts/business/">Business</a>
+                <a href="/prompts/content/">Content</a>
+                <a href="/prompts/coding/">Coding</a>
+                <a href="/about">About</a>
+                <a class="btn-primary" href="/#categories">Get Prompts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/ai-art/">AI Art</a>
+                <span class="separator">›</span>
+                <span class="current" aria-current="page">Social Media Image Pack</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Social Media Image Pack</h1>
+                <p class="prompt-description">
+                    Create a complete set of on-brand social media visuals. Generate scroll-stopping content for Instagram, TikTok, YouTube, and more - all with consistent style and brand identity.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly maxlength="5000">You are a social media visual strategist who creates viral-worthy content that maintains brand consistency across all platforms. You understand platform-specific requirements and psychological triggers that make people stop scrolling.
+
+I need a complete social media visual package that looks professional and drives engagement.
+
+BRAND FOUNDATION:
+- Brand Name: [Your brand]
+- Industry/Niche: [Fashion / Fitness / Food / Tech / Beauty / Education / Other]
+- Target Audience: [Age range, interests, platform preferences]
+- Brand Personality: [Fun / Professional / Luxe / Minimal / Bold / Natural]
+- Color Palette: [Primary: #hex, Secondary: #hex, Accent: #hex]
+- Visual Style: [Photo-realistic / Illustration / 3D / Flat design / Mixed media]
+- Competitors: [For style reference]
+
+COMPLETE SOCIAL MEDIA PACKAGE:
+
+1. **INSTAGRAM FEED POST (1:1)**
+"[Brand topic] social media post, Instagram aesthetic, [brand colors], bold typography saying '[your text]', [visual style], engaging composition, professional design, trending on Instagram --ar 1:1 --v 5.2"
+
+2. **INSTAGRAM STORY (9:16)**
+"Instagram story design for [brand], vertical format, [main element], space for text overlay at top and bottom, [brand colors], swipe-up area at bottom, mobile-optimized, [visual style] --ar 9:16 --v 5.2"
+
+3. **INSTAGRAM CAROUSEL COVER**
+"Instagram carousel cover slide, '[Title Text]' in bold letters, numbered 1 of [X], [brand colors], consistent design system, swipe indicator, [visual style], professional layout --ar 1:1 --v 5.2"
+
+4. **YOUTUBE THUMBNAIL (16:9)**
+"YouTube thumbnail for '[Video Title]', eye-catching design, [main subject] with shocked/excited expression, bold text overlay, high contrast, [brand colors], clickable design, professional YouTube thumbnail --ar 16:9 --v 5.2"
+
+5. **TIKTOK COVER (9:16)**
+"TikTok video cover, '[Hook Text]' in trendy font, [visual element], Gen-Z aesthetic, [brand colors], mobile-first design, viral potential, vertical format --ar 9:16 --v 5.2"
+
+6. **LINKEDIN POST (1200x627)**
+"Professional LinkedIn post graphic, [topic], corporate but engaging, [brand colors], space for text, business aesthetic, thought leadership design, clean layout --ar 1200:627 --v 5.2"
+
+7. **TWITTER/X HEADER (1500x500)**
+"Twitter header banner for [brand], [visual theme], space for profile circle on left, [brand colors], professional header design, consistent branding --ar 3:1 --v 5.2"
+
+8. **PINTEREST PIN (2:3)**
+"Pinterest pin for [topic], vertical infographic style, '[Title]' at top, [visual elements], step-by-step layout, [brand colors], save-worthy design, Pinterest-optimized --ar 2:3 --v 5.2"
+
+CONTENT TYPES BY PURPOSE:
+
+**Quote Posts:**
+"'[Your quote]' in [font style], [background style], [brand colors], Instagram quote post, inspiring design, shareable content, professional typography --ar 1:1"
+
+**Before/After:**
+"Split screen before and after, [subject], dramatic transformation, clear division, labeled sections, [brand colors], compelling comparison --ar 1:1"
+
+**Tips/Education:**
+"[Number] tips for [topic], numbered list design, icons for each point, [brand colors], educational infographic, easy to read, valuable content --ar 1:1"
+
+**Product Feature:**
+"[Product] feature spotlight, highlighting [specific feature], arrows and callouts, [brand colors], educational product post, clear benefits --ar 1:1"
+
+**Testimonial:**
+"Customer testimonial design, five stars, quote marks, '[testimonial text]', customer photo placeholder, [brand colors], trust-building design --ar 1:1"
+
+**Event/Announcement:**
+"[Event type] announcement, date and time prominent, [visual theme], excitement-building design, [brand colors], clear CTA, professional layout --ar 1:1"
+
+CONSISTENT STORY TEMPLATES:
+
+**Poll/Question:**
+"Instagram story poll template, '[Question]', this or that format, [brand colors], interactive design, engagement-driving, clear options --ar 9:16"
+
+**Countdown:**
+"Story countdown template, '[Event]' launching soon, timer placeholder, excitement building, [brand colors], urgency design --ar 9:16"
+
+**Behind the Scenes:**
+"BTS story template, 'Behind the Scenes' text, casual authentic feel, [brand colors], exclusive content vibe, mobile-optimized --ar 9:16"
+
+**Swipe Up/Link:**
+"Story with link sticker area, '[CTA text]', arrow pointing up, [brand colors], action-driving design, clear call-to-action --ar 9:16"
+
+BRAND CONSISTENCY ELEMENTS:
+
+Logo Placement:
+"subtle [brand] logo in bottom right corner, watermark style, consistent across all posts"
+
+Font Hierarchy:
+"headline in [font1], body text in [font2], consistent typography system, readable on mobile"
+
+Color Usage:
+"primary color for headlines, secondary for accents, white space for breathing room, consistent palette"
+
+Filter/Style:
+"consistent filter effect, [warm/cool/neutral] tone, signature look, recognizable style"
+
+ENGAGEMENT BOOSTERS:
+
+Carousel Prompts:
+"Slide [number] of [total], consistent design across slides, swipe indicator, continuous story, [brand style]"
+
+Video Thumbnails:
+"play button overlay, motion blur suggesting action, intriguing frame, clickbait-worthy but honest"
+
+Story Highlights:
+"Instagram highlight cover icons, [category name], minimalist design, [brand colors], consistent set of [number] --ar 1:1"
+
+Reel Covers:
+"Instagram Reel cover, trending audio reference, bold text hook, [brand style], vertical video thumbnail --ar 9:16"
+
+SEASONAL VARIATIONS:
+
+"[Holiday/Season] themed post, [regular content] with seasonal elements, maintaining brand colors, festive but on-brand, timely content --ar 1:1"
+
+PLATFORM-SPECIFIC OPTIMIZATION:
+
+- Instagram: High contrast, mobile-first, square or vertical
+- TikTok: Fast-paced feel, Gen-Z aesthetic, vertical only
+- YouTube: Clear thumbnails, readable at small size
+- LinkedIn: Professional, text-friendly, landscape
+- Pinterest: Vertical, informational, save-worthy
+- Twitter: Works in feed, considers crop, simple
+
+Remember: Consistency builds recognition. Save templates and reuse with variations!</textarea>
+                    
+                    <button id="copy-button" aria-label="Copy prompt to clipboard" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Create templates you can reuse with different content</li>
+                        <li>Test posts at mobile size - that's where most viewing happens</li>
+                        <li>Leave space for text overlays and platform UI elements</li>
+                        <li>Batch create content in consistent sessions for unified look</li>
+                        <li>Save brand elements (colors, fonts) in your prompt library</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/ai-art/brand-style-guide.html" class="related-card">
+                            <h3>Brand Style Guide</h3>
+                            <p>Complete visual identity</p>
+                            <span class="category-tag">AI Art</span>
+                        </a>
+                        <a href="/prompts/content/instagram-caption.html" class="related-card">
+                            <h3>Instagram Caption Writer</h3>
+                            <p>Pair with your visuals</p>
+                            <span class="category-tag">Content</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+        </div>
+    </footer>
+
+    <script src="/feedback.js"></script>
+    <script src="/script.js"></script>
+    <script src="/simple-analytics.js" async></script>
+        <script src="/js/affiliate-manager.js"></script>
+        <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
+</body>
+</html>

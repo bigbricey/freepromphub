@@ -1,0 +1,47 @@
+# Security Policy for FreePromptHub
+# This file implements the security.txt standard (RFC 9116)
+
+Contact: security@freepromphub.com
+Contact: https://www.freepromphub.com/contact.html
+
+Expires: 2025-12-31T23:59:59.000Z
+
+Preferred-Languages: en
+
+Canonical: https://www.freepromphub.com/security.txt
+
+Policy: https://www.freepromphub.com/security-policy
+
+# Security Headers Implementation
+# - Content Security Policy (CSP)
+# - HTTP Strict Transport Security (HSTS)
+# - X-Frame-Options
+# - X-Content-Type-Options
+# - X-XSS-Protection
+# - Referrer-Policy
+# - Permissions-Policy
+
+# Compliance
+# - GDPR Compliant
+# - CCPA Compliant
+# - Cookie Consent Implemented
+# - Data Processing Agreement Available
+
+# Vulnerability Disclosure
+# We appreciate responsible disclosure of security vulnerabilities.
+# Please allow us 90 days to address issues before public disclosure.
+
+# Hall of Fame
+# We maintain a hall of fame for security researchers who have helped us.
+# https://www.freepromphub.com/security-hall-of-fame
+
+Acknowledgments: https://www.freepromphub.com/security-hall-of-fame
+
+# PGP Key (if available)
+# Encryption: https://www.freepromphub.com/pgp-key.asc
+
+# Bug Bounty Program
+# Currently: No formal bug bounty program
+# Acknowledgment: Public recognition in our Hall of Fame
+
+Hiring: https://www.freepromphub.com/careers

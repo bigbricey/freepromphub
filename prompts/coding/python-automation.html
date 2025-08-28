@@ -1,15 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <!-- Preload critical resources -->
+    <link rel="dns-prefetch" href="//www.freeprompthub.com">
+    <link rel="preconnect" href="https://www.freeprompthub.com">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="FreePromptHub">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#0066CC">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
     <meta name="description" content="Python Automation Script prompt - Generate Python scripts to automate any repetitive task. Web scraping, file processing, API calls, and more.">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="FreePromptHub">
+    <link rel="canonical" href="https://www.freeprompthub.com/prompts/coding/python-automation.html">
+    
+    <!-- Open Graph Tags (Facebook, LinkedIn) -->
+    <meta property="og:site_name" content="FreePromptHub">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.freeprompthub.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FreePromptHub - Free AI Prompts">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:site" content="@freeprompthub">
+    <meta name="twitter:creator" content="@freeprompthub">
+    <meta name="twitter:title" content="Python Automation Script Prompt - Coding | FreePromptHub">
+    <meta name="twitter:description" content="Python Automation Script prompt - Generate Python scripts to automate any repetitive task. Web scraping, file processing, API calls, and more.">
+    <meta name="twitter:image" content="https://www.freeprompthub.com/og-image.png">
+    <meta name="twitter:image:alt" content="FreePromptHub Logo">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="keywords" content="AI prompts, ChatGPT prompts, Claude prompts, free prompts, technology prompts">
+    <meta name="category" content="Technology">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "FreePromptHub",
+        "url": "https://www.freeprompthub.com/prompts/coding/python-automation.html",
+        "description": "Python Automation Script prompt - Generate Python scripts to automate any repetitive task. Web scraping, file processing, API calls, and more.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "FreePromptHub",
+            "url": "https://www.freeprompthub.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.freeprompthub.com/icon-512x512.png",
+                "width": 512,
+                "height": 512
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.freeprompthub.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.freeprompthub.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Coding",
+            "item": "https://www.freeprompthub.com/coding"
+        }
+    ]
+}
+    </script>
+
     <title>Python Automation Script Prompt - Coding | FreePromptHub</title>
-    <link rel="stylesheet" href="/style.css">
+    <style id="critical-css">
+    /* Critical CSS - Above-the-fold styles for FreePromptHub */
+/* This should be inlined in the <head> for optimal performance */
+
+:root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--shadow:0 2px 4px rgba(0,0,0,0.1);--radius:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.site-header{background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 100%);padding:20px 0;border-bottom:2px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;backdrop-filter:blur(10px);background:rgba(255,255,255,0.95)}
+.header-content{display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:1.5rem;font-weight:800;color:#000;text-decoration:none;display:flex;align-items:center;letter-spacing:-0.5px}
+.main-nav{display:flex;gap:30px;align-items:center}
+.main-nav a{color:#333;text-decoration:none;font-weight:500;transition:color 0.2s}
+.main-nav a:hover{color:var(--primary)}
+.btn-primary{background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.2s ease}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,102,204,0.3)}
+.mobile-menu-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;width:30px;height:30px;background:transparent;border:none;cursor:pointer;padding:0}
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:white;border-radius:var(--radius);margin:40px 0}
+.hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:20px;font-weight:800;letter-spacing:-1px;line-height:1.1}
+.tagline{font-size:clamp(1rem,2vw,1.25rem);opacity:0.95;margin-bottom:30px;line-height:1.5}
+.hero-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.trustbar{list-style:none;display:flex;justify-content:center;gap:30px;margin-top:40px;padding:0;flex-wrap:wrap}
+.trustbar li{font-size:1rem;opacity:0.9}
+.search-section{margin:40px 0}
+.search-container{position:relative;max-width:600px;margin:0 auto}
+.search-input{width:100%;padding:15px 20px;font-size:1rem;border:2px solid var(--border);border-radius:var(--radius);transition:all 0.3s ease}
+.search-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,102,204,0.1)}
+.categories{padding:40px 0}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.category-card{display:block;padding:30px;background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:all 0.3s ease;position:relative;overflow:hidden}
+.category-card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,0.1);border-color:var(--primary)}
+.category-icon{font-size:2.5rem;margin-bottom:15px}
+.category-card h3{font-size:1.25rem;margin-bottom:10px;color:var(--text)}
+.category-card p{color:var(--text-muted);line-height:1.5}
+.prompt-count{display:inline-block;margin-top:10px;padding:4px 12px;background:var(--primary);color:white;border-radius:20px;font-size:0.85rem;font-weight:600}
+
+/* Mobile Critical CSS */
+@media (max-width:768px){
+.mobile-menu-toggle{display:flex}
+.mobile-menu-toggle span{display:block;width:22px;height:2px;background:#333;margin:3px 0;transition:all 0.3s}
+.mobile-menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.mobile-menu-toggle.active span:nth-child(2){opacity:0}
+.mobile-menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);border-bottom:2px solid var(--border)}
+.main-nav.active{display:flex}
+.hero{padding:60px 20px}
+.trustbar{gap:15px}
+.trustbar li{font-size:0.9rem}
+}
+    </style>
+    <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/style.css"></noscript>
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
         <!-- Standardized Header with Mobile Navigation -->
-    <header class="site-header">
+    <header role="banner" class="site-header">
         <div class="container header-content">
             <a class="brand" href="/">
                 <span style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
@@ -24,27 +289,22 @@
                 <a href="/prompts/business/">Business</a>
                 <a href="/prompts/content/">Content</a>
                 <a href="/prompts/coding/">Coding</a>
-                <a href="/about.html">About</a>
+                <a href="/about">About</a>
                 <a class="btn-primary" href="/#categories">Get Prompts</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main role="main">
         <div class="container">
-                <section class="affiliate-section" style="margin-top: 60px; padding: 30px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 10px;">
-                    <h2 style="color: #00ff41; margin-bottom: 15px;">⚡ Code at Peak Performance</h2>
-                    <p style="color: white; margin-bottom: 20px;">Long coding sessions demand sustained mental energy. Neuro Energizer uses scientifically-proven nootropics to enhance focus, memory, and cognitive speed - helping you debug faster, think clearer, and code better for hours without the crash.</p>
-                    <a href="https://9d76fn1hemvx3t0bresjkcmiki.hop.clickbank.net" target="_blank" style="display: inline-block; background: #00ff41; color: #1a1a2e; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">Unlock Your Coding Potential →</a>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 12px; margin-top: 15px;"><em>*Sponsored - We may earn a commission if you purchase. This helps us keep all prompts free.</em></p>
-                </section>
+                
 
-            <nav class="breadcrumb">
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
                 <a href="/">Home</a>
                 <span class="separator">›</span>
                 <a href="/prompts/coding/">Coding</a>
                 <span class="separator">›</span>
-                <span class="current">Python Automation Script</span>
+                <span class="current" aria-current="page">Python Automation Script</span>
             </nav>
 
             <article class="prompt-display">
@@ -55,7 +315,7 @@
 
                 <div class="prompt-content">
                     <label for="prompt-text" class="prompt-label">Prompt:</label>
-                    <textarea id="prompt-text" class="prompt-textarea" readonly>You are a Python automation expert with deep knowledge of scripting, web scraping, API integration, and process automation. Create robust, efficient scripts that handle errors gracefully and save hours of manual work.
+                    <textarea id="prompt-text" class="prompt-textarea" readonly maxlength="5000">You are a Python automation expert with deep knowledge of scripting, web scraping, API integration, and process automation. Create robust, efficient scripts that handle errors gracefully and save hours of manual work.
 
 I need a Python automation script for the following task:
 
@@ -296,7 +556,7 @@ Please ensure the script is:
 - Secure (no hardcoded credentials)
 - Easy to modify and extend</textarea>
                     
-                    <button id="copy-button" class="copy-button">
+                    <button id="copy-button" aria-label="Copy prompt to clipboard" class="copy-button">
                         <span class="button-text">Copy Prompt</span>
                         <span class="success-message">Copied!</span>
                     </button>
@@ -343,7 +603,7 @@ Please ensure the script is:
         </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
             <nav>
@@ -354,6 +614,58 @@ Please ensure the script is:
         </div>
     </footer>
 
+    <script src="/feedback.js"></script>
     <script src="/script.js"></script>
+    <script src="/simple-analytics.js" async></script>
+        <script src="/js/affiliate-manager.js"></script>
+        <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
 </body>
 </html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <title>Your Privacy Rights Dashboard - FreePromptHub</title>
+    <meta name="description" content="Manage your data, privacy rights, and consent preferences">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    
+    <!-- Dashboard Styles -->
+    <style>
+        .user-rights-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+        }
+        
+        .dashboard-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        #complianceBadges {
+            margin-top: 20px;
+        }
+        
+        .compliance-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .dashboard-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .info-item label {
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .edit-btn {
+            padding: 5px 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .edit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .categories-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .category-item {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .category-header h4 {
+            margin: 0;
+            color: #34495e;
+        }
+        
+        .data-count {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        
+        .category-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        
+        .category-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .category-actions button {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        
+        .view-data-btn:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .download-category-btn:hover {
+            background: #27ae60;
+            color: white;
+            border-color: #27ae60;
+        }
+        
+        .delete-category-btn:hover {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+        
+        .activities-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .activities-table th,
+        .activities-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .activities-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .object-btn {
+            padding: 5px 10px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .object-btn:hover {
+            background: #c0392b;
+        }
+        
+        .required-badge {
+            padding: 5px 10px;
+            background: #95a5a6;
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .history-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+        }
+        
+        .history-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .history-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+        
+        .history-date {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .history-details {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .action-btn.export {
+            background: #3498db;
+            color: white;
+        }
+        
+        .action-btn.export:hover {
+            background: #2980b9;
+        }
+        
+        .action-btn.delete {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .action-btn.delete:hover {
+            background: #c0392b;
+        }
+        
+        .action-btn.restrict {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .action-btn.restrict:hover {
+            background: #e67e22;
+        }
+        
+        .action-btn.object {
+            background: #9b59b6;
+            color: white;
+        }
+        
+        .action-btn.object:hover {
+            background: #8e44ad;
+        }
+        
+        /* Modals */
+        .edit-modal,
+        .data-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-content h3 {
+            margin-top: 0;
+        }
+        
+        .data-display {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .modal-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        /* Notifications */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 4px;
+            color: white;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s;
+            z-index: 10001;
+        }
+        
+        .notification.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .notification-success {
+            background: #27ae60;
+        }
+        
+        .notification-error {
+            background: #e74c3c;
+        }
+        
+        .notification-info {
+            background: #3498db;
+        }
+        
+        /* Login Prompt */
+        .login-prompt {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .login-prompt h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .login-prompt p {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .login-prompt .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        /* Dark mode support */
+        [data-theme="dark"] .dashboard-card {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .dashboard-card h3 {
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .info-item {
+            background: #2a2a2a;
+        }
+        
+        [data-theme="dark"] .category-item {
+            border-color: #333;
+        }
+        
+        [data-theme="dark"] .activities-table th {
+            background: #2a2a2a;
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .activities-table td {
+            border-color: #333;
+        }
+        
+        [data-theme="dark"] .history-details {
+            background: #2a2a2a;
+        }
+        
+        [data-theme="dark"] .modal-content {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .data-display {
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="brand">
+                    <img src="/images/logo.png" alt="FreePromptHub Logo" class="logo">
+                    <span>FreePromptHub</span>
+                </a>
+                <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/prompts/business">Business</a></li>
+                            <li><a href="/prompts/content">Content Creation</a></li>
+                            <li><a href="/prompts/everyday">Everyday Life</a></li>
+                            <li><a href="/prompts/health">Health & Wellness</a></li>
+                            <li><a href="/prompts/money">Money & Finance</a></li>
+                            <li><a href="/prompts/relationships">Relationships</a></li>
+                            <li><a href="/prompts/coding">Coding & Tech</a></li>
+                            <li><a href="/prompts/ai-art">AI Art</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/search">🔍 Search</a></li>
+                    <li id="authMenuItem"></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="user-rights-container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Your Privacy Rights Dashboard</h1>
+                <p>Complete control over your personal data and privacy preferences</p>
+                <div id="complianceBadges"></div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button id="exportDataBtn" class="action-btn export">
+                        📥 Export My Data
+                    </button>
+                    <button id="deleteAccountBtn" class="action-btn delete">
+                        🗑️ Delete Account
+                    </button>
+                    <button id="restrictProcessingBtn" class="action-btn restrict">
+                        🔒 Restrict Processing
+                    </button>
+                    <button id="objectProcessingBtn" class="action-btn object">
+                        ✋ Object to Processing
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- User Information -->
+                <div class="dashboard-card">
+                    <h3>Your Account Information</h3>
+                    <div id="userInfoContainer">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Data Categories -->
+                <div class="dashboard-card">
+                    <h3>Your Data Categories</h3>
+                    <div id="dataCategoriesContainer">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processing Activities -->
+            <div class="dashboard-card">
+                <h3>How We Process Your Data</h3>
+                <div id="processingActivitiesContainer">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Consent History -->
+            <div class="dashboard-card">
+                <h3>Your Consent History</h3>
+                <div id="consentHistoryContainer">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Data Correction Form -->
+            <div class="dashboard-card">
+                <h3>Request Data Correction</h3>
+                <form id="dataCorrectionForm" role="form" novalidate>
+                    <div class="form-group">
+                        <label for="correctionField">Field to Correct:</label>
+                        <select id="correctionField" name="field" required aria-required="true">
+                            <option value="">Select a field</option>
+                            <option value="name">Name</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="oldValue">Current Value:</label>
+                        <input type="text" id="oldValue" name="oldValue" required maxlength="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="newValue">New Value:</label>
+                        <input type="text" id="newValue" name="newValue" required maxlength="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Correction:</label>
+                        <textarea id="reason" name="reason" rows="3" maxlength="5000"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Correction Request</button>
+                </form>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="dashboard-card">
+                <h3>Privacy Resources</h3>
+                <ul>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="/data-processing-agreement.html">Data Processing Agreement</a></li>
+                    <li><a href="/privacy-center.html">Privacy Center</a></li>
+                    <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FreePromptHub</h3>
+                    <p>Your source for the best AI prompts, completely free.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/prompts/business">Business</a></li>
+                        <li><a href="/prompts/content">Content</a></li>
+                        <li><a href="/prompts/everyday">Everyday</a></li>
+                        <li><a href="/prompts/health">Health</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy-center.html">Privacy Center</a></li>
+                        <li><a href="/data-processing-agreement.html">DPA</a></li>
+                        <li><a href="/user-rights-dashboard.html">Your Rights</a></li>
+                        <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreePromptHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <script src="/js/auth-system.js"></script>
+    <script src="/js/cookie-consent.js"></script>
+    <script src="/js/user-rights.js"></script>
+    <script src="/js/accessibility.js"></script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
+</body>
+</html>

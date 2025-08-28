@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Sign Up Free - FreePromptHub</title>
+    <style>
+        :root {
+            --primary: #0066CC;
+            --primary-dark: #0052A3;
+            --error: #dc3545;
+            --success: #28a745;
+            --bg: #ffffff;
+            --bg-subtle: #f8f9fa;
+            --text: #212529;
+            --text-muted: #6c757d;
+            --border: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .auth-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .value-props {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .value-prop {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        
+        .value-prop strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+        
+        .password-wrapper {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+        
+        .password-strength {
+            margin-top: 5px;
+            font-size: 0.85rem;
+        }
+        
+        .strength-weak {
+            color: var(--error);
+        }
+        
+        .strength-medium {
+            color: orange;
+        }
+        
+        .strength-strong {
+            color: var(--success);
+        }
+        
+        .checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-wrapper input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            margin-top: 3px;
+        }
+        
+        .checkbox-wrapper label {
+            margin: 0;
+            font-weight: normal;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .checkbox-wrapper a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .checkbox-wrapper a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            color: var(--text-muted);
+            position: relative;
+            font-size: 0.9rem;
+        }
+        
+        .social-login {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .social-btn:hover {
+            background: var(--bg-subtle);
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .auth-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="/" class="logo">🚀 FreePromptHub</a>
+            <h1>Create Your Free Account</h1>
+            <p class="subtitle">Join 50,000+ professionals using better prompts</p>
+        </div>
+
+        <div class="value-props">
+            <div class="value-prop">
+                <strong>100%</strong>
+                Free Forever
+            </div>
+            <div class="value-prop">
+                <strong>10s</strong>
+                Quick Setup
+            </div>
+            <div class="value-prop">
+                <strong>∞</strong>
+                Unlimited Use
+            </div>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <form id="registerForm" role="form" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" maxlength="200" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" required placeholder="Create a strong password" minlength="6" autocomplete="current-password">
+                    <button type="button" class="toggle-password" onclick="togglePassword()" aria-expanded="false">👁️</button>
+                </div>
+                <div id="passwordStrength" class="password-strength"></div>
+            </div>
+
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="terms" name="terms" required aria-required="true">
+                <label for="terms">
+                    I agree to the <a href="/terms" target="_blank">Terms of Service</a> and 
+                    <a href="/privacy" target="_blank">Privacy Policy</a>. 
+                    I understand this is 100% free with no hidden costs.
+                </label>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submitBtn">
+                Create Free Account
+            </button>
+        </form>
+
+        <div class="divider">
+            <span>or sign up with</span>
+        </div>
+
+        <div class="social-login">
+            <button class="social-btn" onclick="socialSignup('google')">
+                <span>🔍</span> Google
+            </button>
+            <button class="social-btn" onclick="socialSignup('github')">
+                <span>💻</span> GitHub
+            </button>
+        </div>
+
+        <div class="auth-footer">
+            Already have an account? <a href="/auth/login.html">Login</a>
+        </div>
+    </div>
+
+    <script src="/auth/auth.js"></script>
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            const input = document.getElementById('password');
+            const button = document.querySelector('.toggle-password');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                button.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                button.textContent = '👁️';
+            }
+        }
+
+        // Check password strength
+        function checkPasswordStrength(password) {
+            const strengthDiv = document.getElementById('passwordStrength');
+            
+            if (password.length === 0) {
+                strengthDiv.innerHTML = '';
+                return;
+            }
+            
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (password.match(/[a-z]/)) strength++;
+            if (password.match(/[A-Z]/)) strength++;
+            if (password.match(/[0-9]/)) strength++;
+            if (password.match(/[^a-zA-Z0-9]/)) strength++;
+            
+            let message = '';
+            let className = '';
+            
+            if (strength < 2) {
+                message = '⚠️ Weak password';
+                className = 'strength-weak';
+            } else if (strength < 4) {
+                message = '🔒 Medium strength';
+                className = 'strength-medium';
+            } else {
+                message = '✅ Strong password';
+                className = 'strength-strong';
+            }
+            
+            strengthDiv.innerHTML = message;
+            strengthDiv.className = 'password-strength ' + className;
+        }
+
+        // Password strength checker
+        document.getElementById('password').addEventListener('input', (e) => {
+            checkPasswordStrength(e.target.value);
+        });
+
+        // Show alert
+        function showAlert(message, type = 'error') {
+            const alertContainer = document.getElementById('alertContainer');
+            alertContainer.innerHTML = `
+                <div class="alert alert-${type}">
+                    ${message}
+                </div>
+            `;
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                alertContainer.innerHTML = '';
+            }, 5000);
+        }
+
+        // Handle registration form submission
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const terms = document.getElementById('terms').checked;
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (!terms) {
+                showAlert('Please agree to the terms and conditions');
+                return;
+            }
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Creating account...';
+            
+            try {
+                // Attempt registration
+                const user = auth.register(email, password, name);
+                
+                // Show success message
+                showAlert('Account created successfully! Redirecting to dashboard...', 'success');
+                
+                // Redirect to dashboard
+                setTimeout(() => {
+                    window.location.href = '/dashboard';
+                }, 1500);
+                
+            } catch (error) {
+                showAlert(error.message);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Create Free Account';
+            }
+        });
+
+        // Social signup handler
+        function socialSignup(provider) {
+            showAlert(`${provider} signup coming soon! For now, please use email registration.`);
+        }
+
+        // Check if already logged in
+        if (auth.isLoggedIn()) {
+            window.location.href = '/dashboard';
+        }
+
+        // Create demo account on page load for testing
+        setTimeout(() => {
+            try {
+                // Check if demo account exists
+                const users = JSON.parse(localStorage.getItem('fph_users') || '[]');
+                if (!users.find(u => u.email === 'demo@example.com')) {
+                    // Create demo account
+                    const demoUser = {
+                        id: 'demo_user',
+                        email: 'demo@example.com',
+                        password: auth.hashPassword('demo123'),
+                        name: 'Demo User',
+                        createdAt: new Date().toISOString(),
+                        favorites: [],
+                        history: [],
+                        preferences: {
+                            emailNotifications: true,
+                            darkMode: false
+                        }
+                    };
+                    users.push(demoUser);
+                    localStorage.setItem('fph_users', JSON.stringify(users));
+                }
+            } catch (e) {
+                console.log('Demo account setup skipped');
+            }
+        }, 100);
+    </script>
+        <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
+</body>
+</html>

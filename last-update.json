@@ -1,0 +1,20 @@
+{
+  "lastUpdated": "2025-08-28T15:08:14.606Z",
+  "sitemaps": {
+    "updated": true,
+    "files": [
+      "sitemap.xml",
+      "sitemap-prompts.xml",
+      "sitemap.html"
+    ]
+  },
+  "rss": {
+    "updated": true,
+    "files": [
+      "rss.xml",
+      "atom.xml",
+      "feed.json"
+    ]
+  },
+  "executionTime": 199
+}

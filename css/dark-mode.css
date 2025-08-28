@@ -1,0 +1,383 @@
+/* Dark Mode Styles for FreePromptHub */
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    /* Primary colors */
+    --primary: #4A9EFF;
+    --primary-dark: #2B7FDB;
+    --secondary: #FFB74D;
+    
+    /* Background colors */
+    --bg-primary: #0F1419;
+    --bg-secondary: #1A1F2E;
+    --bg-tertiary: #242937;
+    --bg-card: #1E2330;
+    --bg-hover: #2A3040;
+    
+    /* Text colors */
+    --text-primary: #E8EAED;
+    --text-secondary: #9CA3AF;
+    --text-tertiary: #6B7280;
+    --text-inverse: #0F1419;
+    
+    /* Border colors */
+    --border-light: #2A3040;
+    --border-medium: #374151;
+    --border-dark: #4B5563;
+    
+    /* Status colors */
+    --success: #34D399;
+    --warning: #FBBF24;
+    --error: #F87171;
+    --info: #60A5FA;
+    
+    /* Shadow colors */
+    --shadow-sm: rgba(0, 0, 0, 0.3);
+    --shadow-md: rgba(0, 0, 0, 0.5);
+    --shadow-lg: rgba(0, 0, 0, 0.7);
+    
+    /* Code block colors */
+    --code-bg: #0D1117;
+    --code-border: #30363D;
+    --code-text: #E8EAED;
+    
+    /* Input colors */
+    --input-bg: #1A1F2E;
+    --input-border: #374151;
+    --input-focus: #4A9EFF;
+    
+    /* Header gradient */
+    --header-gradient: linear-gradient(135deg, #1A1F2E 0%, #242937 100%);
+}
+
+/* Light theme variables (default) */
+[data-theme="light"] {
+    /* Primary colors */
+    --primary: #0066CC;
+    --primary-dark: #0052A3;
+    --secondary: #FF6B35;
+    
+    /* Background colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #E9ECEF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F1F3F5;
+    
+    /* Text colors */
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+    --text-tertiary: #ADB5BD;
+    --text-inverse: #FFFFFF;
+    
+    /* Border colors */
+    --border-light: #DEE2E6;
+    --border-medium: #CED4DA;
+    --border-dark: #ADB5BD;
+    
+    /* Status colors */
+    --success: #28A745;
+    --warning: #FFC107;
+    --error: #DC3545;
+    --info: #17A2B8;
+    
+    /* Shadow colors */
+    --shadow-sm: rgba(0, 0, 0, 0.075);
+    --shadow-md: rgba(0, 0, 0, 0.15);
+    --shadow-lg: rgba(0, 0, 0, 0.25);
+    
+    /* Code block colors */
+    --code-bg: #F6F8FA;
+    --code-border: #D1D5DB;
+    --code-text: #24292E;
+    
+    /* Input colors */
+    --input-bg: #FFFFFF;
+    --input-border: #CED4DA;
+    --input-focus: #0066CC;
+    
+    /* Header gradient */
+    --header-gradient: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+}
+
+/* Apply theme colors to elements */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styles */
+header {
+    background: var(--header-gradient);
+    border-bottom: 1px solid var(--border-light);
+}
+
+header nav a {
+    color: var(--text-inverse);
+}
+
+header nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: var(--bg-tertiary);
+    border-radius: 15px;
+    border: 2px solid var(--border-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme="dark"] .theme-toggle-slider {
+    transform: translateX(30px);
+}
+
+.theme-toggle-icon {
+    font-size: 12px;
+}
+
+/* Card styles */
+.prompt-card, .category-card, .feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+}
+
+.prompt-card:hover, .category-card:hover, .feature-card:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-medium);
+    box-shadow: 0 4px 12px var(--shadow-md);
+}
+
+/* Button styles */
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--border-dark);
+}
+
+/* Form inputs */
+input, textarea, select {
+    background: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--input-border);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.1);
+    background: var(--input-bg);
+}
+
+/* Code blocks */
+pre, code {
+    background: var(--code-bg);
+    color: var(--code-text);
+    border: 1px solid var(--code-border);
+}
+
+/* Prompt display area */
+.prompt-display {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+}
+
+.prompt-content {
+    background: var(--code-bg);
+    color: var(--code-text);
+    border: 1px solid var(--code-border);
+}
+
+/* Copy button */
+.copy-btn {
+    background: var(--primary);
+    color: var(--text-inverse);
+}
+
+.copy-btn:hover {
+    background: var(--primary-dark);
+}
+
+.copy-btn.copied {
+    background: var(--success);
+}
+
+/* Search results */
+.search-result {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+}
+
+.search-result:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-medium);
+}
+
+.search-highlight {
+    background: rgba(255, 183, 77, 0.3);
+    color: var(--text-primary);
+}
+
+/* Rating stars */
+.star-rating .star {
+    color: var(--text-tertiary);
+}
+
+.star-rating .star.filled {
+    color: #FFB74D;
+}
+
+/* Reviews */
+.review-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+}
+
+/* Modal backgrounds */
+.modal {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+}
+
+/* Footer */
+footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--primary);
+}
+
+footer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-dark);
+}
+
+/* Dashboard stats */
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+}
+
+.stat-value {
+    color: var(--primary);
+}
+
+/* Animations for theme transition */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Scrollbar styling for dark mode */
+[data-theme="dark"] ::-webkit-scrollbar {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-medium);
+}
+
+/* Table styles */
+table {
+    background: var(--bg-card);
+}
+
+th {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-medium);
+}
+
+td {
+    border-color: var(--border-light);
+    color: var(--text-primary);
+}
+
+tr:hover {
+    background: var(--bg-hover);
+}
+
+/* Alert boxes */
+.alert-info {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: var(--info);
+    color: var(--text-primary);
+}
+
+.alert-success {
+    background: rgba(52, 211, 153, 0.1);
+    border-color: var(--success);
+    color: var(--text-primary);
+}
+
+.alert-warning {
+    background: rgba(251, 191, 36, 0.1);
+    border-color: var(--warning);
+    color: var(--text-primary);
+}
+
+.alert-error {
+    background: rgba(248, 113, 113, 0.1);
+    border-color: var(--error);
+    color: var(--text-primary);
+}

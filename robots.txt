@@ -1,5 +1,144 @@
+# FreePromptHub Robots.txt
+# This file controls how search engines crawl and index the site
+
+# Default - Allow all crawlers
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-Sitemap: https://freeprompthub.com/sitemap.xml
+# Sitemaps
+Sitemap: https://www.freeprompthub.com/sitemap.xml
+Sitemap: https://www.freeprompthub.com/sitemap-prompts.xml
 
+# RSS Feeds for discovery
+Sitemap: https://www.freeprompthub.com/rss.xml
+Sitemap: https://www.freeprompthub.com/atom.xml
+
+# Allow search engines to index everything except private areas
+Disallow: /auth/
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /test-
+Disallow: /generate-
+Disallow: /add-
+Disallow: /fix-
+Disallow: /improve-
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.backup
+Disallow: /*.old
+Disallow: /*.test
+Disallow: /private/
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+Allow: /*.css
+Allow: /*.js
+Allow: /images/
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Majestic-12
+Disallow: /
+
+User-agent: SEOkicks-Robot
+Disallow: /
+
+User-agent: SiteExplorer
+Disallow: /
+
+User-agent: SEOENGBot
+Disallow: /
+
+# Block AI training bots (optional - remove if you want AI to train on your content)
+User-agent: GPTBot
+Allow: /prompts/
+Disallow: /auth/
+Disallow: /dashboard/
+
+User-agent: ChatGPT-User
+Allow: /prompts/
+Disallow: /auth/
+Disallow: /dashboard/
+
+User-agent: CCBot
+Allow: /prompts/
+Disallow: /auth/
+Disallow: /dashboard/
+
+User-agent: ClaudeBot
+Allow: /prompts/
+Disallow: /auth/
+Disallow: /dashboard/
+
+User-agent: Claude-Web
+Allow: /prompts/
+Disallow: /auth/
+Disallow: /dashboard/
+
+# Block download bots
+User-agent: wget
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+# Host preference (for supported crawlers)
+Host: www.freeprompthub.com
+
+# Clean-param (tells Google to ignore these URL parameters)
+Clean-param: utm_source&utm_medium&utm_campaign&ref&source

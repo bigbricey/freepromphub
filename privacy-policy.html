@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <meta name="robots" content="index, follow">
+    <title>Privacy Policy - FreePromptHub | Your Data Protection Rights</title>
+    <meta name="description" content="FreePromptHub privacy policy. Learn how we collect, use, and protect your personal information. GDPR and CCPA compliant.">
+    <link rel="canonical" href="https://www.freeprompthub.com/privacy-policy">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <style>
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .legal-content h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .legal-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 10px;
+        }
+        .legal-content h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .legal-nav {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 80px;
+        }
+        .legal-nav h4 {
+            margin-bottom: 15px;
+        }
+        .legal-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .legal-nav li {
+            margin-bottom: 10px;
+        }
+        .legal-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .legal-nav a:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid var(--border-light);
+        }
+        th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+        .data-rights {
+            background: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        [data-theme="dark"] .data-rights {
+            background: rgba(76, 175, 80, 0.1);
+        }
+    </style>
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+
+    <!-- Feed Autodiscovery -->
+    <link rel="alternate" type="application/rss+xml" title="FreePromptHub RSS Feed" href="/rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="FreePromptHub Atom Feed" href="/atom.xml">
+    <link rel="alternate" type="application/json" title="FreePromptHub JSON Feed" href="/feed.json">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+</head>
+<body>
+    <header role="banner" class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="/">
+                <span style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
+                FreePromptHub
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="/prompts/business/">Business</a>
+                <a href="/prompts/content/">Content</a>
+                <a href="/prompts/coding/">Coding</a>
+                <a href="/search"><span aria-hidden="true">🔍</span> Search</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Privacy Policy</h1>
+                
+                <div class="last-updated">
+                    <strong>Last Updated:</strong> January 15, 2025<br>
+                    <strong>Effective Date:</strong> January 1, 2025
+                </div>
+
+                <div class="legal-nav">
+                    <h4>Table of Contents</h4>
+                    <ul>
+                        <li><a href="#introduction">1. Introduction</a></li>
+                        <li><a href="#information-collected">2. Information We Collect</a></li>
+                        <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                        <li><a href="#data-sharing">4. Data Sharing and Disclosure</a></li>
+                        <li><a href="#data-retention">5. Data Retention</a></li>
+                        <li><a href="#data-security">6. Data Security</a></li>
+                        <li><a href="#your-rights">7. Your Rights</a></li>
+                        <li><a href="#cookies">8. Cookies and Tracking</a></li>
+                        <li><a href="#third-party">9. Third-Party Services</a></li>
+                        <li><a href="#children">10. Children's Privacy</a></li>
+                        <li><a href="#international">11. International Data Transfers</a></li>
+                        <li><a href="#changes">12. Changes to This Policy</a></li>
+                        <li><a href="#contact">13. Contact Information</a></li>
+                    </ul>
+                </div>
+
+                <section id="introduction">
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to FreePromptHub ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.freeprompthub.com (the "Site").</p>
+                    
+                    <p>By using our Site, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this privacy policy, please do not access the Site.</p>
+                </section>
+
+                <section id="information-collected">
+                    <h2>2. Information We Collect</h2>
+                    
+                    <h3>2.1 Information You Provide Directly</h3>
+                    <ul>
+                        <li><strong>Account Information:</strong> When you create an account, we collect your email address, username, and password (encrypted).</li>
+                        <li><strong>Profile Information:</strong> Optional information you may provide such as your name and preferences.</li>
+                        <li><strong>Feedback and Reviews:</strong> Ratings, reviews, and feedback you provide about prompts.</li>
+                        <li><strong>Contact Information:</strong> Information you provide when contacting us for support.</li>
+                    </ul>
+
+                    <h3>2.2 Information Collected Automatically</h3>
+                    <table>
+                        <tr>
+                            <th>Type of Data</th>
+                            <th>Examples</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>Device Information</td>
+                            <td>Browser type, operating system, device type</td>
+                            <td>Optimize site experience</td>
+                        </tr>
+                        <tr>
+                            <td>Usage Data</td>
+                            <td>Pages visited, time spent, clicks</td>
+                            <td>Improve content and navigation</td>
+                        </tr>
+                        <tr>
+                            <td>Location Data</td>
+                            <td>Country, region (from IP address)</td>
+                            <td>Content localization</td>
+                        </tr>
+                        <tr>
+                            <td>Log Data</td>
+                            <td>IP address, access times, referring pages</td>
+                            <td>Security and diagnostics</td>
+                        </tr>
+                    </table>
+
+                    <h3>2.3 Information from Third Parties</h3>
+                    <ul>
+                        <li><strong>Analytics Providers:</strong> We use Simple Analytics (privacy-focused, no cookies)</li>
+                        <li><strong>Social Media:</strong> If you interact with us on social media platforms</li>
+                    </ul>
+                </section>
+
+                <section id="how-we-use">
+                    <h2>3. How We Use Your Information</h2>
+                    
+                    <p>We use the information we collect for the following purposes:</p>
+                    
+                    <h3>3.1 Service Provision</h3>
+                    <ul>
+                        <li>Provide, maintain, and improve our services</li>
+                        <li>Personalize your experience on the Site</li>
+                        <li>Save your preferences and favorites</li>
+                        <li>Track your usage history for continuity</li>
+                    </ul>
+
+                    <h3>3.2 Communication</h3>
+                    <ul>
+                        <li>Respond to your inquiries and support requests</li>
+                        <li>Send service-related announcements (opt-in only)</li>
+                        <li>Notify you of updates to prompts you've favorited</li>
+                    </ul>
+
+                    <h3>3.3 Analytics and Improvements</h3>
+                    <ul>
+                        <li>Analyze usage patterns to improve content</li>
+                        <li>Identify popular prompts and categories</li>
+                        <li>Test new features and functionality</li>
+                        <li>Monitor and prevent fraud and abuse</li>
+                    </ul>
+
+                    <h3>3.4 Legal Obligations</h3>
+                    <ul>
+                        <li>Comply with legal requirements</li>
+                        <li>Respond to legal requests and prevent harm</li>
+                        <li>Enforce our terms of service</li>
+                    </ul>
+                </section>
+
+                <section id="data-sharing">
+                    <h2>4. Data Sharing and Disclosure</h2>
+                    
+                    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following situations:</p>
+
+                    <h3>4.1 Service Providers</h3>
+                    <p>We may share data with third-party service providers who assist us in operating our website:</p>
+                    <ul>
+                        <li>Web hosting providers (secured infrastructure)</li>
+                        <li>Analytics services (Simple Analytics - privacy-focused)</li>
+                        <li>Email service providers (for support communications)</li>
+                    </ul>
+
+                    <h3>4.2 Business Transfers</h3>
+                    <p>If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+
+                    <h3>4.3 Legal Requirements</h3>
+                    <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
+
+                    <h3>4.4 Consent</h3>
+                    <p>We may share your information with your explicit consent for any other purpose.</p>
+                </section>
+
+                <section id="data-retention">
+                    <h2>5. Data Retention</h2>
+                    
+                    <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required by law.</p>
+
+                    <table>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Retention Period</th>
+                            <th>Reason</th>
+                        </tr>
+                        <tr>
+                            <td>Account Data</td>
+                            <td>Until account deletion + 30 days</td>
+                            <td>Account recovery</td>
+                        </tr>
+                        <tr>
+                            <td>Usage Analytics</td>
+                            <td>90 days</td>
+                            <td>Performance analysis</td>
+                        </tr>
+                        <tr>
+                            <td>Support Communications</td>
+                            <td>2 years</td>
+                            <td>Service improvement</td>
+                        </tr>
+                        <tr>
+                            <td>Legal Records</td>
+                            <td>As required by law</td>
+                            <td>Compliance</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="data-security">
+                    <h2>6. Data Security</h2>
+                    
+                    <p>We implement appropriate technical and organizational security measures to protect your personal information:</p>
+
+                    <ul>
+                        <li><strong>Encryption:</strong> SSL/TLS encryption for data in transit</li>
+                        <li><strong>Access Controls:</strong> Limited access to personal data on need-to-know basis</li>
+                        <li><strong>Password Security:</strong> Bcrypt hashing for password storage</li>
+                        <li><strong>Regular Audits:</strong> Security reviews and vulnerability assessments</li>
+                        <li><strong>Incident Response:</strong> Procedures for data breach notification</li>
+                    </ul>
+
+                    <p>While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+                </section>
+
+                <section id="your-rights">
+                    <h2>7. Your Rights</h2>
+                    
+                    <div class="data-rights">
+                        <h3>Your Data Protection Rights</h3>
+                        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                    </div>
+
+                    <h3>7.1 GDPR Rights (European Users)</h3>
+                    <ul>
+                        <li><strong>Right to Access:</strong> Request copies of your personal data</li>
+                        <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+                        <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
+                        <li><strong>Right to Restrict Processing:</strong> Request restriction of data processing</li>
+                        <li><strong>Right to Data Portability:</strong> Request transfer of your data</li>
+                        <li><strong>Right to Object:</strong> Object to processing of your personal data</li>
+                        <li><strong>Rights Related to Automated Decision-Making:</strong> Not be subject to decisions based solely on automated processing</li>
+                    </ul>
+
+                    <h3>7.2 CCPA Rights (California Residents)</h3>
+                    <ul>
+                        <li><strong>Right to Know:</strong> Request information about data collection and sharing</li>
+                        <li><strong>Right to Delete:</strong> Request deletion of personal information</li>
+                        <li><strong>Right to Opt-Out:</strong> Opt-out of sale of personal information (we do not sell data)</li>
+                        <li><strong>Right to Non-Discrimination:</strong> Equal service regardless of privacy choices</li>
+                    </ul>
+
+                    <h3>7.3 How to Exercise Your Rights</h3>
+                    <p>To exercise any of these rights, please contact us using the information provided in the Contact section. We will respond to your request within 30 days.</p>
+                </section>
+
+                <section id="cookies">
+                    <h2>8. Cookies and Tracking Technologies</h2>
+                    
+                    <h3>8.1 Essential Cookies</h3>
+                    <p>We use minimal essential cookies for:</p>
+                    <ul>
+                        <li>Session management (keeping you logged in)</li>
+                        <li>Security tokens (CSRF protection)</li>
+                        <li>User preferences (theme selection, language)</li>
+                    </ul>
+
+                    <h3>8.2 LocalStorage</h3>
+                    <p>We use browser LocalStorage for:</p>
+                    <ul>
+                        <li>Saving your favorites and preferences</li>
+                        <li>Storing your usage history</li>
+                        <li>Caching data for offline access</li>
+                        <li>Theme preferences (light/dark mode)</li>
+                    </ul>
+
+                    <h3>8.3 Analytics</h3>
+                    <p>We use Simple Analytics, a privacy-focused analytics service that:</p>
+                    <ul>
+                        <li>Does not use cookies</li>
+                        <li>Does not track individual users</li>
+                        <li>Does not collect personal information</li>
+                        <li>Is GDPR, CCPA, and PECR compliant</li>
+                    </ul>
+
+                    <h3>8.4 Managing Cookies</h3>
+                    <p>You can control cookies through your browser settings. Note that disabling cookies may limit functionality of the Site.</p>
+                </section>
+
+                <section id="third-party">
+                    <h2>9. Third-Party Services</h2>
+                    
+                    <h3>9.1 Affiliate Programs</h3>
+                    <p>We participate in affiliate programs (ClickBank, Amazon Associates). When you click affiliate links:</p>
+                    <ul>
+                        <li>You are redirected to third-party sites</li>
+                        <li>Those sites have their own privacy policies</li>
+                        <li>We may receive a commission for purchases</li>
+                        <li>We do not share your personal data with affiliates</li>
+                    </ul>
+
+                    <h3>9.2 External Links</h3>
+                    <p>Our Site may contain links to other websites. We are not responsible for the privacy practices of other sites. We encourage you to read their privacy policies.</p>
+
+                    <h3>9.3 Social Media</h3>
+                    <p>If you share our content on social media, those platforms may collect information about you according to their own privacy policies.</p>
+                </section>
+
+                <section id="children">
+                    <h2>10. Children's Privacy</h2>
+                    
+                    <p>Our Site is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+                    
+                    <p>If we discover that a child under 13 has provided us with personal information, we will delete such information from our servers immediately.</p>
+                </section>
+
+                <section id="international">
+                    <h2>11. International Data Transfers</h2>
+                    
+                    <p>Your information may be transferred to and maintained on servers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ.</p>
+                    
+                    <p>If you are located outside the United States and choose to provide information to us, please note that we transfer the data to the United States and process it there.</p>
+                    
+                    <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+                </section>
+
+                <section id="changes">
+                    <h2>12. Changes to This Privacy Policy</h2>
+                    
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by:</p>
+                    <ul>
+                        <li>Posting the new Privacy Policy on this page</li>
+                        <li>Updating the "Last Updated" date at the top</li>
+                        <li>Sending an email notification for material changes (if you have an account)</li>
+                    </ul>
+                    
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes are effective when posted on this page.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>13. Contact Information</h2>
+                    
+                    <div class="contact-info">
+                        <h3>Data Protection Officer</h3>
+                        <p>For privacy-related questions or to exercise your rights, contact us at:</p>
+                        <ul>
+                            <li><strong>Email:</strong> privacy@freeprompthub.com</li>
+                            <li><strong>Web Form:</strong> <a href="/contact">Contact Page</a></li>
+                            <li><strong>Response Time:</strong> Within 30 days</li>
+                        </ul>
+                        
+                        <h3>Supervisory Authority</h3>
+                        <p>EU residents have the right to lodge a complaint with their local supervisory authority if they believe their rights under GDPR have been violated.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All rights reserved.</p>
+            <nav aria-label="Footer">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/cookie-policy">Cookie Policy</a>
+            </nav>
+        </div>
+    </footer>
+    
+    <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+</body>
+</html>

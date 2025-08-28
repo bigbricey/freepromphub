@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <meta name="robots" content="index, follow">
+    <title>Terms of Service - FreePromptHub | Legal Agreement</title>
+    <meta name="description" content="Terms of Service for FreePromptHub. Read our legal agreement covering usage rights, intellectual property, disclaimers, and user responsibilities.">
+    <link rel="canonical" href="https://www.freeprompthub.com/terms-of-service">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <style>
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .legal-content h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .legal-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 10px;
+        }
+        .legal-content h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .legal-nav {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 80px;
+        }
+        .legal-nav h4 {
+            margin-bottom: 15px;
+        }
+        .legal-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .legal-nav li {
+            margin-bottom: 10px;
+        }
+        .legal-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .legal-nav a:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .important-notice {
+            background: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        [data-theme="dark"] .important-notice {
+            background: rgba(255, 152, 0, 0.1);
+        }
+        .prohibited-uses {
+            background: #FFEBEE;
+            border-left: 4px solid #F44336;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        [data-theme="dark"] .prohibited-uses {
+            background: rgba(244, 67, 54, 0.1);
+        }
+    </style>
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+
+    <!-- Feed Autodiscovery -->
+    <link rel="alternate" type="application/rss+xml" title="FreePromptHub RSS Feed" href="/rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="FreePromptHub Atom Feed" href="/atom.xml">
+    <link rel="alternate" type="application/json" title="FreePromptHub JSON Feed" href="/feed.json">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+</head>
+<body>
+    <header role="banner" class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="/">
+                <span style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
+                FreePromptHub
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="/prompts/business/">Business</a>
+                <a href="/prompts/content/">Content</a>
+                <a href="/prompts/coding/">Coding</a>
+                <a href="/search"><span aria-hidden="true">🔍</span> Search</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Terms of Service</h1>
+                
+                <div class="last-updated">
+                    <strong>Last Updated:</strong> January 15, 2025<br>
+                    <strong>Effective Date:</strong> January 1, 2025
+                </div>
+
+                <div class="legal-nav">
+                    <h4>Table of Contents</h4>
+                    <ul>
+                        <li><a href="#agreement">1. Agreement to Terms</a></li>
+                        <li><a href="#use-license">2. Use License</a></li>
+                        <li><a href="#user-accounts">3. User Accounts</a></li>
+                        <li><a href="#acceptable-use">4. Acceptable Use</a></li>
+                        <li><a href="#user-content">5. User Content</a></li>
+                        <li><a href="#intellectual-property">6. Intellectual Property</a></li>
+                        <li><a href="#ai-usage">7. AI Usage Guidelines</a></li>
+                        <li><a href="#disclaimers">8. Disclaimers</a></li>
+                        <li><a href="#limitation-liability">9. Limitation of Liability</a></li>
+                        <li><a href="#indemnification">10. Indemnification</a></li>
+                        <li><a href="#termination">11. Termination</a></li>
+                        <li><a href="#governing-law">12. Governing Law</a></li>
+                        <li><a href="#changes">13. Changes to Terms</a></li>
+                        <li><a href="#contact">14. Contact Information</a></li>
+                    </ul>
+                </div>
+
+                <section id="agreement">
+                    <h2>1. Agreement to Terms</h2>
+                    <p>By accessing or using FreePromptHub ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you do not have permission to access the Service.</p>
+                    
+                    <p>These Terms apply to all visitors, users, and others who access or use the Service. By accessing or using the Service, you represent that:</p>
+                    <ul>
+                        <li>You are at least 13 years of age</li>
+                        <li>You have the legal capacity to enter into these Terms</li>
+                        <li>Your use of the Service will not violate any applicable law or regulation</li>
+                    </ul>
+                </section>
+
+                <section id="use-license">
+                    <h2>2. Use License</h2>
+                    
+                    <div class="important-notice">
+                        <strong>Important:</strong> All prompts on FreePromptHub are provided free of charge for both personal and commercial use.
+                    </div>
+
+                    <h3>2.1 Grant of License</h3>
+                    <p>Subject to your compliance with these Terms, we grant you a non-exclusive, non-transferable, revocable license to:</p>
+                    <ul>
+                        <li>Access and use the Service for lawful purposes</li>
+                        <li>Copy, modify, and use prompts for personal or commercial projects</li>
+                        <li>Share prompts with attribution to FreePromptHub</li>
+                    </ul>
+
+                    <h3>2.2 License Restrictions</h3>
+                    <p>You may not:</p>
+                    <ul>
+                        <li>Republish substantial portions of our prompt database as a competing service</li>
+                        <li>Use automated systems to scrape or harvest prompts in bulk</li>
+                        <li>Remove or alter any proprietary notices or labels</li>
+                        <li>Use the Service for any illegal or unauthorized purpose</li>
+                        <li>Attempt to gain unauthorized access to any portion of the Service</li>
+                    </ul>
+                </section>
+
+                <section id="user-accounts">
+                    <h2>3. User Accounts</h2>
+                    
+                    <h3>3.1 Account Creation</h3>
+                    <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. You are responsible for safeguarding the password and for all activities that occur under your account.</p>
+
+                    <h3>3.2 Account Responsibilities</h3>
+                    <ul>
+                        <li>Maintain the security of your password and account</li>
+                        <li>Notify us immediately of any unauthorized access</li>
+                        <li>Not share your account credentials with others</li>
+                        <li>Not create accounts using automated methods</li>
+                        <li>Not create multiple accounts for abusive purposes</li>
+                    </ul>
+
+                    <h3>3.3 Account Termination</h3>
+                    <p>We reserve the right to terminate or suspend your account immediately, without prior notice or liability, for any reason, including but not limited to breach of the Terms.</p>
+                </section>
+
+                <section id="acceptable-use">
+                    <h2>4. Acceptable Use Policy</h2>
+                    
+                    <h3>4.1 Permitted Uses</h3>
+                    <p>You may use FreePromptHub to:</p>
+                    <ul>
+                        <li>Browse and search for AI prompts</li>
+                        <li>Copy prompts for use with AI services</li>
+                        <li>Rate and review prompts</li>
+                        <li>Save favorites for personal reference</li>
+                        <li>Share prompts via social media with attribution</li>
+                    </ul>
+
+                    <div class="prohibited-uses">
+                        <h3>4.2 Prohibited Uses</h3>
+                        <p>You may not use the Service to:</p>
+                        <ul>
+                            <li>Generate content that is illegal, harmful, or offensive</li>
+                            <li>Harass, abuse, or harm other users</li>
+                            <li>Violate any laws or regulations</li>
+                            <li>Infringe on intellectual property rights</li>
+                            <li>Spread misinformation or propaganda</li>
+                            <li>Create deepfakes or misleading content</li>
+                            <li>Engage in any form of discrimination</li>
+                            <li>Attempt to manipulate ratings or reviews</li>
+                            <li>Use prompts for phishing or scamming</li>
+                            <li>Generate adult or explicit content involving minors</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="user-content">
+                    <h2>5. User Content</h2>
+                    
+                    <h3>5.1 User Submissions</h3>
+                    <p>Our Service may allow you to submit, post, or display content such as reviews, ratings, and comments ("User Content"). You retain ownership of your User Content, but grant us certain rights to use it.</p>
+
+                    <h3>5.2 License Grant</h3>
+                    <p>By submitting User Content, you grant FreePromptHub a worldwide, non-exclusive, royalty-free license to:</p>
+                    <ul>
+                        <li>Use, reproduce, modify, and distribute your User Content</li>
+                        <li>Display your User Content publicly</li>
+                        <li>Include your User Content in our services</li>
+                        <li>Sublicense these rights to service providers</li>
+                    </ul>
+
+                    <h3>5.3 User Content Representations</h3>
+                    <p>You represent and warrant that:</p>
+                    <ul>
+                        <li>You own or have rights to use your User Content</li>
+                        <li>Your User Content does not infringe any third-party rights</li>
+                        <li>Your User Content complies with these Terms</li>
+                        <li>Your User Content is not false, misleading, or deceptive</li>
+                    </ul>
+                </section>
+
+                <section id="intellectual-property">
+                    <h2>6. Intellectual Property Rights</h2>
+                    
+                    <h3>6.1 Service Content</h3>
+                    <p>The Service and its original content (excluding User Content and prompts), features, and functionality are and will remain the exclusive property of FreePromptHub and its licensors. The Service is protected by copyright, trademark, and other laws.</p>
+
+                    <h3>6.2 Prompts</h3>
+                    <p>Prompts published on FreePromptHub are provided for free use. However:</p>
+                    <ul>
+                        <li>Individual prompts may be subject to fair use principles</li>
+                        <li>Systematic copying of our entire database is prohibited</li>
+                        <li>Attribution to FreePromptHub is appreciated but not required</li>
+                        <li>We make no claim to AI-generated outputs from prompts</li>
+                    </ul>
+
+                    <h3>6.3 Trademarks</h3>
+                    <p>"FreePromptHub" and our logo are trademarks of our service. You may not use these marks without our prior written permission, except for attribution purposes.</p>
+
+                    <h3>6.4 DMCA Notice</h3>
+                    <p>If you believe content on our Service infringes your copyright, please contact us with:</p>
+                    <ul>
+                        <li>Description of the copyrighted work</li>
+                        <li>Location of the infringing material</li>
+                        <li>Your contact information</li>
+                        <li>Statement of good faith belief</li>
+                        <li>Statement of accuracy under penalty of perjury</li>
+                    </ul>
+                </section>
+
+                <section id="ai-usage">
+                    <h2>7. AI Usage Guidelines</h2>
+                    
+                    <h3>7.1 Responsible AI Use</h3>
+                    <p>When using prompts from FreePromptHub with AI services, you agree to:</p>
+                    <ul>
+                        <li>Comply with the terms of service of the AI platform you're using</li>
+                        <li>Not use prompts to generate harmful or illegal content</li>
+                        <li>Verify accuracy of AI-generated content before use</li>
+                        <li>Take responsibility for outputs generated from our prompts</li>
+                        <li>Not use prompts to circumvent AI safety measures</li>
+                    </ul>
+
+                    <h3>7.2 AI Platform Compatibility</h3>
+                    <p>Our prompts are designed for various AI platforms including but not limited to ChatGPT, Claude, Gemini, and others. We do not guarantee compatibility or specific results with any particular AI service.</p>
+
+                    <h3>7.3 Output Ownership</h3>
+                    <p>FreePromptHub makes no claim to content generated by AI services using our prompts. Ownership of AI-generated content is determined by the terms of the AI platform you use.</p>
+                </section>
+
+                <section id="disclaimers">
+                    <h2>8. Disclaimers</h2>
+                    
+                    <div class="important-notice">
+                        <h3>8.1 "As Is" Basis</h3>
+                        <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</p>
+                    </div>
+
+                    <h3>8.2 No Warranties</h3>
+                    <p>We specifically disclaim all warranties, including but not limited to:</p>
+                    <ul>
+                        <li>The accuracy, completeness, or usefulness of prompts</li>
+                        <li>The results obtained from using prompts</li>
+                        <li>The compatibility with specific AI platforms</li>
+                        <li>The continuous, uninterrupted, or error-free operation of the Service</li>
+                        <li>The correction of defects or errors</li>
+                    </ul>
+
+                    <h3>8.3 Professional Advice Disclaimer</h3>
+                    <p>Prompts and content on FreePromptHub are for informational purposes only and do not constitute professional advice. Prompts related to:</p>
+                    <ul>
+                        <li><strong>Legal matters:</strong> Not a substitute for legal counsel</li>
+                        <li><strong>Medical/Health:</strong> Not a substitute for medical advice</li>
+                        <li><strong>Financial:</strong> Not investment or financial advice</li>
+                        <li><strong>Business:</strong> General guidance only</li>
+                    </ul>
+
+                    <h3>8.4 Third-Party Content</h3>
+                    <p>We are not responsible for content on third-party websites linked from our Service, including affiliate partners. Each website has its own terms and privacy policies.</p>
+                </section>
+
+                <section id="limitation-liability">
+                    <h2>9. Limitation of Liability</h2>
+                    
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, FREEPROMPTHUB SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:</p>
+                    <ul>
+                        <li>Loss of profits, data, use, or goodwill</li>
+                        <li>Service interruptions</li>
+                        <li>Computer damage or system failure</li>
+                        <li>Cost of substitute services</li>
+                        <li>Personal injury or property damage</li>
+                        <li>Any damages resulting from use of AI-generated content</li>
+                    </ul>
+
+                    <p>Our total liability shall not exceed the amount paid by you to us in the past twelve months, or $100 if you have not made any payments.</p>
+
+                    <p>Some jurisdictions do not allow exclusion of implied warranties or limitation of liability for incidental or consequential damages, so these limitations may not apply to you.</p>
+                </section>
+
+                <section id="indemnification">
+                    <h2>10. Indemnification</h2>
+                    
+                    <p>You agree to defend, indemnify, and hold harmless FreePromptHub, its officers, directors, employees, and agents, from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including attorney's fees) arising from:</p>
+                    <ul>
+                        <li>Your use of and access to the Service</li>
+                        <li>Your violation of these Terms</li>
+                        <li>Your violation of any third-party right</li>
+                        <li>Your User Content</li>
+                        <li>Any harm caused by your use of AI-generated content from our prompts</li>
+                        <li>Your violation of any law or regulation</li>
+                    </ul>
+                </section>
+
+                <section id="termination">
+                    <h2>11. Termination</h2>
+                    
+                    <h3>11.1 Termination by You</h3>
+                    <p>You may terminate your account at any time by:</p>
+                    <ul>
+                        <li>Contacting us to request account deletion</li>
+                        <li>Stopping use of the Service</li>
+                        <li>Deleting any bookmarks to our Service</li>
+                    </ul>
+
+                    <h3>11.2 Termination by Us</h3>
+                    <p>We may terminate or suspend your account immediately, without prior notice, if:</p>
+                    <ul>
+                        <li>You breach these Terms</li>
+                        <li>You engage in conduct we deem harmful to other users</li>
+                        <li>You engage in fraudulent or illegal activities</li>
+                        <li>Required by law or court order</li>
+                    </ul>
+
+                    <h3>11.3 Effect of Termination</h3>
+                    <p>Upon termination:</p>
+                    <ul>
+                        <li>Your right to use the Service ceases immediately</li>
+                        <li>We may delete your account and User Content</li>
+                        <li>Provisions that should survive termination will remain in effect</li>
+                    </ul>
+                </section>
+
+                <section id="governing-law">
+                    <h2>12. Governing Law and Disputes</h2>
+                    
+                    <h3>12.1 Governing Law</h3>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the United States and the State of Delaware, without regard to its conflict of law provisions.</p>
+
+                    <h3>12.2 Dispute Resolution</h3>
+                    <p>Any disputes arising out of or relating to these Terms or the Service shall be resolved through:</p>
+                    <ol>
+                        <li><strong>Informal Resolution:</strong> First, by contacting us to attempt resolution</li>
+                        <li><strong>Binding Arbitration:</strong> If informal resolution fails, through binding arbitration in accordance with the rules of the American Arbitration Association</li>
+                    </ol>
+
+                    <h3>12.3 Class Action Waiver</h3>
+                    <p>You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.</p>
+
+                    <h3>12.4 Time Limitation</h3>
+                    <p>Any cause of action or claim you may have must be commenced within one (1) year after the claim or cause of action arises.</p>
+                </section>
+
+                <section id="changes">
+                    <h2>13. Changes to Terms</h2>
+                    
+                    <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will:</p>
+                    <ul>
+                        <li>Update the "Last Updated" date at the top</li>
+                        <li>Provide notice on our homepage for 30 days</li>
+                        <li>Email users with accounts (if applicable)</li>
+                    </ul>
+                    
+                    <p>Your continued use of the Service after changes become effective constitutes acceptance of the revised Terms. If you do not agree to the new Terms, please stop using the Service.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>14. Contact Information</h2>
+                    
+                    <div class="contact-info">
+                        <p>For questions about these Terms of Service, please contact us at:</p>
+                        <ul>
+                            <li><strong>Email:</strong> legal@freeprompthub.com</li>
+                            <li><strong>Web Form:</strong> <a href="/contact">Contact Page</a></li>
+                            <li><strong>Response Time:</strong> 2-5 business days</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="miscellaneous">
+                    <h2>15. Miscellaneous</h2>
+                    
+                    <h3>15.1 Entire Agreement</h3>
+                    <p>These Terms constitute the entire agreement between you and FreePromptHub regarding the Service and supersede all prior agreements and understandings.</p>
+
+                    <h3>15.2 Waiver</h3>
+                    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+
+                    <h3>15.3 Severability</h3>
+                    <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+                    <h3>15.4 Assignment</h3>
+                    <p>You may not assign or transfer these Terms. We may assign our rights to any of our affiliates or successors.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All rights reserved.</p>
+            <nav aria-label="Footer">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/cookie-policy">Cookie Policy</a>
+            </nav>
+        </div>
+    </footer>
+    
+    <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+</body>
+</html>

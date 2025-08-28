@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <title>Data Processing Agreement - FreePromptHub</title>
+    <meta name="description" content="Data Processing Agreement for FreePromptHub - Our commitment to protecting your data under GDPR and CCPA">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    
+    <!-- Legal Document Styles -->
+    <style>
+        .dpa-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .dpa-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        .dpa-version {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .dpa-section {
+            margin-bottom: 40px;
+        }
+        
+        .dpa-section h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .dpa-section h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .dpa-list {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .dpa-list li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .dpa-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .dpa-table th,
+        .dpa-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .dpa-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .dpa-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .security-measures {
+            background: #e8f8f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .contact-box {
+            background: #ebf5fb;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+        }
+        
+        /* Dark mode support */
+        [data-theme="dark"] .dpa-container {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .dpa-section h2 {
+            color: #ffffff;
+            border-bottom-color: #333;
+        }
+        
+        [data-theme="dark"] .dpa-section h3 {
+            color: #f0f0f0;
+        }
+        
+        [data-theme="dark"] .dpa-table th {
+            background-color: #2a2a2a;
+        }
+        
+        [data-theme="dark"] .dpa-table tr:nth-child(even) {
+            background-color: #252525;
+        }
+        
+        [data-theme="dark"] .security-measures {
+            background: #1e3a2f;
+        }
+        
+        [data-theme="dark"] .contact-box {
+            background: #1e2a3a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="brand">
+                    <img src="/images/logo.png" alt="FreePromptHub Logo" class="logo">
+                    <span>FreePromptHub</span>
+                </a>
+                <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/prompts/business">Business</a></li>
+                            <li><a href="/prompts/content">Content Creation</a></li>
+                            <li><a href="/prompts/everyday">Everyday Life</a></li>
+                            <li><a href="/prompts/health">Health & Wellness</a></li>
+                            <li><a href="/prompts/money">Money & Finance</a></li>
+                            <li><a href="/prompts/relationships">Relationships</a></li>
+                            <li><a href="/prompts/coding">Coding & Tech</a></li>
+                            <li><a href="/prompts/ai-art">AI Art</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/search">🔍 Search</a></li>
+                    <li id="authMenuItem"></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <div class="dpa-container">
+                <div class="dpa-header">
+                    <h1>Data Processing Agreement</h1>
+                    <p class="dpa-version">Version 1.0 | Effective Date: December 19, 2024</p>
+                </div>
+
+                <!-- Section 1: Parties -->
+                <section class="dpa-section">
+                    <h2>1. Parties and Definitions</h2>
+                    <p>This Data Processing Agreement ("DPA") is entered into between:</p>
+                    <ul class="dpa-list">
+                        <li><strong>Data Controller:</strong> The entity using FreePromptHub services ("You" or "Controller")</li>
+                        <li><strong>Data Processor:</strong> FreePromptHub and its operators ("We" or "Processor")</li>
+                    </ul>
+                    
+                    <h3>Key Definitions:</h3>
+                    <ul class="dpa-list">
+                        <li><strong>"Personal Data":</strong> Any information relating to an identified or identifiable natural person</li>
+                        <li><strong>"Processing":</strong> Any operation performed on Personal Data</li>
+                        <li><strong>"Data Subject":</strong> The individual whose Personal Data is being processed</li>
+                        <li><strong>"Sub-processor":</strong> Any third party engaged by the Processor to process Personal Data</li>
+                    </ul>
+                </section>
+
+                <!-- Section 2: Processing Details -->
+                <section class="dpa-section">
+                    <h2>2. Details of Processing</h2>
+                    
+                    <h3>2.1 Categories of Data Subjects</h3>
+                    <ul class="dpa-list">
+                        <li>Website visitors</li>
+                        <li>Registered users</li>
+                        <li>Newsletter subscribers</li>
+                        <li>Content contributors</li>
+                    </ul>
+                    
+                    <h3>2.2 Types of Personal Data Processed</h3>
+                    <table class="dpa-table">
+                        <thead>
+                            <tr>
+                                <th>Data Category</th>
+                                <th>Specific Types</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Identity Data</td>
+                                <td>Name, username, user ID</td>
+                                <td>Account management</td>
+                            </tr>
+                            <tr>
+                                <td>Contact Data</td>
+                                <td>Email address</td>
+                                <td>Communication, authentication</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Data</td>
+                                <td>IP address, browser type, device information</td>
+                                <td>Security, analytics</td>
+                            </tr>
+                            <tr>
+                                <td>Usage Data</td>
+                                <td>Pages viewed, prompts used, search queries</td>
+                                <td>Service improvement</td>
+                            </tr>
+                            <tr>
+                                <td>Preference Data</td>
+                                <td>Favorites, settings, consent choices</td>
+                                <td>Personalization</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>2.3 Processing Activities</h3>
+                    <ul class="dpa-list">
+                        <li>Storage and hosting of user data</li>
+                        <li>Authentication and access control</li>
+                        <li>Analytics and usage tracking</li>
+                        <li>Email communication</li>
+                        <li>Content delivery and personalization</li>
+                        <li>Security monitoring and fraud prevention</li>
+                    </ul>
+                </section>
+
+                <!-- Section 3: Processor Obligations -->
+                <section class="dpa-section">
+                    <h2>3. Processor Obligations</h2>
+                    <p>The Processor shall:</p>
+                    <ul class="dpa-list">
+                        <li>Process Personal Data only on documented instructions from the Controller</li>
+                        <li>Ensure that persons authorized to process Personal Data have committed to confidentiality</li>
+                        <li>Implement appropriate technical and organizational security measures</li>
+                        <li>Not engage sub-processors without prior written consent from the Controller</li>
+                        <li>Assist the Controller in responding to data subject requests</li>
+                        <li>Delete or return all Personal Data at the end of the service provision</li>
+                        <li>Make available all information necessary to demonstrate compliance</li>
+                        <li>Immediately notify the Controller of any data breaches</li>
+                    </ul>
+                </section>
+
+                <!-- Section 4: Security Measures -->
+                <section class="dpa-section">
+                    <h2>4. Technical and Organizational Security Measures</h2>
+                    
+                    <div class="security-measures">
+                        <h3>4.1 Technical Measures</h3>
+                        <ul class="dpa-list">
+                            <li><strong>Encryption:</strong> All data transmitted using HTTPS/TLS encryption</li>
+                            <li><strong>Access Controls:</strong> Multi-factor authentication available for user accounts</li>
+                            <li><strong>Password Security:</strong> Hashed and salted password storage</li>
+                            <li><strong>Regular Updates:</strong> Security patches and software updates applied promptly</li>
+                            <li><strong>Backup:</strong> Regular data backups with secure storage</li>
+                            <li><strong>Monitoring:</strong> Continuous security monitoring and intrusion detection</li>
+                        </ul>
+                        
+                        <h3>4.2 Organizational Measures</h3>
+                        <ul class="dpa-list">
+                            <li><strong>Access Management:</strong> Role-based access control with principle of least privilege</li>
+                            <li><strong>Training:</strong> Regular security awareness training for all personnel</li>
+                            <li><strong>Incident Response:</strong> Documented incident response procedures</li>
+                            <li><strong>Vendor Management:</strong> Security assessment of all sub-processors</li>
+                            <li><strong>Data Minimization:</strong> Collection limited to necessary data only</li>
+                            <li><strong>Privacy by Design:</strong> Privacy considerations in all new features</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 5: Sub-processors -->
+                <section class="dpa-section">
+                    <h2>5. Sub-processors</h2>
+                    <p>Current approved sub-processors:</p>
+                    
+                    <table class="dpa-table">
+                        <thead>
+                            <tr>
+                                <th>Sub-processor</th>
+                                <th>Service</th>
+                                <th>Location</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cloudflare</td>
+                                <td>CDN & Security</td>
+                                <td>Global</td>
+                                <td>Content delivery, DDoS protection</td>
+                            </tr>
+                            <tr>
+                                <td>Google Analytics</td>
+                                <td>Analytics</td>
+                                <td>United States</td>
+                                <td>Usage analytics (if consent given)</td>
+                            </tr>
+                            <tr>
+                                <td>SendGrid</td>
+                                <td>Email Service</td>
+                                <td>United States</td>
+                                <td>Transactional emails</td>
+                            </tr>
+                            <tr>
+                                <td>AWS</td>
+                                <td>Cloud Hosting</td>
+                                <td>United States</td>
+                                <td>Data storage and processing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>The Controller consents to the Processor engaging the sub-processors listed above. The Processor shall notify the Controller of any intended changes concerning the addition or replacement of sub-processors, giving the Controller the opportunity to object to such changes.</p>
+                </section>
+
+                <!-- Section 6: International Transfers -->
+                <section class="dpa-section">
+                    <h2>6. International Data Transfers</h2>
+                    <p>Where Personal Data is transferred outside the European Economic Area (EEA), the Processor shall ensure that:</p>
+                    <ul class="dpa-list">
+                        <li>The transfer is to a country with an adequacy decision from the European Commission; or</li>
+                        <li>Appropriate safeguards are in place (such as Standard Contractual Clauses); or</li>
+                        <li>A specific derogation under GDPR Article 49 applies</li>
+                    </ul>
+                    
+                    <h3>Current Transfer Mechanisms:</h3>
+                    <ul class="dpa-list">
+                        <li><strong>EU-US Data Privacy Framework:</strong> For transfers to US-based sub-processors</li>
+                        <li><strong>Standard Contractual Clauses:</strong> For other international transfers</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7: Data Subject Rights -->
+                <section class="dpa-section">
+                    <h2>7. Data Subject Rights</h2>
+                    <p>The Processor shall assist the Controller in fulfilling its obligations to respond to Data Subject requests for:</p>
+                    <ul class="dpa-list">
+                        <li><strong>Access:</strong> Providing copies of Personal Data</li>
+                        <li><strong>Rectification:</strong> Correcting inaccurate Personal Data</li>
+                        <li><strong>Erasure:</strong> Deleting Personal Data ("right to be forgotten")</li>
+                        <li><strong>Restriction:</strong> Limiting processing of Personal Data</li>
+                        <li><strong>Portability:</strong> Providing Personal Data in a structured format</li>
+                        <li><strong>Objection:</strong> Stopping processing for certain purposes</li>
+                        <li><strong>Automated Decision-Making:</strong> Human review of automated decisions</li>
+                    </ul>
+                    
+                    <div class="contact-box">
+                        <h3>Data Subject Request Procedure:</h3>
+                        <ol class="dpa-list">
+                            <li>Submit request via Privacy Center or email to privacy@freepromphub.com</li>
+                            <li>Identity verification within 48 hours</li>
+                            <li>Response provided within 30 days (or 60 days for complex requests)</li>
+                            <li>No fee unless request is manifestly unfounded or excessive</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Section 8: Audits -->
+                <section class="dpa-section">
+                    <h2>8. Audits and Compliance</h2>
+                    <p>The Processor shall:</p>
+                    <ul class="dpa-list">
+                        <li>Make available to the Controller all information necessary to demonstrate compliance with this DPA</li>
+                        <li>Allow for and contribute to audits, including inspections, conducted by the Controller or an auditor mandated by the Controller</li>
+                        <li>Provide annual compliance reports upon request</li>
+                        <li>Maintain records of all processing activities carried out on behalf of the Controller</li>
+                    </ul>
+                    
+                    <h3>Audit Process:</h3>
+                    <ol class="dpa-list">
+                        <li>Controller provides 30 days written notice of audit</li>
+                        <li>Audits conducted during business hours</li>
+                        <li>Processor provides reasonable assistance</li>
+                        <li>Controller bears costs unless material non-compliance found</li>
+                    </ol>
+                </section>
+
+                <!-- Section 9: Breach Notification -->
+                <section class="dpa-section">
+                    <h2>9. Data Breach Notification</h2>
+                    <p>In the event of a Personal Data breach, the Processor shall:</p>
+                    <ul class="dpa-list">
+                        <li>Notify the Controller without undue delay and within 48 hours of becoming aware</li>
+                        <li>Provide the following information:
+                            <ul>
+                                <li>Nature of the breach and categories of data affected</li>
+                                <li>Estimated number of Data Subjects affected</li>
+                                <li>Likely consequences of the breach</li>
+                                <li>Measures taken or proposed to address the breach</li>
+                            </ul>
+                        </li>
+                        <li>Cooperate fully in investigating and remediating the breach</li>
+                        <li>Document all breaches and remediation efforts</li>
+                    </ul>
+                </section>
+
+                <!-- Section 10: Term and Termination -->
+                <section class="dpa-section">
+                    <h2>10. Term and Termination</h2>
+                    <p>This DPA shall:</p>
+                    <ul class="dpa-list">
+                        <li>Come into effect when the Controller starts using the services</li>
+                        <li>Remain in effect for the duration of the service provision</li>
+                        <li>Terminate automatically when the services are discontinued</li>
+                    </ul>
+                    
+                    <h3>Upon Termination:</h3>
+                    <ul class="dpa-list">
+                        <li>Processor shall, at Controller's choice, delete or return all Personal Data</li>
+                        <li>Processor shall delete existing copies unless legally required to retain</li>
+                        <li>Processor shall provide certification of deletion upon request</li>
+                    </ul>
+                </section>
+
+                <!-- Section 11: Liability -->
+                <section class="dpa-section">
+                    <h2>11. Liability and Indemnification</h2>
+                    <ul class="dpa-list">
+                        <li>Each party shall be liable for damages caused by its processing that infringes applicable data protection laws</li>
+                        <li>The Processor shall be liable for damages caused by processing only where it has not complied with obligations specifically directed to processors or acted contrary to lawful instructions</li>
+                        <li>Each party shall indemnify the other against claims brought by Data Subjects for violations of their data protection rights</li>
+                    </ul>
+                </section>
+
+                <!-- Section 12: Governing Law -->
+                <section class="dpa-section">
+                    <h2>12. Governing Law and Jurisdiction</h2>
+                    <p>This DPA shall be governed by and construed in accordance with:</p>
+                    <ul class="dpa-list">
+                        <li>For EU Data Subjects: GDPR and the laws of Ireland</li>
+                        <li>For California residents: CCPA/CPRA and California law</li>
+                        <li>For other Data Subjects: The applicable data protection laws of their jurisdiction</li>
+                    </ul>
+                </section>
+
+                <!-- Download Section -->
+                <div class="download-section">
+                    <h3>Download This Agreement</h3>
+                    <p>Need a copy for your records?</p>
+                    <button onclick="window.print()" class="download-btn">📄 Download PDF</button>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-box">
+                    <h3>Questions About This DPA?</h3>
+                    <p>Contact our Data Protection Officer:</p>
+                    <ul class="dpa-list">
+                        <li>Email: privacy@freepromphub.com</li>
+                        <li>Privacy Center: <a href="/privacy-center.html">/privacy-center</a></li>
+                        <li>Response time: Within 48 business hours</li>
+                    </ul>
+                </div>
+
+                <!-- Related Documents -->
+                <section class="dpa-section">
+                    <h2>Related Documents</h2>
+                    <ul class="dpa-list">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="/privacy-center.html">Privacy Center</a></li>
+                        <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FreePromptHub</h3>
+                    <p>Your source for the best AI prompts, completely free.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/prompts/business">Business</a></li>
+                        <li><a href="/prompts/content">Content</a></li>
+                        <li><a href="/prompts/everyday">Everyday</a></li>
+                        <li><a href="/prompts/health">Health</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy</a></li>
+                        <li><a href="/terms-of-service.html">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy-center.html">Privacy Center</a></li>
+                        <li><a href="/data-processing-agreement.html">DPA</a></li>
+                        <li><a href="/cookie-policy.html">Cookies</a></li>
+                        <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreePromptHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <script src="/js/auth-system.js"></script>
+    <script src="/js/accessibility.js"></script>
+</body>
+</html>

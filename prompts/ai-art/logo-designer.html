@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Design professional logos with AI. Create memorable, scalable logos that work everywhere from business cards to billboards. No design experience needed.">
+    <title>Logo Designer - AI Art | FreePromptHub</title>
+    <style id="critical-css">
+    :root{--primary:#0066CC;--primary-dark:#0052A3;--bg:#ffffff;--text:#212529;--border:#dee2e6}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--text);line-height:1.6}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .site-header{background:white;padding:20px 0;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:1000}
+    .header-content{display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:1.5rem;font-weight:800;color:#000;text-decoration:none}
+    .main-nav{display:flex;gap:30px;align-items:center}
+    .main-nav a{color:#333;text-decoration:none;font-weight:500}
+    .btn-primary{background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none}
+    </style>
+    <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner" class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="/">🚀 FreePromptHub</a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="/prompts/business/">Business</a>
+                <a href="/prompts/content/">Content</a>
+                <a href="/prompts/ai-art/">AI Art</a>
+                <a class="btn-primary" href="/#categories">Get Prompts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/ai-art/">AI Art</a>
+                <span class="separator">›</span>
+                <span class="current" aria-current="page">Logo Designer</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Logo Designer</h1>
+                <p class="prompt-description">
+                    Create professional logos that capture your brand essence. Generate timeless, versatile logos that work at any size and look like they cost thousands in design fees.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly maxlength="5000">You are a master logo designer with expertise in brand identity, symbolism, and visual communication. You've created iconic logos for major brands and understand the principles of memorable, scalable design.
+
+I need to create a professional logo that perfectly represents my brand and works across all applications.
+
+BRAND INFORMATION:
+- Company Name: [Your company name]
+- Industry: [Your industry]
+- Target Audience: [Who you serve]
+- Brand Values: [3-5 core values]
+- Personality: [Professional / Playful / Bold / Minimal / Luxury / Tech]
+- Competitors: [For differentiation]
+- Unique Angle: [What makes you special]
+
+LOGO TYPES TO CREATE:
+
+1. **WORDMARK LOGO**
+"[Company name] wordmark logo, custom typography, [style: modern/classic/bold/elegant], professional lettering design, black on white background, scalable vector style, memorable and unique --ar 3:1 --v 5.2"
+
+2. **LETTERMARK/MONOGRAM**
+"[Initials] monogram logo, interlocking letters, [geometric/script/modern] style, clever negative space, minimal design, black and white, professional brand mark --ar 1:1 --v 5.2"
+
+3. **PICTORIAL MARK**
+"[Object/animal/symbol] logo for [company], simplified iconic design, [style: flat/3D/line art], memorable symbol, works at small size, black on white --ar 1:1 --v 5.2"
+
+4. **ABSTRACT MARK**
+"abstract logo for [company name], [shapes: geometric/organic/flowing], representing [concept], unique symbol, professional design, black and white, modern brand mark --ar 1:1 --v 5.2"
+
+5. **COMBINATION MARK**
+"[Company name] logo with [symbol] icon, balanced composition, icon and text combination, versatile layout, professional brand identity, black on white --ar 2:1 --v 5.2"
+
+6. **EMBLEM/BADGE**
+"[Company name] emblem logo, [vintage/modern/official] badge style, contained design, detailed but scalable, professional crest, black and white --ar 1:1 --v 5.2"
+
+STYLE VARIATIONS:
+
+Minimalist:
+"ultra minimalist [company] logo, maximum simplicity, single line weight, generous white space, less is more approach, timeless design --ar 1:1 --v 5.2"
+
+Geometric:
+"geometric [company] logo, perfect shapes, mathematical precision, grid-based design, modern and clean, professional geometry --ar 1:1 --v 5.2"
+
+Organic:
+"organic flowing [company] logo, natural curves, hand-drawn feel, approachable design, warm and human, artistic touch --ar 1:1 --v 5.2"
+
+Vintage/Retro:
+"vintage style [company] logo, [decade] inspired, nostalgic design, authentic retro feel, timeless classic, heritage brand --ar 1:1 --v 5.2"
+
+Tech/Futuristic:
+"futuristic [company] logo, tech-inspired, gradient mesh, innovative design, cutting-edge feel, digital-first brand --ar 1:1 --v 5.2"
+
+Luxury/Premium:
+"luxury [company] logo, elegant and refined, premium feel, sophisticated design, high-end brand mark, exclusive appearance --ar 1:1 --v 5.2"
+
+COLOR EXPLORATIONS:
+
+Monochrome First:
+"[Your chosen logo] in pure black on white background, testing form without color, strong silhouette, works in single color --ar 1:1 --v 5.2"
+
+Primary Brand Color:
+"[Your logo] in [specific color/hex code], brand color application, maintaining legibility, color psychology, professional appearance --ar 1:1 --v 5.2"
+
+Gradient Version:
+"[Your logo] with gradient from [color1] to [color2], modern color treatment, smooth transition, trendy but timeless --ar 1:1 --v 5.2"
+
+TECHNICAL VERSIONS:
+
+Horizontal Layout:
+"[Company logo] horizontal arrangement, website header format, balanced proportions, wide application, professional layout --ar 3:1 --v 5.2"
+
+Vertical/Stacked:
+"[Company logo] stacked vertically, social media profile format, compact arrangement, square friendly, centered design --ar 1:1 --v 5.2"
+
+Icon Only:
+"[Company] icon mark only, no text, app icon format, recognizable symbol, works at 16px, simplified version --ar 1:1 --v 5.2"
+
+Reversed/Knockout:
+"[Company logo] white on black background, reversed version, knockout application, dark mode ready, high contrast --ar 1:1 --v 5.2"
+
+INDUSTRY-SPECIFIC APPROACHES:
+
+Tech/Software:
+"clean lines, gradient accents, modern typography, innovative feel, scalable design, digital-first"
+
+Healthcare/Medical:
+"trustworthy, clean, often blue/green, caring feel, professional, accessible design"
+
+Food/Restaurant:
+"appetizing, warm colors, personality-driven, memorable, often playful or artisanal"
+
+Finance/Banking:
+"stable, trustworthy, often blue/green, conservative, professional, established feel"
+
+Fashion/Beauty:
+"elegant, sophisticated, minimal or ornate, luxury feel, memorable, artistic"
+
+CONCEPT DEVELOPMENT:
+
+Symbol Meanings:
+"[Company] logo incorporating [specific symbol] representing [meaning], thoughtful symbolism, deeper meaning, clever concept --ar 1:1"
+
+Negative Space:
+"[Company] logo with clever negative space revealing [hidden element], dual meaning, smart design, memorable trick --ar 1:1"
+
+Letter Integration:
+"[Company] logo where letters form [shape/image], integrated design, clever typography, unified concept --ar 1:1"
+
+SCALABILITY TESTS:
+
+Business Card Size:
+"[Logo] shown at business card scale, maintaining clarity, readable at small size, professional application"
+
+Billboard Size:
+"[Logo] shown on billboard mockup, impact at large scale, distance visibility, outdoor application"
+
+App Icon:
+"[Logo] as mobile app icon, 1024x1024px, rounded corners, works on phone screen, simplified if needed"
+
+PRESENTATION FORMATS:
+
+Logo on Grid:
+"[Company logo] with construction grid overlay, showing proportions, geometric foundation, design rationale --ar 1:1"
+
+Logo Variations Set:
+"[Company] complete logo set showing primary, secondary, and icon versions, consistent system, brand flexibility --ar 16:9"
+
+Mockup Applications:
+"[Logo] applied to business card, letterhead, and website mockup, real-world usage, professional presentation --ar 16:9"
+
+Remember: Great logos are simple, memorable, timeless, versatile, and appropriate. Test at all sizes!</textarea>
+                    
+                    <button id="copy-button" aria-label="Copy prompt to clipboard" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Always design in black and white first - if it doesn't work without color, it doesn't work</li>
+                        <li>Test your logo at business card size and billboard size</li>
+                        <li>Avoid trendy effects that will date quickly</li>
+                        <li>Ensure it's unique - do a reverse image search to check</li>
+                        <li>Create multiple versions for different use cases</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/ai-art/brand-style-guide.html" class="related-card">
+                            <h3>Brand Style Guide</h3>
+                            <p>Complete brand identity</p>
+                            <span class="category-tag">AI Art</span>
+                        </a>
+                        <a href="/prompts/business/business-plan.html" class="related-card">
+                            <h3>Business Plan</h3>
+                            <p>Define your business</p>
+                            <span class="category-tag">Business</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+        </div>
+    </footer>
+
+    <script src="/feedback.js"></script>
+    <script src="/script.js"></script>
+    <script src="/simple-analytics.js" async></script>
+        <script src="/js/affiliate-manager.js"></script>
+        <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
+</body>
+</html>

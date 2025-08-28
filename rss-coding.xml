@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FreePromptHub - Coding & Technology Prompts</title>
+    <link>https://www.freeprompthub.com/prompts/coding</link>
+    <description>Latest Coding & Technology AI prompts from FreePromptHub</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Aug 2025 15:08:14 GMT</lastBuildDate>
+    <item>
+      <title>Unit Test Generator Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/test-generator</link>
+      <description>Unit Test Generator prompt - Generate comprehensive test suites with edge cases, mocks, and 100% coverage. Never ship untested code again.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/test-generator</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Regex Pattern Builder Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/regex-wizard</link>
+      <description>Regex Pattern Builder prompt - Create and explain complex regex patterns for any use case. Never struggle with regular expressions again.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/regex-wizard</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>SQL Query Optimizer Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/sql-optimizer</link>
+      <description>SQL Query Optimizer - Transform slow queries into lightning-fast ones. Fix N+1 problems, optimize JOINs, and improve database performance by 10-100x.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/sql-optimizer</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Python Automation Script Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/python-automation</link>
+      <description>Python Automation Script prompt - Generate Python scripts to automate any repetitive task. Web scraping, file processing, API calls, and more.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/python-automation</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>React Component Generator Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/react-component</link>
+      <description>React Component Generator prompt - Create production-ready React components with TypeScript, hooks, and testing. Build faster with AI.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/react-component</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Legacy Code Refactorer Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/refactor-legacy</link>
+      <description>Legacy Code Refactorer prompt - Transform spaghetti code into clean, maintainable architecture. Modernize legacy systems with best practices and design patterns.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/refactor-legacy</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Code Review Pro Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/code-reviewer</link>
+      <description>Code Review Pro - Get senior developer code reviews with security analysis, performance optimization, and best practices recommendations.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/code-reviewer</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Debug Master Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/debug-master</link>
+      <description>Debug Master prompt - Fix any bug instantly with AI. Get step-by-step debugging solutions with root cause analysis and prevention tips.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/debug-master</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>REST API Builder Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/api-builder</link>
+      <description>REST API Builder - Generate complete REST APIs with authentication, validation, error handling, and documentation in any framework.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/api-builder</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Algorithm Explainer Prompt - Coding | FreePromptHub</title>
+      <link>https://www.freeprompthub.com/prompts/coding/algorithm-explainer</link>
+      <description>Algorithm Explainer prompt - Master any algorithm with visual explanations, complexity analysis, and real-world use cases. Perfect for interviews and learning.</description>
+      <guid>https://www.freeprompthub.com/prompts/coding/algorithm-explainer</guid>
+      <pubDate>Thu, 28 Aug 2025 14:58:04 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -33,27 +33,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Copy to Clipboard Functionality
+// Copy to Clipboard Functionality with Enhanced Feedback
 document.addEventListener('DOMContentLoaded', function() {
     const copyButton = document.getElementById('copy-button');
     const promptTextarea = document.getElementById('prompt-text');
     
     if (copyButton && promptTextarea) {
         copyButton.addEventListener('click', function() {
-            copyToClipboard(promptTextarea.value);
+            // Use enhanced copy if feedback system is loaded
+            if (window.enhancedCopyToClipboard) {
+                enhancedCopyToClipboard(promptTextarea.value, copyButton);
+            } else {
+                // Fallback to basic copy
+                copyToClipboard(promptTextarea.value);
+            }
         });
+        
+        // Add keyboard shortcut hint on hover
+        copyButton.setAttribute('title', 'Copy prompt (Ctrl+Shift+C)');
     }
 });
 
 function copyToClipboard(text) {
     const copyButton = document.getElementById('copy-button');
     
+    // Add visual feedback
+    copyButton.disabled = true;
+    const originalText = copyButton.textContent;
+    copyButton.textContent = 'Copying...';
+    
     // Modern clipboard API (preferred method)
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function() {
             showCopySuccess();
+            copyButton.textContent = 'Copied!';
+            
+            // Show toast if feedback system is available
+            if (window.feedback) {
+                window.feedback.showToast('Prompt copied to clipboard!', 'success');
+            }
+            
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+                copyButton.disabled = false;
+            }, 2000);
         }).catch(function(err) {
-            // Fallback to older method if modern API fails
+            // Show error feedback
+            copyButton.textContent = 'Copy Failed';
+            copyButton.classList.add('error');
+            
+            if (window.feedback) {
+                window.feedback.showToast('Failed to copy. Try selecting and pressing Ctrl+C.', 'error');
+            }
+            
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+                copyButton.disabled = false;
+                copyButton.classList.remove('error');
+            }, 2000);
+            
+            // Try fallback
             fallbackCopyToClipboard(text);
         });
     } else {
@@ -63,6 +102,9 @@ function copyToClipboard(text) {
 }
 
 function fallbackCopyToClipboard(text) {
+    const copyButton = document.getElementById('copy-button');
+    const originalText = copyButton.textContent;
+    
     // Create a temporary textarea element
     const tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
@@ -70,6 +112,7 @@ function fallbackCopyToClipboard(text) {
     tempTextarea.style.left = '-9999px';
     tempTextarea.style.top = '0';
     tempTextarea.setAttribute('readonly', '');
+    tempTextarea.setAttribute('aria-hidden', 'true');
     
     document.body.appendChild(tempTextarea);
     
@@ -82,26 +125,57 @@ function fallbackCopyToClipboard(text) {
         const successful = document.execCommand('copy');
         if (successful) {
             showCopySuccess();
+            copyButton.textContent = 'Copied!';
+            
+            if (window.feedback) {
+                window.feedback.showToast('Prompt copied!', 'success');
+            }
         } else {
-            console.error('Failed to copy text');
+            throw new Error('Copy command failed');
         }
     } catch (err) {
         console.error('Failed to copy text:', err);
+        copyButton.classList.add('error');
+        copyButton.textContent = 'Copy Failed';
+        
+        if (window.feedback) {
+            window.feedback.showToast('Please select the text and press Ctrl+C to copy.', 'warning');
+        }
     }
     
     // Remove temporary textarea
     document.body.removeChild(tempTextarea);
+    
+    // Reset button
+    setTimeout(() => {
+        copyButton.textContent = originalText;
+        copyButton.disabled = false;
+        copyButton.classList.remove('error');
+    }, 2000);
 }
 
 function showCopySuccess() {
     const copyButton = document.getElementById('copy-button');
     
-    // Add success state
+    // Add success state with animation
     copyButton.classList.add('copied');
     
-    // Remove success state after 2 seconds
+    // Add checkmark temporarily
+    const checkmark = document.createElement('span');
+    checkmark.className = 'success-indicator';
+    checkmark.textContent = '✓';
+    checkmark.style.marginLeft = '5px';
+    copyButton.appendChild(checkmark);
+    
+    // Track the copy event
+    trackCopyEvent();
+    
+    // Remove success state after animation
     setTimeout(function() {
         copyButton.classList.remove('copied');
+        if (checkmark.parentNode) {
+            checkmark.remove();
+        }
     }, 2000);
 }
 
@@ -116,11 +190,26 @@ function autoResizeTextarea() {
     }
 }
 
-// Optional: Track copy events for analytics
+// Track copy events for analytics
 function trackCopyEvent() {
-    // Add your analytics tracking code here
-    // Example: gtag('event', 'copy', { 'event_category': 'prompt' });
-    console.log('Prompt copied successfully');
+    // Get prompt title and category from page
+    const promptTitle = document.querySelector('.prompt-title')?.textContent || 'Unknown Prompt';
+    const breadcrumb = document.querySelector('.breadcrumb');
+    let category = 'general';
+    
+    if (breadcrumb) {
+        const links = breadcrumb.querySelectorAll('a');
+        if (links.length > 1) {
+            category = links[links.length - 1].textContent.toLowerCase();
+        }
+    }
+    
+    // Track with simple analytics if available
+    if (window.simpleAnalytics && window.simpleAnalytics.trackPromptCopy) {
+        window.simpleAnalytics.trackPromptCopy(promptTitle, category);
+    }
+    
+    console.log('Prompt copied:', promptTitle, 'Category:', category);
 }
 
 // Optional: Highlight text when textarea is focused

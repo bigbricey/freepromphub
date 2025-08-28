@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#0066CC"/>
+  
+  <!-- Rocket Icon (simplified) -->
+  <g transform="translate(256, 256)">
+    <!-- Rocket Body -->
+    <path d="M -60 -120 
+             L 60 -120 
+             L 40 60 
+             L 20 100
+             L -20 100
+             L -40 60 
+             Z" 
+          fill="white" 
+          stroke="#0052A3" 
+          stroke-width="4"/>
+    
+    <!-- Rocket Nose -->
+    <path d="M -60 -120 
+             Q 0 -180 60 -120" 
+          fill="#FFD700" 
+          stroke="#0052A3" 
+          stroke-width="4"/>
+    
+    <!-- Rocket Window -->
+    <circle cx="0" cy="-60" r="25" fill="#0066CC" stroke="#0052A3" stroke-width="4"/>
+    
+    <!-- Rocket Fins -->
+    <path d="M -40 20 L -80 60 L -40 60 Z" fill="#0052A3"/>
+    <path d="M 40 20 L 80 60 L 40 60 Z" fill="#0052A3"/>
+    
+    <!-- Rocket Flame -->
+    <path d="M -20 100 
+             Q -15 130 -10 140 
+             Q -5 135 0 140 
+             Q 5 135 10 140 
+             Q 15 130 20 100 
+             Z" 
+          fill="#FF4444" 
+          opacity="0.9"/>
+    <path d="M -15 100 
+             Q -10 125 -5 130 
+             Q 0 125 5 130 
+             Q 10 125 15 100 
+             Z" 
+          fill="#FFD700" 
+          opacity="0.9"/>
+  </g>
+</svg>

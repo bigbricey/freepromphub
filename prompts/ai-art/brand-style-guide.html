@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers via Meta Tags -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.affiliate-network.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- X-XSS-Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Referrer-Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Create a complete brand visual identity with AI. Generate logos, color palettes, patterns, and style guides that establish a professional, cohesive brand.">
+    <title>Brand Style Guide Creator - AI Art | FreePromptHub</title>
+    <style id="critical-css">
+    :root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--radius:8px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .site-header{background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 100%);padding:20px 0;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:1000}
+    .header-content{display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:1.5rem;font-weight:800;color:#000;text-decoration:none}
+    .main-nav{display:flex;gap:30px;align-items:center}
+    .main-nav a{color:#333;text-decoration:none;font-weight:500}
+    .btn-primary{background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+    </style>
+    <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+    <!-- Cookie Consent -->
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .cookie-consent-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-consent-text p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .cookie-consent-text a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .cookie-consent-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-consent-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-consent-btn.accept-all {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .cookie-consent-btn.accept-all:hover {
+            background: #2ecc71;
+        }
+        
+        .cookie-consent-btn.necessary-only {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-consent-btn.necessary-only:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .cookie-consent-btn.manage {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .cookie-consent-btn.manage:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner" class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="/">🚀 FreePromptHub</a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="/prompts/business/">Business</a>
+                <a href="/prompts/content/">Content</a>
+                <a href="/prompts/coding/">Coding</a>
+                <a href="/about">About</a>
+                <a class="btn-primary" href="/#categories">Get Prompts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <a href="/">Home</a>
+                <span class="separator">›</span>
+                <a href="/prompts/ai-art/">AI Art</a>
+                <span class="separator">›</span>
+                <span class="current" aria-current="page">Brand Style Guide</span>
+            </nav>
+
+            <article class="prompt-display">
+                <h1 class="prompt-title">Brand Style Guide Creator</h1>
+                <p class="prompt-description">
+                    Build a complete visual brand identity from scratch. Generate cohesive logos, color palettes, typography, patterns, and usage guidelines that make your brand instantly recognizable.
+                </p>
+
+                <div class="prompt-content">
+                    <label for="prompt-text" class="prompt-label">Prompt:</label>
+                    <textarea id="prompt-text" class="prompt-textarea" readonly maxlength="5000">You are a brand identity designer with 20 years of experience creating memorable visual identities for startups and Fortune 500 companies. You understand color psychology, typography, and how to create flexible design systems that work across all media.
+
+I need to create a complete brand style guide that establishes a professional, cohesive visual identity.
+
+BRAND FOUNDATION:
+- Brand Name: [Your brand name]
+- Industry: [Tech / Fashion / Food / Health / Finance / Education / Other]
+- Mission: [What you do and why]
+- Target Audience: [Demographics and psychographics]
+- Brand Personality: [3-5 adjectives like: Bold, Trustworthy, Playful]
+- Competitors: [For differentiation]
+- Unique Value: [What makes you different]
+
+COMPLETE BRAND STYLE GUIDE:
+
+1. **LOGO VARIATIONS**
+
+Primary Logo:
+"minimalist logo design for [brand name], [symbol/icon description], [style: geometric/organic/abstract], black on white background, scalable vector style, professional brand mark --ar 1:1 --v 5.2"
+
+Wordmark:
+"[brand name] wordmark logo, [font style: modern/classic/playful], custom typography, professional lettering, black on white, brand identity design --ar 3:1 --v 5.2"
+
+Icon Only:
+"simplified icon version of [brand] logo, minimal geometric mark, works at 16px size, app icon style, black and white, recognizable symbol --ar 1:1 --v 5.2"
+
+Logo Lockups:
+"[brand] logo variations showing horizontal, vertical, and stacked layouts, consistent design system, professional brand guidelines presentation --ar 16:9 --v 5.2"
+
+2. **COLOR PALETTE**
+
+Primary Palette:
+"brand color palette showing [main color theme: warm/cool/neutral], 5 complementary colors with hex codes, professional color swatches, brand guidelines style --ar 16:9 --v 5.2"
+
+Extended Palette:
+"extended brand colors including tints and shades, 60-30-10 rule demonstration, accessibility considerations, WCAG compliant combinations --ar 16:9 --v 5.2"
+
+Color Applications:
+"[brand] color usage examples, showing primary for CTAs, secondary for accents, neutral for text, real-world applications --ar 16:9 --v 5.2"
+
+3. **TYPOGRAPHY SYSTEM**
+
+Font Hierarchy:
+"typography system showing [headline font], [body font], [accent font], complete hierarchy from H1 to body text, professional type specimen --ar 16:9 --v 5.2"
+
+Type Combinations:
+"[brand] typography in use, showing headline and body text combinations, readable pairings, professional layout examples --ar 3:2 --v 5.2"
+
+4. **VISUAL ELEMENTS**
+
+Brand Patterns:
+"seamless pattern using [brand] visual elements, [geometric/organic/abstract] style, [brand colors], repeatable tile design, background texture --ar 1:1 --tile --v 5.2"
+
+Icon Set:
+"custom icon set for [brand], 12 consistent icons for [common actions/concepts], [line/filled/duo-tone] style, uniform weight, professional icon design --ar 16:9 --v 5.2"
+
+Photo Style:
+"photography style guide for [brand], showing [bright/moody/natural] lighting, [color grading], consistent filter, lifestyle photography examples --ar 16:9 --v 5.2"
+
+Illustration Style:
+"brand illustration style, [2D/3D/isometric/hand-drawn], [brand colors], consistent character design, cohesive visual language --ar 3:2 --v 5.2"
+
+5. **BRAND APPLICATIONS**
+
+Business Card:
+"business card design using [brand] identity, front and back, logo placement, contact information layout, premium design, mockup on textured surface --ar 3.5:2 --v 5.2"
+
+Website Header:
+"website header using [brand] style guide, navigation design, hero section, responsive layout visualization, professional web design --ar 16:9 --v 5.2"
+
+Social Media Templates:
+"social media template set for [brand], Instagram post, story, and profile mockup, consistent visual system, brand colors and fonts --ar 1:1 --v 5.2"
+
+Packaging Concept:
+"product packaging using [brand] identity, [box/bottle/bag] design, logo placement, color application, premium mockup --ar 4:3 --v 5.2"
+
+6. **BRAND GUIDELINES DOCUMENT**
+
+Logo Usage:
+"logo usage guidelines showing correct and incorrect applications, minimum sizes, clear space rules, background variations --ar 16:9 --v 5.2"
+
+Do's and Don'ts:
+"brand usage do's and don'ts, showing correct vs incorrect logo treatments, color usage, typography rules, professional guidelines --ar 16:9 --v 5.2"
+
+STYLE VARIATIONS BY INDUSTRY:
+
+Tech/Startup:
+"modern, minimal, gradient accents, sans-serif typography, geometric shapes, innovation-focused"
+
+Luxury/Premium:
+"elegant, high contrast, gold/silver accents, serif typography, generous white space, sophisticated"
+
+Eco/Natural:
+"organic shapes, earth tones, hand-drawn elements, natural textures, sustainable feeling"
+
+Bold/Youth:
+"vibrant colors, dynamic angles, street art influence, bold typography, high energy"
+
+Corporate/Trust:
+"conservative colors, traditional typography, structured layouts, professional, reliable"
+
+BRAND PERSONALITY EXPRESSIONS:
+
+Playful:
+"rounded corners, bright colors, casual typography, fun illustrations, approachable design"
+
+Serious:
+"sharp edges, muted colors, formal typography, minimal decoration, authoritative presence"
+
+Innovative:
+"futuristic elements, gradient meshes, cutting-edge typography, tech-inspired, forward-thinking"
+
+Vintage:
+"retro color palettes, vintage typography, textured backgrounds, nostalgic elements, timeless"
+
+CONSISTENCY ELEMENTS:
+
+Visual Rhythm:
+"consistent spacing system, 8px grid, proportional relationships, harmonious layouts"
+
+Brand Voice:
+"visual representation of [formal/casual/friendly] brand voice through design choices"
+
+Flexibility:
+"showing how brand adapts across different media while maintaining recognition"
+
+DELIVERABLE FORMATS:
+
+Style Guide Page:
+"one-page brand style guide for [brand], showing all elements together, quick reference format, PDF-ready design --ar 2:3 --v 5.2"
+
+Brand Board:
+"mood board style brand presentation, inspirational images, color and type samples, cohesive visual story --ar 16:9 --v 5.2"
+
+Asset Kit:
+"downloadable brand assets preview, showing file formats, organized folders, implementation-ready --ar 16:9 --v 5.2"
+
+Remember: A strong brand style guide ensures consistency across all touchpoints. Generate variations but maintain core identity!</textarea>
+                    
+                    <button id="copy-button" aria-label="Copy prompt to clipboard" class="copy-button">
+                        <span class="button-text">Copy Prompt</span>
+                        <span class="success-message">Copied!</span>
+                    </button>
+                </div>
+
+                <section class="pro-tips">
+                    <h2>Pro Tips:</h2>
+                    <ul>
+                        <li>Start with black and white logos before adding color</li>
+                        <li>Test logos at tiny sizes (favicon) and huge (billboard)</li>
+                        <li>Create a simple version for complex reproduction methods</li>
+                        <li>Document everything - consistency is key to recognition</li>
+                        <li>Generate multiple options and A/B test with your audience</li>
+                    </ul>
+                </section>
+
+                <section class="related-prompts">
+                    <h2>Related Prompts</h2>
+                    <div class="related-grid">
+                        <a href="/prompts/ai-art/logo-designer.html" class="related-card">
+                            <h3>Logo Designer</h3>
+                            <p>Professional logo creation</p>
+                            <span class="category-tag">AI Art</span>
+                        </a>
+                        <a href="/prompts/business/brand-strategy.html" class="related-card">
+                            <h3>Brand Strategy</h3>
+                            <p>Define your brand</p>
+                            <span class="category-tag">Business</span>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
+        </div>
+    </footer>
+
+    <script src="/feedback.js"></script>
+    <script src="/script.js"></script>
+    <script src="/simple-analytics.js" async></script>
+        <script src="/js/affiliate-manager.js"></script>
+        <script src="/js/accessibility.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    <strong>🍪 We value your privacy</strong><br>
+                    We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies. 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-center.html">Privacy Center</a>
+                </p>
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-consent-btn necessary-only" onclick="cookieConsent.acceptNecessaryOnly()">
+                    Necessary Only
+                </button>
+                <button class="cookie-consent-btn manage" onclick="window.location.href='/privacy-center.html'">
+                    Manage Preferences
+                </button>
+                <button class="cookie-consent-btn accept-all" onclick="cookieConsent.acceptAll()">
+                    Accept All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js"></script>
+    <script>
+        // Initialize cookie consent
+        const cookieConsent = new CookieConsent();
+        
+        // Check if banner should be shown
+        window.addEventListener('DOMContentLoaded', function() {
+            if (cookieConsent.shouldShowBanner()) {
+                document.getElementById('cookieConsentBanner').classList.add('show');
+            }
+            
+            // Apply consent preferences
+            cookieConsent.applyConsent();
+        });
+    </script>
+
+    <!-- Input Validation Scripts -->
+    <script src="/js/input-validator.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/form-validation.css">
+</body>
+</html>
