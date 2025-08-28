@@ -276,30 +276,33 @@
             `;
             
             trendingSection.innerHTML = `
-                <h3 style="margin-bottom: 20px; color: #212529;">🔥 Trending Prompts</h3>
+                <h3 style="margin-bottom: 20px; color: #212529; font-size: 1.8rem; font-weight: 700;">🔥 Trending Prompts</h3>
                 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     ${trending.map(prompt => `
                         <a href="${prompt.id}" style="
                             display: inline-flex;
                             align-items: center;
                             gap: 8px;
-                            padding: 8px 16px;
+                            padding: 10px 20px;
                             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                            color: white;
-                            border-radius: 20px;
+                            color: white !important;
+                            border-radius: 25px;
                             text-decoration: none;
-                            font-size: 0.95rem;
-                            transition: transform 0.2s;
-                        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            font-size: 1rem;
+                            font-weight: 600;
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+                            opacity: 1 !important;
+                        " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.3)'">
                             <span>${prompt.title}</span>
-                            <span style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 10px; font-size: 0.8rem;">
+                            <span style="background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 12px; font-size: 0.85rem; font-weight: 700;">
                                 ${prompt.popularity}%
                             </span>
                         </a>
                     `).join('')}
                 </div>
-                <div style="margin-top: 20px;">
-                    <a href="/search" style="color: #0066CC; text-decoration: none; font-size: 0.95rem;">
+                <div style="margin-top: 25px;">
+                    <a href="/search" style="color: #0066CC; text-decoration: none; font-size: 1rem; font-weight: 600;">
                         Explore all prompts with advanced search →
                     </a>
                 </div>
