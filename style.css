@@ -138,6 +138,70 @@ body {
     font-weight: 700;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: var(--text-nav);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 5px 8px;
+    transition: color 0.2s;
+    font-family: inherit;
+}
+
+.dropdown-btn:hover {
+    color: var(--primary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 280px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-hover);
+    color: var(--primary);
+}
+
+.dropdown-content .count {
+    float: right;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
     display: none;
