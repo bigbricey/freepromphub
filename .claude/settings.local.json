@@ -12,7 +12,12 @@
       "WebFetch(domain:developers.google.com)",
       "WebFetch(domain:support.google.com)",
       "Bash(dir:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:freeprompthub.com)",
+      "WebFetch(domain:3811aatcrgoq3zex8i6zidmb77.hop.clickbank.net)",
+      "WebFetch(domain:0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
