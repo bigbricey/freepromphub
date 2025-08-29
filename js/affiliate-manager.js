@@ -9,17 +9,17 @@
         // Business & Productivity
         business: {
             primary: {
-                title: "📚 Business Strategy Templates",
-                description: "Professional templates and frameworks for business planning, marketing, and operations. Save time with proven structures.",
-                cta: "View Templates →",
+                title: "🧠 The Genius Wave - Unlock Your Success",
+                description: "Activate your genius potential with this breakthrough audio program. Used by entrepreneurs to enhance focus and decision-making.",
+                cta: "Get The Genius Wave →",
                 url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#4CAF50"
             },
             secondary: {
-                title: "📊 Business Analytics Tools",
-                description: "Data-driven insights for better business decisions. Analyze performance and identify growth opportunities.",
-                cta: "Explore Tools →",
-                url: "https://example.clickbank.net",
+                title: "🧠 The Genius Wave - Unlock Your Success",
+                description: "Activate your genius potential with this breakthrough audio program. Used by entrepreneurs to enhance focus and decision-making.",
+                cta: "Get The Genius Wave →",
+                url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#2196F3"
             }
         },
@@ -27,17 +27,17 @@
         // Money & Finance
         money: {
             primary: {
-                title: "💰 Personal Finance Course",
-                description: "Learn practical money management strategies. Build savings, reduce debt, and plan for your financial future.",
-                cta: "Start Learning →",
-                url: "https://finance.clickbank.net",
+                title: "💰 Billionaire Brain Wave - Attract Wealth",
+                description: "Activate the neural pathways used by billionaires. This 7-minute audio program helps attract money and success.",
+                cta: "Get Billionaire Brain Wave →",
+                url: "https://3811aatcrgoq3zex8i6zidmb77.hop.clickbank.net",
                 color: "#FFD700"
             },
             secondary: {
-                title: "📈 Investment Education",
-                description: "Understand investment basics and risk management. Make informed decisions about your portfolio.",
-                cta: "Learn Investing →",
-                url: "https://investing.clickbank.net",
+                title: "💰 Billionaire Brain Wave - Attract Wealth",
+                description: "Activate the neural pathways used by billionaires. This 7-minute audio program helps attract money and success.",
+                cta: "Get Billionaire Brain Wave →",
+                url: "https://3811aatcrgoq3zex8i6zidmb77.hop.clickbank.net",
                 color: "#00C853"
             }
         },
@@ -45,17 +45,17 @@
         // Health & Fitness
         health: {
             primary: {
-                title: "🥗 Nutrition Guide",
-                description: "Evidence-based nutrition information for better health. Practical meal planning and healthy eating strategies.",
-                cta: "Get Nutrition Guide →",
-                url: "https://nutrition.clickbank.net",
+                title: "😴 SleepLean - Lose Weight While You Sleep",
+                description: "Revolutionary weight loss breakthrough that works while you sleep. Transform your body with this simple bedtime ritual.",
+                cta: "Get SleepLean →",
+                url: "https://454019zerqrp6s2c-9sgr8eldl.hop.clickbank.net",
                 color: "#FF5722"
             },
             secondary: {
-                title: "💪 Fitness Program",
-                description: "Structured workout plans for different fitness levels. Build strength and improve your health sustainably.",
-                cta: "Start Fitness Journey →",
-                url: "https://fitness.clickbank.net",
+                title: "😴 SleepLean - Lose Weight While You Sleep",
+                description: "Revolutionary weight loss breakthrough that works while you sleep. Transform your body with this simple bedtime ritual.",
+                cta: "Get SleepLean →",
+                url: "https://454019zerqrp6s2c-9sgr8eldl.hop.clickbank.net",
                 color: "#FF9800"
             }
         },
@@ -63,17 +63,17 @@
         // Relationships & Dating
         relationships: {
             primary: {
-                title: "💕 Relationship Communication",
-                description: "Improve communication skills for better relationships. Learn active listening and conflict resolution techniques.",
-                cta: "Improve Communication →",
-                url: "https://relationships.clickbank.net",
+                title: "💕 His Secret Obsession - Make Him Devoted",
+                description: "Discover the secret words that make any man feel a deep emotional connection and overwhelming desire for you.",
+                cta: "Get His Secret Obsession →",
+                url: "https://fdd98gwkrduu9o55wkx6seqd2w.hop.clickbank.net",
                 color: "#E91E63"
             },
             secondary: {
-                title: "💬 Dating Confidence",
-                description: "Build confidence in dating and social situations. Practical tips for authentic connection.",
-                cta: "Build Confidence →",
-                url: "https://dating.clickbank.net",
+                title: "💕 His Secret Obsession - Make Him Devoted",
+                description: "Discover the secret words that make any man feel a deep emotional connection and overwhelming desire for you.",
+                cta: "Get His Secret Obsession →",
+                url: "https://fdd98gwkrduu9o55wkx6seqd2w.hop.clickbank.net",
                 color: "#9C27B0"
             }
         },
@@ -81,17 +81,17 @@
         // Content & Writing
         content: {
             primary: {
-                title: "✍️ Content Creation Course",
-                description: "Learn to create engaging content for blogs and social media. Practical writing techniques and strategies.",
-                cta: "Learn Content Creation →",
-                url: "https://content.clickbank.net",
+                title: "☕ Java Burn 2.0 - Boost Your Metabolism",
+                description: "Turn your morning coffee into a fat-burning powerhouse. Boost metabolism and energy while you create content.",
+                cta: "Get Java Burn 2.0 →",
+                url: "https://13f75e6ccbuz3u04ikq7xmpr5b.hop.clickbank.net",
                 color: "#3F51B5"
             },
             secondary: {
-                title: "📝 Writing Skills Workshop",
-                description: "Improve your writing for business and marketing. Clear communication and persuasive writing techniques.",
-                cta: "Improve Writing →",
-                url: "https://writing.clickbank.net",
+                title: "☕ Java Burn 2.0 - Boost Your Metabolism",
+                description: "Turn your morning coffee into a fat-burning powerhouse. Boost metabolism and energy while you create content.",
+                cta: "Get Java Burn 2.0 →",
+                url: "https://13f75e6ccbuz3u04ikq7xmpr5b.hop.clickbank.net",
                 color: "#673AB7"
             }
         },
@@ -99,17 +99,17 @@
         // Coding & Tech
         coding: {
             primary: {
-                title: "💻 Programming Fundamentals",
-                description: "Learn programming basics with structured lessons. Build practical skills for web development.",
-                cta: "Start Learning →",
-                url: "https://programming.clickbank.net",
+                title: "🧠 Neuro Energizer - Enhanced Focus",
+                description: "Supercharge your coding sessions with enhanced mental clarity and sustained focus. Perfect for programmers.",
+                cta: "Get Neuro Energizer →",
+                url: "https://9d76fn1hemvx3t0bresjkcmiki.hop.clickbank.net",
                 color: "#00BCD4"
             },
             secondary: {
-                title: "🚀 Web Development Course",
-                description: "Comprehensive web development training. Learn HTML, CSS, JavaScript, and modern frameworks.",
-                cta: "Learn Web Dev →",
-                url: "https://webdev.clickbank.net",
+                title: "🧠 Neuro Energizer - Enhanced Focus",
+                description: "Supercharge your coding sessions with enhanced mental clarity and sustained focus. Perfect for programmers.",
+                cta: "Get Neuro Energizer →",
+                url: "https://9d76fn1hemvx3t0bresjkcmiki.hop.clickbank.net",
                 color: "#009688"
             }
         },
@@ -117,17 +117,17 @@
         // Everyday Life
         everyday: {
             primary: {
-                title: "🎯 Productivity System",
-                description: "Organize your life with proven productivity methods. Time management and goal-setting strategies.",
-                cta: "Get Organized →",
-                url: "https://productivity.clickbank.net",
+                title: "🔨 TedsWoodworking - 16,000 Plans",
+                description: "Get instant access to 16,000 woodworking plans and projects. Turn your everyday DIY ideas into reality.",
+                cta: "Get TedsWoodworking →",
+                url: "https://6c0e5c0dqlol4ufpg9yjr0xl50.hop.clickbank.net",
                 color: "#795548"
             },
             secondary: {
-                title: "📖 Personal Development",
-                description: "Build better habits and reach your goals. Practical self-improvement strategies that work.",
-                cta: "Start Growing →",
-                url: "https://development.clickbank.net",
+                title: "🔨 TedsWoodworking - 16,000 Plans",
+                description: "Get instant access to 16,000 woodworking plans and projects. Turn your everyday DIY ideas into reality.",
+                cta: "Get TedsWoodworking →",
+                url: "https://6c0e5c0dqlol4ufpg9yjr0xl50.hop.clickbank.net",
                 color: "#607D8B"
             }
         },
@@ -135,17 +135,17 @@
         // AI Art & Creative
         'ai-art': {
             primary: {
-                title: "🎨 Digital Art Course",
-                description: "Learn digital art creation techniques. From basics to advanced methods for creating stunning visuals.",
-                cta: "Learn Digital Art →",
-                url: "https://digitalart.clickbank.net",
+                title: "🧠 The Genius Wave - Creative Breakthrough",
+                description: "Unlock your creative potential with this 7-minute brain training audio. Perfect for artists and designers.",
+                cta: "Get The Genius Wave →",
+                url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#FF4081"
             },
             secondary: {
-                title: "🖼️ Creative Skills Training",
-                description: "Develop your creative abilities with structured practice. Techniques for visual thinking and design.",
-                cta: "Develop Creativity →",
-                url: "https://creative.clickbank.net",
+                title: "🧠 The Genius Wave - Creative Breakthrough",
+                description: "Unlock your creative potential with this 7-minute brain training audio. Perfect for artists and designers.",
+                cta: "Get The Genius Wave →",
+                url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#7C4DFF"
             }
         },
@@ -153,17 +153,17 @@
         // Universal (fallback)
         universal: {
             primary: {
-                title: "📚 Skills Development Library",
-                description: "Access courses and resources for personal and professional growth. Learn at your own pace.",
-                cta: "Browse Library →",
-                url: "https://learning.clickbank.net",
+                title: "🧠 The Genius Wave - Universal Success",
+                description: "Activate your genius potential with this breakthrough 7-minute audio program. Works for any goal or aspiration.",
+                cta: "Get The Genius Wave →",
+                url: "https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net",
                 color: "#4CAF50"
             },
             secondary: {
-                title: "💡 Online Learning Platform",
-                description: "Expand your knowledge with quality educational content. Various subjects and skill levels available.",
-                cta: "Start Learning →",
-                url: "https://education.clickbank.net",
+                title: "💰 Billionaire Brain Wave - Universal Wealth",
+                description: "Activate the neural pathways used by billionaires. This 7-minute audio program helps attract success in any area.",
+                cta: "Get Billionaire Brain Wave →",
+                url: "https://3811aatcrgoq3zex8i6zidmb77.hop.clickbank.net",
                 color: "#2196F3"
             }
         }
