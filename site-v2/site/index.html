@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FreePromptHub — Curated Prompts, Better Results</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+
+    <meta name="description" content="Discover curated prompts, share your best, and get consistently better results across AI models." />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta property="og:title" content="FreePromptHub" />
+    <meta property="og:description" content="Curated prompts, by and for power users." />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="./">
+        <img src="./assets/logo.svg" alt="FreePromptHub" />
+        <span>FreePromptHub</span>
+      </a>
+      <nav class="menu">
+        <a href="./prompts.html">Prompts</a>
+        <a href="./submit.html">Submit</a>
+        <a href="./about.html">About</a>
+        <button id="themeToggle" class="ghost">Theme</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Prompts that actually ship results</h1>
+        <p>Search, filter, and copy production‑ready prompts curated by the community for GPT, Claude, Llama and more.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="./prompts.html">Browse Prompts</a>
+          <a class="btn" href="./submit.html">Share Yours</a>
+        </div>
+      </section>
+
+      <section class="search-quick card">
+        <input id="quickSearch" type="search" placeholder="Search prompts (e.g. SEO outline, Rust refactor, UX critique)" />
+        <div class="chips" id="quickChips"></div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Featured</h2>
+          <div id="featured" class="cards"></div>
+        </div>
+        <div class="card">
+          <h2>Latest</h2>
+          <div id="latest" class="cards"></div>
+        </div>
+      </section>
+
+      <section class="cta card">
+        <h2>Level up your workflow</h2>
+        <p>Good prompts are leverage. Use and remix freely — no lock‑in, no paywall.</p>
+        <a class="btn primary" href="./prompts.html">Explore the Library</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> FreePromptHub</div>
+      <div class="foot-links">
+        <a href="./about.html">About</a>
+        <a href="./prompts.html">Prompts</a>
+        <a href="./submit.html">Submit</a>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+      }
+    </script>
+  </body>
+  </html>
+

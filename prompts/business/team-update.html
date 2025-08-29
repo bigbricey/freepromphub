@@ -387,7 +387,106 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
             color: #94a3b8;
         }
     </style>
-</head>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  // Configure GA4 with enhanced ecommerce
+  gtag('config', 'G-XXXXXXXXXX', {
+    // Enhanced ecommerce settings
+    send_page_view: true,
+    allow_google_signals: true,
+    allow_ad_personalization_signals: true,
+    
+    // Custom parameters
+    custom_map: {
+      'custom_parameter_1': 'prompt_category',
+      'custom_parameter_2': 'affiliate_product'
+    }
+  });
+  
+  // Track affiliate clicks
+  function trackAffiliateClick(productName, category, revenue) {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'Affiliate',
+      'event_label': productName,
+      'custom_parameter_1': category,
+      'custom_parameter_2': productName,
+      'value': revenue
+    });
+  }
+  
+  // Track prompt copies
+  function trackPromptCopy(category) {
+    gtag('event', 'prompt_copy', {
+      'event_category': 'Engagement',
+      'event_label': category,
+      'custom_parameter_1': category
+    });
+  }
+  
+  // Track conversion funnel
+  function trackConversionStep(step, category) {
+    gtag('event', 'conversion_step', {
+      'event_category': 'Conversion',
+      'event_label': step,
+      'custom_parameter_1': category,
+      'custom_parameter_2': step
+    });
+  }
+</script>
+
+<!-- ClickBank Tracking Pixel -->
+<script>
+  // ClickBank conversion tracking
+  function trackClickBankConversion(productId, amount, category) {
+    // Send conversion data to ClickBank
+    var img = new Image();
+    img.src = 'https://www.clickbank.com/track/conversion?pid=' + productId + 
+               '&amount=' + amount + '&category=' + encodeURIComponent(category);
+  }
+</script>
+
+<!-- Facebook Pixel (for retargeting) -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', 'YOUR_PIXEL_ID'); // User needs to add their pixel ID
+  fbq('track', 'PageView');
+  
+  // Track affiliate clicks on Facebook
+  function trackFBAffiliate(productName, value) {
+    fbq('track', 'Lead', {
+      content_name: productName,
+      value: value,
+      currency: 'USD'
+    });
+  }
+</script>
+
+<!-- Hotjar Heat Mapping -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6}; // User needs to add Hotjar ID
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+\n</head>
 <body>
         <!-- Standardized Header with Mobile Navigation -->
     <header role="banner" class="site-header">
@@ -544,6 +643,32 @@ Keep it under 2 minutes reading time.</textarea>
         </div>
     </main>
 
+    
+        <!-- Affiliate Recommendation Section -->
+        <section class="affiliate-recommendation" style="margin: 40px 0; padding: 30px; background: var(--bg-secondary); border-radius: var(--radius); border-left: 4px solid var(--primary);">
+            <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.3rem;">🚀 Works 10x Better With</h3>
+            <div class="affiliate-product" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div class="product-info" style="flex: 1; min-width: 300px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">The Genius Wave</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 10px; line-height: 1.5;">Brain enhancement audio for focus and creativity</p>
+                    <div class="social-proof" style="font-size: 0.9rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                        ⭐ Used by 47,000+ people | ✅ 60-day guarantee | 🔥 Limited-time bonus
+                    </div>
+                </div>
+                <div class="cta-section" style="text-align: center;">
+                    <div class="price-tag" style="background: var(--success); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; display: inline-block;">
+                        Save 70% Today!
+                    </div>
+                    <a href="https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net" class="btn-affiliate" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">
+                        Get Instant Access →
+                    </a>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 8px;">
+                        ⏰ Offer expires in 24 hours
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 FreePromptHub. All prompts are free to use.</p>
@@ -669,5 +794,234 @@ Keep it under 2 minutes reading time.</textarea>
             }
         });
     </script>
-</body>
+
+<script>
+// Enhanced conversion tracking for FreePromptHub
+
+class ConversionTracker {
+    constructor() {
+        this.sessionStart = Date.now();
+        this.pageViews = 0;
+        this.promptCopies = 0;
+        this.affiliateClicks = 0;
+        this.category = this.getCurrentCategory();
+        
+        this.init();
+    }
+    
+    init() {
+        this.trackPageView();
+        this.setupScrollTracking();
+        this.setupTimeOnPage();
+        this.setupAffiliateTracking();
+        this.setupPromptTracking();
+    }
+    
+    getCurrentCategory() {
+        const path = window.location.pathname;
+        const matches = path.match(/\/prompts\/([^/]+)\//);
+        return matches ? matches[1] : 'homepage';
+    }
+    
+    trackPageView() {
+        this.pageViews++;
+        
+        // Send to Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': document.title,
+                'page_location': window.location.href,
+                'page_category': this.category
+            });
+        }
+    }
+    
+    setupScrollTracking() {
+        let scrollPercents = [25, 50, 75, 100];
+        let tracked = [];
+        
+        window.addEventListener('scroll', () => {
+            const scrolled = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            
+            scrollPercents.forEach(percent => {
+                if (scrolled >= percent && !tracked.includes(percent)) {
+                    tracked.push(percent);
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll', {
+                            'event_category': 'Engagement',
+                            'event_label': `${percent}%`,
+                            'value': percent
+                        });
+                    }
+                }
+            });
+        });
+    }
+    
+    setupTimeOnPage() {
+        // Track meaningful time milestones
+        const milestones = [30, 60, 120, 300]; // seconds
+        
+        milestones.forEach(seconds => {
+            setTimeout(() => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'time_on_page', {
+                        'event_category': 'Engagement',
+                        'event_label': `${seconds}s`,
+                        'value': seconds
+                    });
+                }
+            }, seconds * 1000);
+        });
+    }
+    
+    setupAffiliateTracking() {
+        // Track all affiliate link clicks
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href*="hop.clickbank.net"]');
+            if (link) {
+                this.affiliateClicks++;
+                
+                const productName = this.getProductNameFromLink(link);
+                const revenue = this.getRevenueFromProduct(productName);
+                
+                // Track in GA4
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'affiliate_click', {
+                        'event_category': 'Affiliate',
+                        'event_label': productName,
+                        'value': revenue,
+                        'currency': 'USD'
+                    });
+                }
+                
+                // Track in Facebook
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: productName,
+                        value: revenue,
+                        currency: 'USD'
+                    });
+                }
+                
+                // Track conversion funnel step
+                this.trackConversionStep('affiliate_click', productName);
+            }
+        });
+    }
+    
+    setupPromptTracking() {
+        // Track prompt copy events
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('.copy-button, .copy-button-top, #copy-button, #copy-button-top')) {
+                this.promptCopies++;
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'prompt_copy', {
+                        'event_category': 'Engagement',
+                        'event_label': this.category,
+                        'value': 1
+                    });
+                }
+                
+                // This is a key conversion signal
+                this.trackConversionStep('prompt_copy', this.category);
+            }
+        });
+    }
+    
+    getProductNameFromLink(link) {
+        // Extract product name from affiliate link or surrounding content
+        const productSection = link.closest('.affiliate-recommendation, .affiliate-product');
+        if (productSection) {
+            const nameElement = productSection.querySelector('h4');
+            return nameElement ? nameElement.textContent.trim() : 'Unknown Product';
+        }
+        return 'Unknown Product';
+    }
+    
+    getRevenueFromProduct(productName) {
+        // Map product names to commission amounts
+        const revenueMap = {
+            'Billionaire Brain Wave': 42.32,
+            'Mitolyn': 180.63,
+            'His Secret Obsession': 48.85,
+            'TedsWoodworking': 61.36,
+            'The Genius Wave': 46.91,
+            'SleepLean': 187.11,
+            'HepatoBurn': 167.00,
+            'Neuro Energizer': 51.39
+        };
+        
+        return revenueMap[productName] || 50; // Default value
+    }
+    
+    trackConversionStep(step, detail) {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion_step', {
+                'event_category': 'Conversion Funnel',
+                'event_label': step,
+                'custom_parameter_1': this.category,
+                'custom_parameter_2': detail,
+                'value': this.getStepValue(step)
+            });
+        }
+    }
+    
+    getStepValue(step) {
+        const values = {
+            'page_view': 1,
+            'scroll_50': 2,
+            'time_30s': 3,
+            'prompt_copy': 5,
+            'affiliate_click': 10
+        };
+        return values[step] || 1;
+    }
+    
+    // Export session data for analysis
+    getSessionData() {
+        return {
+            category: this.category,
+            timeOnSite: Date.now() - this.sessionStart,
+            pageViews: this.pageViews,
+            promptCopies: this.promptCopies,
+            affiliateClicks: this.affiliateClicks
+        };
+    }
+}
+
+// Initialize tracking when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    window.conversionTracker = new ConversionTracker();
+    
+    // Global functions for manual tracking
+    window.trackCopyEvent = function() {
+        if (window.conversionTracker) {
+            window.conversionTracker.trackConversionStep('prompt_copy', 
+                window.conversionTracker.category);
+        }
+    };
+    
+    window.trackAffiliateClick = function(productName, revenue) {
+        if (window.conversionTracker) {
+            window.conversionTracker.trackConversionStep('affiliate_click', productName);
+        }
+    };
+});
+
+// Track page unload for session analysis
+window.addEventListener('beforeunload', function() {
+    if (window.conversionTracker && typeof gtag !== 'undefined') {
+        const sessionData = window.conversionTracker.getSessionData();
+        gtag('event', 'session_end', {
+            'event_category': 'Session',
+            'event_label': sessionData.category,
+            'value': Math.round(sessionData.timeOnSite / 1000) // seconds
+        });
+    }
+});
+</script>
+\n</body>
 </html>

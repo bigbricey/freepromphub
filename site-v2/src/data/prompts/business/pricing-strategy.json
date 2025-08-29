@@ -1,0 +1,13 @@
+{
+  "slug": "pricing-strategy",
+  "category": "business",
+  "title": "Pricing Strategy Calculator",
+  "description": "Set prices that maximize profit without losing customers. This pricing strategy prompt helps you find the sweet spot for your products or services.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Act as a pricing strategist who has helped 500+ businesses optimize their pricing. Help me develop the perfect pricing strategy for my product/service.\n\nWHAT I'M SELLING:\n- Product/Service: [DESCRIBE WHAT YOU SELL]\n- Industry: [YOUR INDUSTRY]\n- Business Model: [One-time/Subscription/Project-based/Hourly]\n- Current Price (if any): $[CURRENT PRICE]\n\nCOSTS & MARGINS:\n- Cost to Deliver: $[COST PER UNIT/HOUR]\n- Fixed Monthly Costs: $[OVERHEAD]\n- Desired Profit Margin: [%]\n- Break-even Point: [UNITS/CLIENTS NEEDED]\n\nMARKET ANALYSIS:\n- Main Competitors' Prices: [LIST COMPETITOR PRICES]\n- Target Customer: [WHO BUYS FROM YOU]\n- Customer's Budget Range: $[LOW] to $[HIGH]\n- Value You Provide: [WHAT MAKES YOU DIFFERENT]\n\nCURRENT SITUATION:\n- Monthly Sales Volume: [NUMBER]\n- Customer Complaints About Price: [Yes/No and details]\n- Lost Sales Due to Price: [Estimated %]\n- Customer Lifetime Value: $[AMOUNT]\n\nGOALS:\n- Revenue Target: $[MONTHLY/YEARLY GOAL]\n- Growth Target: [% INCREASE]\n- Market Position: [Premium/Mid-range/Budget]\n\nProvide:\n1. Recommended price point with justification\n2. Pricing model (flat/tiered/usage-based/value-based)\n3. 3-tier pricing structure if applicable\n4. Psychological pricing tactics to use\n5. How to present/frame the price to customers\n6. Scripts for handling \"too expensive\" objections\n7. When and how to raise prices\n8. Discount strategy (if any)\n9. Testing plan to validate pricing\n10. Expected impact on revenue and volume\n\nConsider price elasticity, perceived value, and competitive positioning."
+}

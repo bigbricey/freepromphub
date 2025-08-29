@@ -1,0 +1,4 @@
+# Consolidate duplicate legacy routes (examples)
+/privacy.html          /privacy-policy    301
+/privacy-center.html   /privacy-policy    301
+

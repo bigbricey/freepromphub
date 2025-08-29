@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompts — FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="./">
+        <img src="./assets/logo.svg" alt="FreePromptHub" />
+        <span>FreePromptHub</span>
+      </a>
+      <nav class="menu">
+        <a class="active" href="./prompts.html">Prompts</a>
+        <a href="./submit.html">Submit</a>
+        <a href="./about.html">About</a>
+        <button id="themeToggle" class="ghost">Theme</button>
+      </nav>
+    </header>
+
+    <main class="prompts-page">
+      <section class="filters card">
+        <input id="searchInput" type="search" placeholder="Search prompts" />
+        <select id="modelFilter">
+          <option value="">All Models</option>
+          <option>GPT-4o</option>
+          <option>Claude 3.5</option>
+          <option>Llama 3</option>
+          <option>Gemini</option>
+        </select>
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option>Code</option>
+          <option>Writing</option>
+          <option>Research</option>
+          <option>Productivity</option>
+          <option>Design</option>
+        </select>
+        <div class="chips" id="tagChips"></div>
+      </section>
+
+      <section id="list" class="cards"></section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> FreePromptHub</div>
+      <div class="foot-links">
+        <a href="./about.html">About</a>
+        <a href="./index.html">Home</a>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/prompts.js"></script>
+  </body>
+  </html>
+

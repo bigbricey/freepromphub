@@ -1,0 +1,13 @@
+{
+  "slug": "security-deposit",
+  "category": "everyday",
+  "title": "Get Security Deposit Back",
+  "description": "Get your security deposit back in full. Document everything and handle move-out like a pro.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "lifestyle prompts"
+  ],
+  "prompt": "Help me get my full security deposit back from my landlord. Create the documentation and communication needed to protect my money.\n\nRENTAL DETAILS:\n- Property Address: [FULL ADDRESS]\n- Landlord/Company: [NAME]\n- Monthly Rent: $[AMOUNT]\n- Security Deposit: $[AMOUNT]\n- Move-in Date: [DATE]\n- Move-out Date: [DATE]\n- Lease Type: [Month-to-month/Annual]\n\nCURRENT CONDITION:\n- Overall State: [Excellent/Good/Fair]\n- Known Issues: [LIST ANY DAMAGE]\n- Pre-existing Problems: [WHAT WAS ALREADY BROKEN]\n- Cleaning Done: [WHAT YOU'VE CLEANED]\n- Repairs Made: [WHAT YOU'VE FIXED]\n\nMOVE-IN DOCUMENTATION:\n- Move-in Checklist: [Have it/Don't have it]\n- Photos from Move-in: [Yes/No]\n- Prior Damage Noted: [WHAT WAS DOCUMENTED]\n- Lease Terms: [DEPOSIT RETURN TIMELINE]\n\nPOTENTIAL DISPUTES:\n- Wear and Tear Items: [CARPET/PAINT/ETC]\n- Landlord's History: [DIFFICULT/REASONABLE]\n- State Laws: [YOUR STATE]\n- Small Claims Limit: $[STATE LIMIT]\n\nMOVE-OUT STATUS:\n- Notice Given: [DATE NOTIFIED]\n- Keys Returned: [METHOD]\n- Final Walkthrough: [SCHEDULED/COMPLETED]\n- Forwarding Address: [PROVIDED/NEEDED]\n\nCreate:\n1. Move-out inspection checklist\n2. Photo documentation guide\n3. Email to landlord requesting deposit\n4. Follow-up email templates (30/45/60 days)\n5. Demand letter if not returned\n6. Small claims court filing guide\n7. Evidence organization list\n8. State law citations for my state\n9. Dispute response templates\n10. Documentation tracking spreadsheet\n\nInclude:\n- What photos to take and how\n- Normal wear vs damage definitions\n- Timeline with legal deadlines\n- What landlords can/cannot deduct\n- Red flags to watch for\n\nMake everything legally solid but not aggressive until necessary."
+}

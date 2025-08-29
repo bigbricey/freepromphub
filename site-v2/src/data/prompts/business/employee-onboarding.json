@@ -1,0 +1,13 @@
+{
+  "slug": "employee-onboarding",
+  "category": "business",
+  "title": "Employee Onboarding Plan",
+  "description": "Create employee onboarding that gets new hires productive fast. Stop losing good people in their first 90 days.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Create a complete employee onboarding plan that gets new hires productive quickly while making them feel welcomed and confident.\n\nNEW HIRE DETAILS:\n- Position: [JOB TITLE]\n- Department: [TEAM]\n- Start Date: [DATE]\n- Manager: [NAME]\n- Remote/Office: [WORK LOCATION]\n- Experience Level: [JUNIOR/MID/SENIOR]\n\nCOMPANY CONTEXT:\n- Company Size: [EMPLOYEES]\n- Industry: [FIELD]\n- Culture: [FORMAL/CASUAL/STARTUP]\n- Tools Used: [SOFTWARE/SYSTEMS]\n- Team Size: [IMMEDIATE TEAM]\n\nROLE SPECIFICS:\n- Main Responsibilities: [TOP 3-5 DUTIES]\n- Key Relationships: [WHO THEY WORK WITH]\n- First Project: [STARTER ASSIGNMENT]\n- Success Metrics: [30/60/90 DAY GOALS]\n- Common Challenges: [WHAT'S HARD]\n\nCURRENT PROBLEMS:\n- Past Turnover Issues: [WHY PEOPLE LEFT]\n- Training Gaps: [WHAT'S MISSING]\n- Time to Productivity: [CURRENT VS GOAL]\n- Resource Constraints: [LIMITATIONS]\n\nLOGISTICS:\n- Equipment Needed: [COMPUTER/TOOLS/ACCESS]\n- Paperwork Required: [FORMS/DOCUMENTS]\n- System Access: [ACCOUNTS/PERMISSIONS]\n- Physical Space: [DESK/PARKING/KEYS]\n\nCreate:\n1. Pre-arrival checklist (week before start)\n2. Day 1 schedule (hour by hour)\n3. Week 1 plan (daily focus areas)\n4. First 30 days roadmap\n5. 60-day check-in agenda\n6. 90-day review framework\n7. Training curriculum and resources\n8. Buddy system guidelines\n9. Manager 1-on-1 templates\n10. Early warning signs to watch for\n\nAlso include:\n- Welcome email templates\n- First day agenda\n- Introduction scripts\n- Quick wins to build confidence\n- Social integration activities\n- Feedback collection points\n- Documentation templates\n- Success metrics tracking\n\nMake it practical and realistic for busy teams."
+}

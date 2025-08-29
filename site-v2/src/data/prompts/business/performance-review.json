@@ -1,0 +1,13 @@
+{
+  "slug": "performance-review",
+  "category": "business",
+  "title": "Performance Review Writer",
+  "description": "Write performance reviews that actually help employees improve. Give feedback that motivates instead of deflates.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Help me write a performance review that's constructive, specific, and motivating while documenting performance accurately.\n\nEMPLOYEE INFORMATION:\n- Name: [EMPLOYEE NAME]\n- Position: [TITLE]\n- Review Period: [DATES]\n- Time in Role: [DURATION]\n- Previous Rating: [IF APPLICABLE]\n\nPERFORMANCE DATA:\n- Key Achievements: [TOP 3-5 WINS]\n- Goals Met: [WHICH TARGETS HIT]\n- Goals Missed: [WHICH TARGETS MISSED]\n- Quantifiable Results: [NUMBERS/METRICS]\n- Peer Feedback: [COWORKER COMMENTS]\n\nSTRENGTHS:\n- Technical Skills: [WHAT THEY'RE GREAT AT]\n- Soft Skills: [INTERPERSONAL STRENGTHS]\n- Growth Areas: [WHERE THEY'VE IMPROVED]\n- Special Contributions: [ABOVE AND BEYOND]\n\nAREAS FOR IMPROVEMENT:\n- Performance Gaps: [WHERE THEY STRUGGLE]\n- Behavioral Issues: [IF ANY]\n- Skills to Develop: [TRAINING NEEDED]\n- Missed Expectations: [SPECIFIC EXAMPLES]\n\nCONTEXT:\n- Team Changes: [DISRUPTIONS/TRANSITIONS]\n- Resource Constraints: [LIMITATIONS FACED]\n- Personal Situations: [IF RELEVANT]\n- Market Conditions: [EXTERNAL FACTORS]\n\nFUTURE PLANNING:\n- Next Period Goals: [TARGETS TO SET]\n- Development Plan: [GROWTH OPPORTUNITIES]\n- Promotion Potential: [TIMELINE IF ANY]\n- Compensation Change: [RAISE/BONUS IF ANY]\n\nCreate:\n1. Overall performance summary\n2. Accomplishment highlights with specifics\n3. Strengths section with examples\n4. Improvement areas with action plans\n5. Goal setting for next period\n6. Development recommendations\n7. Rating justification\n8. Conversation talking points\n9. Follow-up action items\n10. Documentation for HR file\n\nInclude:\n- Specific examples for everything\n- Balanced feedback (positive and constructive)\n- Clear expectations going forward\n- Professional language (legally safe)\n- Motivational tone where appropriate\n\nAvoid generic statements. Use concrete examples and measurable outcomes."
+}

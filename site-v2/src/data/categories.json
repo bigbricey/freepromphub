@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "ai-art",
+    "name": "Ai art",
+    "description": "Prompts for ai art."
+  },
+  {
+    "slug": "business",
+    "name": "Business",
+    "description": "Prompts for business."
+  },
+  {
+    "slug": "coding",
+    "name": "Coding",
+    "description": "Prompts for coding."
+  },
+  {
+    "slug": "content",
+    "name": "Content",
+    "description": "Prompts for content."
+  },
+  {
+    "slug": "everyday",
+    "name": "Everyday",
+    "description": "Prompts for everyday."
+  },
+  {
+    "slug": "health",
+    "name": "Health",
+    "description": "Prompts for health."
+  },
+  {
+    "slug": "money",
+    "name": "Money",
+    "description": "Prompts for money."
+  }
+]

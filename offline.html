@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Offline | FreePromptHub</title>
+    <link rel="stylesheet" href="/css/modern-architecture.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+    <style>
+        .offline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: var(--space-lg);
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-lg);
+            opacity: 0.7;
+        }
+        
+        .offline-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .offline-message {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            line-height: 1.6;
+        }
+        
+        .offline-actions {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-lg);
+            border: 1px solid transparent;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .cached-prompts {
+            margin-top: var(--space-xl);
+            padding: var(--space-lg);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .cached-prompts h3 {
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .cached-prompt-list {
+            display: grid;
+            gap: var(--space-sm);
+        }
+        
+        .cached-prompt {
+            display: block;
+            padding: var(--space-sm);
+            background: var(--bg-canvas);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: background-color var(--transition-fast);
+        }
+        
+        .cached-prompt:hover {
+            background: var(--bg-hover);
+        }
+        
+        .network-status {
+            position: fixed;
+            top: var(--space-md);
+            right: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            background: var(--error);
+            color: white;
+            z-index: 1000;
+        }
+        
+        .network-status.online {
+            background: var(--success);
+        }
+    </style>
+</head>
+<body>
+    <div class="network-status" id="networkStatus">
+        📡 You're offline
+    </div>
+    
+    <main class="offline-container">
+        <div class="offline-icon" aria-hidden="true">📡</div>
+        
+        <h1 class="offline-title">You're Currently Offline</h1>
+        
+        <p class="offline-message">
+            No internet connection detected. Don't worry - you can still access some cached prompts 
+            and we'll sync everything when you're back online.
+        </p>
+        
+        <div class="offline-actions">
+            <button onclick="tryReconnect()" class="btn btn-primary">
+                🔄 Try Again
+            </button>
+            <a href="/" class="btn btn-secondary">
+                🏠 Go to Homepage
+            </a>
+        </div>
+        
+        <div class="cached-prompts" id="cachedPrompts">
+            <h3>📋 Available Offline</h3>
+            <div class="cached-prompt-list" id="cachedPromptList">
+                <a href="/prompts/business/" class="cached-prompt">
+                    💼 Business Prompts
+                </a>
+                <a href="/prompts/coding/" class="cached-prompt">
+                    💻 Coding Prompts
+                </a>
+                <a href="/prompts/content/" class="cached-prompt">
+                    ✍️ Content Prompts
+                </a>
+                <a href="/prompts/money/" class="cached-prompt">
+                    💰 Money Prompts
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Check network status
+        function updateNetworkStatus() {
+            const statusEl = document.getElementById('networkStatus');
+            if (navigator.onLine) {
+                statusEl.textContent = '🌐 Back online!';
+                statusEl.classList.add('online');
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            } else {
+                statusEl.textContent = '📡 You\'re offline';
+                statusEl.classList.remove('online');
+            }
+        }
+        
+        function tryReconnect() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            } else {
+                // Attempt to fetch a small resource
+                fetch('/', { method: 'HEAD', cache: 'no-cache' })
+                    .then(() => {
+                        window.location.href = '/';
+                    })
+                    .catch(() => {
+                        alert('Still offline. Please check your connection.');
+                    });
+            }
+        }
+        
+        // Listen for network changes
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+        
+        // Load cached prompts from localStorage if available
+        function loadCachedPrompts() {
+            const cached = localStorage.getItem('freeprompthub-cached-prompts');
+            if (cached) {
+                try {
+                    const prompts = JSON.parse(cached);
+                    const listEl = document.getElementById('cachedPromptList');
+                    
+                    prompts.forEach(prompt => {
+                        const link = document.createElement('a');
+                        link.href = prompt.url;
+                        link.className = 'cached-prompt';
+                        link.textContent = `${prompt.icon} ${prompt.name}`;
+                        listEl.appendChild(link);
+                    });
+                } catch (e) {
+                    console.error('Failed to load cached prompts:', e);
+                }
+            }
+        }
+        
+        // Initialize
+        updateNetworkStatus();
+        loadCachedPrompts();
+        
+        // Enable dark mode toggle
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</body>
+</html>

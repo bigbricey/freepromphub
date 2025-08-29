@@ -2,9 +2,19 @@
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <!-- Preload critical resources -->
+    <!-- Enhanced Resource Hints for Performance -->
     <link rel="dns-prefetch" href="//www.freeprompthub.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
     <link rel="preconnect" href="https://www.freeprompthub.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" href="/css/modern-architecture.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/js/modern-core.js" as="script">
+    <link rel="modulepreload" href="/js/search-modern.js">
+    <link rel="prefetch" href="/prompts/business/">
+    <link rel="prefetch" href="/prompts/coding/">
+    <noscript><link rel="stylesheet" href="/css/modern-architecture.css"></noscript>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Security Headers via Meta Tags -->
@@ -68,14 +78,21 @@
     <meta name="revisit-after" content="7 days">
     <meta name="distribution" content="global">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Enhanced Structured Data (JSON-LD) for 2025 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "FreePromptHub",
+        "alternateName": "Free Prompt Hub",
         "url": "https://www.freeprompthub.com/",
         "description": "Free AI Prompts for ChatGPT, Claude, and more. No signup required. Get prompts for business, content creation, coding, and more.",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Professionals, Entrepreneurs, Content Creators"
+        },
         "publisher": {
             "@type": "Organization",
             "name": "FreePromptHub",
@@ -85,6 +102,11 @@
                 "url": "https://www.freeprompthub.com/icon-512x512.png",
                 "width": 512,
                 "height": 512
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "url": "https://www.freeprompthub.com/contact"
             }
         },
         "potentialAction": {
@@ -94,7 +116,61 @@
                 "urlTemplate": "https://www.freeprompthub.com/search?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+            "@type": "CollectionPage",
+            "name": "AI Prompt Categories",
+            "description": "Browse 150+ professional AI prompts organized by category"
         }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FreePromptHub",
+        "url": "https://www.freeprompthub.com",
+        "foundingDate": "2024",
+        "description": "Provider of free, professional AI prompts for business, content creation, coding, and personal use.",
+        "knowsAbout": ["Artificial Intelligence", "Content Creation", "Business Automation", "Prompt Engineering"],
+        "areaServed": "Worldwide",
+        "serviceType": "AI Prompt Library"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are the AI prompts really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all 150+ prompts are completely free to use. No signup required, no hidden fees, no upsells."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "Do the prompts work with ChatGPT and Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our prompts are tested with ChatGPT, Claude, Gemini, and other major AI models for maximum compatibility."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I use the prompts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply browse our categories, find the prompt you need, click to copy it, then paste into your AI tool. Each prompt includes usage instructions."
+                }
+            }
+        ]
     }
     </script><meta name="twitter:card" content="summary_large_image">
     <title>FreePromptHub - Free AI Prompts That Actually Work | No Signup Required</title>
@@ -103,6 +179,30 @@
 /* This should be inlined in the <head> for optimal performance */
 
 :root{--primary:#0066CC;--primary-dark:#0052A3;--secondary:#00C853;--bg:#ffffff;--bg-subtle:#f8f9fa;--text:#212529;--text-muted:#6c757d;--border:#dee2e6;--shadow:0 2px 4px rgba(0,0,0,0.1);--radius:8px;--card-bg:#2a2e35;--card-text:#e9ecef}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.sr-only:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: inherit !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: inherit !important;
+}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -209,11 +309,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
             background: rgba(255,255,255,0.1) !important;
         }
     </style>
+    <!-- Modern CSS Architecture -->
+    <link rel="stylesheet" href="/css/modern-architecture.css">
     <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/dark-mode.css">
     <noscript><link rel="stylesheet" href="/style.css"></noscript>
+    <!-- Modern JavaScript with ES2024 features -->
+    <script type="module" src="/js/modern-core.js"></script>
     <script src="/script.js" defer></script>
     <script src="/search.js" defer></script>
+    
+    <!-- Performance and loading optimizations -->
+    <script>
+      // Critical resource loading optimization
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          // Load non-critical resources during idle time
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = '/js/search-modern.js';
+          document.head.appendChild(link);
+        });
+      }
+      
+      // Prevent layout shifts by setting image dimensions
+      document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('img:not([width]):not([height])');
+        images.forEach(img => {
+          if (!img.style.aspectRatio) {
+            img.style.aspectRatio = '16/9'; // Default aspect ratio
+          }
+        });
+      });
+    </script>
     <!-- Cookie Consent -->
     <style>
         .cookie-consent-banner {
@@ -316,27 +444,145 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
     <link rel="alternate" type="application/atom+xml" title="FreePromptHub Atom Feed" href="/atom.xml">
     <link rel="alternate" type="application/json" title="FreePromptHub JSON Feed" href="/feed.json">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-</head>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  // Configure GA4 with enhanced ecommerce
+  gtag('config', 'G-XXXXXXXXXX', {
+    // Enhanced ecommerce settings
+    send_page_view: true,
+    allow_google_signals: true,
+    allow_ad_personalization_signals: true,
+    
+    // Custom parameters
+    custom_map: {
+      'custom_parameter_1': 'prompt_category',
+      'custom_parameter_2': 'affiliate_product'
+    }
+  });
+  
+  // Track affiliate clicks
+  function trackAffiliateClick(productName, category, revenue) {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'Affiliate',
+      'event_label': productName,
+      'custom_parameter_1': category,
+      'custom_parameter_2': productName,
+      'value': revenue
+    });
+  }
+  
+  // Track prompt copies
+  function trackPromptCopy(category) {
+    gtag('event', 'prompt_copy', {
+      'event_category': 'Engagement',
+      'event_label': category,
+      'custom_parameter_1': category
+    });
+  }
+  
+  // Track conversion funnel
+  function trackConversionStep(step, category) {
+    gtag('event', 'conversion_step', {
+      'event_category': 'Conversion',
+      'event_label': step,
+      'custom_parameter_1': category,
+      'custom_parameter_2': step
+    });
+  }
+</script>
+
+<!-- ClickBank Tracking Pixel -->
+<script>
+  // ClickBank conversion tracking
+  function trackClickBankConversion(productId, amount, category) {
+    // Send conversion data to ClickBank
+    var img = new Image();
+    img.src = 'https://www.clickbank.com/track/conversion?pid=' + productId + 
+               '&amount=' + amount + '&category=' + encodeURIComponent(category);
+  }
+</script>
+
+<!-- Facebook Pixel (for retargeting) -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', 'YOUR_PIXEL_ID'); // User needs to add their pixel ID
+  fbq('track', 'PageView');
+  
+  // Track affiliate clicks on Facebook
+  function trackFBAffiliate(productName, value) {
+    fbq('track', 'Lead', {
+      content_name: productName,
+      value: value,
+      currency: 'USD'
+    });
+  }
+</script>
+
+<!-- Hotjar Heat Mapping -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6}; // User needs to add Hotjar ID
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+\n</head>
 <body>
-    <!-- NEW: Proper Header with Navigation -->
-    <header role="banner" class="site-header">
+    <!-- Enhanced Header with Modern Semantic Elements -->
+    <header role="banner" class="site-header" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container header-content">
-            <a class="brand" href="/">
-                <span style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
-                FreePromptHub
+            <a class="brand" href="/" aria-label="FreePromptHub Homepage" itemprop="url">
+                <span aria-hidden="true" style="font-size: 1.5rem; margin-right: 5px;">🚀</span>
+                <span itemprop="name">FreePromptHub</span>
             </a>
-            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                    type="button">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">Menu</span>
             </button>
-            <nav class="main-nav" aria-label="Primary">
-                <a href="/prompts/business/">Business</a>
-                <a href="/prompts/content/">Content</a>
-                <a href="/prompts/coding/">Coding</a>
-                <a href="/search"><span aria-hidden="true">🔍</span> Search</a>
-                <a href="/about">About</a>
-                <div class="auth-nav"></div>
+            <nav class="main-nav" 
+                 aria-label="Primary navigation"
+                 id="primary-navigation"
+                 itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <a href="/prompts/business/" itemprop="url">
+                    <span itemprop="name">Business</span>
+                </a>
+                <a href="/prompts/content/" itemprop="url">
+                    <span itemprop="name">Content</span>
+                </a>
+                <a href="/prompts/coding/" itemprop="url">
+                    <span itemprop="name">Coding</span>
+                </a>
+                <a href="/search" itemprop="url">
+                    <span aria-hidden="true">🔍</span>
+                    <span itemprop="name">Search</span>
+                </a>
+                <a href="/about" itemprop="url">
+                    <span itemprop="name">About</span>
+                </a>
+                <div class="auth-nav" role="complementary" aria-label="User authentication"></div>
             </nav>
         </div>
     </header>
@@ -359,76 +605,136 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
                 </ul>
             </section>
 
-            <!-- Enhanced Search Bar -->
-            <section class="search-section">
+            <!-- Modern Search Element with Enhanced Accessibility -->
+            <search role="search" class="search-section" aria-label="Prompt search">
                 <div class="search-container">
-                    <input type="text" id="searchBar" placeholder="Search 50+ prompts by title, content, tags, or use case..." class="search-input" aria-label="Search prompts" maxlength="200">
-                    <div id="searchResults" class="search-results"></div>
+                    <label for="searchBar" class="search-label sr-only">
+                        Search through 150+ AI prompts
+                    </label>
+                    <input type="search" 
+                           id="searchBar" 
+                           name="q"
+                           placeholder="Search 150+ prompts by title, content, tags, or use case..." 
+                           class="search-input" 
+                           aria-label="Search prompts"
+                           aria-describedby="search-help"
+                           autocomplete="off"
+                           spellcheck="false"
+                           maxlength="200">
+                    <div id="search-help" class="sr-only">
+                        Search through business, coding, content, and lifestyle prompts. Results appear as you type.
+                    </div>
+                    <div id="searchResults" 
+                         class="search-results" 
+                         role="listbox" 
+                         aria-label="Search results"
+                         aria-live="polite"></div>
                 </div>
-            </section>
+            </search>
 
             <section class="intro">
                 <h2>Stop Getting Generic AI Garbage</h2>
                 <p>Transform vague AI responses into actionable results with prompts engineered by professionals who use AI 50+ times daily.</p>
             </section>
 
-            <section class="categories" id="categories">
-                <div class="category-grid">
-                    <a href="/prompts/everyday/" class="category-card">
-                        <div class="category-icon">🌟</div>
-                        <h3>Everyday Life</h3>
-                        <p>Save $200/month on groceries, ace job interviews, negotiate 20% raises</p>
-                        <span class="prompt-count">20 prompts</span>
-                    </a>
+            <section class="categories" id="categories" aria-labelledby="categories-heading">
+                <h2 id="categories-heading" class="sr-only">AI Prompt Categories</h2>
+                <div class="category-grid" role="grid" aria-label="Browse prompt categories">
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/everyday/" 
+                           aria-labelledby="everyday-title" 
+                           aria-describedby="everyday-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">🌟</div>
+                            <h3 id="everyday-title" itemprop="name">Everyday Life</h3>
+                            <p id="everyday-desc" itemprop="description">Save $200/month on groceries, ace job interviews, negotiate 20% raises</p>
+                            <span class="prompt-count" aria-label="27 prompts available">27 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/business/" class="category-card">
-                        <div class="category-icon">💼</div>
-                        <h3>Business</h3>
-                        <p>Improve conversion rates, write professional proposals, automate routine emails</p>
-                        <span class="prompt-count">20 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/business/" 
+                           aria-labelledby="business-title" 
+                           aria-describedby="business-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">💼</div>
+                            <h3 id="business-title" itemprop="name">Business</h3>
+                            <p id="business-desc" itemprop="description">Improve conversion rates, write professional proposals, automate routine emails</p>
+                            <span class="prompt-count" aria-label="28 prompts available">28 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/money/" class="category-card">
-                        <div class="category-icon">💰</div>
-                        <h3>Money</h3>
-                        <p>Find hidden tax deductions, analyze stocks like pros, build wealth systems</p>
-                        <span class="prompt-count">9 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/money/" 
+                           aria-labelledby="money-title" 
+                           aria-describedby="money-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">💰</div>
+                            <h3 id="money-title" itemprop="name">Money</h3>
+                            <p id="money-desc" itemprop="description">Find hidden tax deductions, analyze stocks like pros, build wealth systems</p>
+                            <span class="prompt-count" aria-label="23 prompts available">23 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/relationships/" class="category-card">
-                        <div class="category-icon">💕</div>
-                        <h3>Relationships</h3>
-                        <p>Craft messages that get replies, handle conflict without drama, deepen connections</p>
-                        <span class="prompt-count">10 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/relationships/" 
+                           aria-labelledby="relationships-title" 
+                           aria-describedby="relationships-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">💕</div>
+                            <h3 id="relationships-title" itemprop="name">Relationships</h3>
+                            <p id="relationships-desc" itemprop="description">Craft messages that get replies, handle conflict without drama, deepen connections</p>
+                            <span class="prompt-count" aria-label="19 prompts available">19 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/content/" class="category-card">
-                        <div class="category-icon">✍️</div>
-                        <h3>Content</h3>
-                        <p>Write faster, create engaging content, improve social media engagement</p>
-                        <span class="prompt-count">10 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/content/" 
+                           aria-labelledby="content-title" 
+                           aria-describedby="content-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">✍️</div>
+                            <h3 id="content-title" itemprop="name">Content</h3>
+                            <p id="content-desc" itemprop="description">Write faster, create engaging content, improve social media engagement</p>
+                            <span class="prompt-count" aria-label="15 prompts available">15 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/coding/" class="category-card">
-                        <div class="category-icon">💻</div>
-                        <h3>Coding</h3>
-                        <p>Debug more efficiently, generate clean code, accelerate learning</p>
-                        <span class="prompt-count">10 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/coding/" 
+                           aria-labelledby="coding-title" 
+                           aria-describedby="coding-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">💻</div>
+                            <h3 id="coding-title" itemprop="name">Coding</h3>
+                            <p id="coding-desc" itemprop="description">Debug more efficiently, generate clean code, accelerate learning</p>
+                            <span class="prompt-count" aria-label="15 prompts available">15 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/ai-art/" class="category-card">
-                        <div class="category-icon">🎨</div>
-                        <h3>AI Art</h3>
-                        <p>Create $500 logos in seconds, consistent characters, pro-level product shots</p>
-                        <span class="prompt-count">5 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/ai-art/" 
+                           aria-labelledby="ai-art-title" 
+                           aria-describedby="ai-art-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">🎨</div>
+                            <h3 id="ai-art-title" itemprop="name">AI Art</h3>
+                            <p id="ai-art-desc" itemprop="description">Create $500 logos in seconds, consistent characters, pro-level product shots</p>
+                            <span class="prompt-count" aria-label="12 prompts available">12 prompts</span>
+                        </a>
+                    </article>
 
-                    <a href="/prompts/health/" class="category-card">
-                        <div class="category-icon">❤️</div>
-                        <h3>Health</h3>
-                        <p>Custom workout plans that stick, meal prep for your goals, optimize sleep & energy</p>
-                        <span class="prompt-count">8 prompts</span>
-                    </a>
+                    <article class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
+                        <a href="/prompts/health/" 
+                           aria-labelledby="health-title" 
+                           aria-describedby="health-desc"
+                           itemprop="url">
+                            <div class="category-icon" aria-hidden="true">❤️</div>
+                            <h3 id="health-title" itemprop="name">Health</h3>
+                            <p id="health-desc" itemprop="description">Custom workout plans that stick, meal prep for your goals, optimize sleep & energy</p>
+                            <span class="prompt-count" aria-label="19 prompts available">19 prompts</span>
+                        </a>
+                    </article>
                 </div>
             </section>
 
@@ -531,5 +837,234 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
     <script src="/js/input-validator.js"></script>
     <script src="/js/form-validation.js"></script>
     <link rel="stylesheet" href="/css/form-validation.css">
-</body>
+
+<script>
+// Enhanced conversion tracking for FreePromptHub
+
+class ConversionTracker {
+    constructor() {
+        this.sessionStart = Date.now();
+        this.pageViews = 0;
+        this.promptCopies = 0;
+        this.affiliateClicks = 0;
+        this.category = this.getCurrentCategory();
+        
+        this.init();
+    }
+    
+    init() {
+        this.trackPageView();
+        this.setupScrollTracking();
+        this.setupTimeOnPage();
+        this.setupAffiliateTracking();
+        this.setupPromptTracking();
+    }
+    
+    getCurrentCategory() {
+        const path = window.location.pathname;
+        const matches = path.match(/\/prompts\/([^/]+)\//);
+        return matches ? matches[1] : 'homepage';
+    }
+    
+    trackPageView() {
+        this.pageViews++;
+        
+        // Send to Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': document.title,
+                'page_location': window.location.href,
+                'page_category': this.category
+            });
+        }
+    }
+    
+    setupScrollTracking() {
+        let scrollPercents = [25, 50, 75, 100];
+        let tracked = [];
+        
+        window.addEventListener('scroll', () => {
+            const scrolled = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            
+            scrollPercents.forEach(percent => {
+                if (scrolled >= percent && !tracked.includes(percent)) {
+                    tracked.push(percent);
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll', {
+                            'event_category': 'Engagement',
+                            'event_label': `${percent}%`,
+                            'value': percent
+                        });
+                    }
+                }
+            });
+        });
+    }
+    
+    setupTimeOnPage() {
+        // Track meaningful time milestones
+        const milestones = [30, 60, 120, 300]; // seconds
+        
+        milestones.forEach(seconds => {
+            setTimeout(() => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'time_on_page', {
+                        'event_category': 'Engagement',
+                        'event_label': `${seconds}s`,
+                        'value': seconds
+                    });
+                }
+            }, seconds * 1000);
+        });
+    }
+    
+    setupAffiliateTracking() {
+        // Track all affiliate link clicks
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href*="hop.clickbank.net"]');
+            if (link) {
+                this.affiliateClicks++;
+                
+                const productName = this.getProductNameFromLink(link);
+                const revenue = this.getRevenueFromProduct(productName);
+                
+                // Track in GA4
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'affiliate_click', {
+                        'event_category': 'Affiliate',
+                        'event_label': productName,
+                        'value': revenue,
+                        'currency': 'USD'
+                    });
+                }
+                
+                // Track in Facebook
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: productName,
+                        value: revenue,
+                        currency: 'USD'
+                    });
+                }
+                
+                // Track conversion funnel step
+                this.trackConversionStep('affiliate_click', productName);
+            }
+        });
+    }
+    
+    setupPromptTracking() {
+        // Track prompt copy events
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('.copy-button, .copy-button-top, #copy-button, #copy-button-top')) {
+                this.promptCopies++;
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'prompt_copy', {
+                        'event_category': 'Engagement',
+                        'event_label': this.category,
+                        'value': 1
+                    });
+                }
+                
+                // This is a key conversion signal
+                this.trackConversionStep('prompt_copy', this.category);
+            }
+        });
+    }
+    
+    getProductNameFromLink(link) {
+        // Extract product name from affiliate link or surrounding content
+        const productSection = link.closest('.affiliate-recommendation, .affiliate-product');
+        if (productSection) {
+            const nameElement = productSection.querySelector('h4');
+            return nameElement ? nameElement.textContent.trim() : 'Unknown Product';
+        }
+        return 'Unknown Product';
+    }
+    
+    getRevenueFromProduct(productName) {
+        // Map product names to commission amounts
+        const revenueMap = {
+            'Billionaire Brain Wave': 42.32,
+            'Mitolyn': 180.63,
+            'His Secret Obsession': 48.85,
+            'TedsWoodworking': 61.36,
+            'The Genius Wave': 46.91,
+            'SleepLean': 187.11,
+            'HepatoBurn': 167.00,
+            'Neuro Energizer': 51.39
+        };
+        
+        return revenueMap[productName] || 50; // Default value
+    }
+    
+    trackConversionStep(step, detail) {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion_step', {
+                'event_category': 'Conversion Funnel',
+                'event_label': step,
+                'custom_parameter_1': this.category,
+                'custom_parameter_2': detail,
+                'value': this.getStepValue(step)
+            });
+        }
+    }
+    
+    getStepValue(step) {
+        const values = {
+            'page_view': 1,
+            'scroll_50': 2,
+            'time_30s': 3,
+            'prompt_copy': 5,
+            'affiliate_click': 10
+        };
+        return values[step] || 1;
+    }
+    
+    // Export session data for analysis
+    getSessionData() {
+        return {
+            category: this.category,
+            timeOnSite: Date.now() - this.sessionStart,
+            pageViews: this.pageViews,
+            promptCopies: this.promptCopies,
+            affiliateClicks: this.affiliateClicks
+        };
+    }
+}
+
+// Initialize tracking when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    window.conversionTracker = new ConversionTracker();
+    
+    // Global functions for manual tracking
+    window.trackCopyEvent = function() {
+        if (window.conversionTracker) {
+            window.conversionTracker.trackConversionStep('prompt_copy', 
+                window.conversionTracker.category);
+        }
+    };
+    
+    window.trackAffiliateClick = function(productName, revenue) {
+        if (window.conversionTracker) {
+            window.conversionTracker.trackConversionStep('affiliate_click', productName);
+        }
+    };
+});
+
+// Track page unload for session analysis
+window.addEventListener('beforeunload', function() {
+    if (window.conversionTracker && typeof gtag !== 'undefined') {
+        const sessionData = window.conversionTracker.getSessionData();
+        gtag('event', 'session_end', {
+            'event_category': 'Session',
+            'event_label': sessionData.category,
+            'value': Math.round(sessionData.timeOnSite / 1000) // seconds
+        });
+    }
+});
+</script>
+\n</body>
 </html>

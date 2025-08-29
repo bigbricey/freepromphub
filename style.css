@@ -5,27 +5,69 @@
     box-sizing: border-box;
 }
 
-/* CSS Variables for Consistency */
+/* CSS Variables for Consistency - Using same naming as dark-mode.css */
 :root {
+    /* Primary colors */
     --primary: #0066CC;
     --primary-dark: #0052A3;
-    --text: #0f172a;
-    --text-nav: #1a1a1a;  /* Darker nav text for better contrast */
-    --text-muted: #475569;
-    --border: #e5e7eb;
-    --bg: #ffffff;
-    --bg-subtle: #f9fafb;
-    --shadow: 0 8px 30px rgba(2,6,23,.08);
-    --shadow-hover: 0 12px 40px rgba(2,6,23,.12);
-    --radius: 14px;
+    --secondary: #FF6B35;
+    
+    /* Background colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #E9ECEF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F1F3F5;
+    
+    /* Text colors */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-tertiary: #6c757d;
+    --text-inverse: #FFFFFF;
+    
+    /* Border colors */
+    --border-light: #e5e7eb;
+    --border-medium: #CED4DA;
+    --border-dark: #ADB5BD;
+    
+    /* Status colors */
     --success: #16a34a;
+    --warning: #FFC107;
+    --error: #DC3545;
+    --info: #17A2B8;
+    
+    /* Shadow colors */
+    --shadow-sm: rgba(0, 0, 0, 0.075);
+    --shadow-md: rgba(0, 0, 0, 0.15);
+    --shadow-lg: rgba(0, 0, 0, 0.25);
+    
+    /* Code block colors */
+    --code-bg: #F6F8FA;
+    --code-border: #D1D5DB;
+    --code-text: #24292E;
+    
+    /* Input colors */
+    --input-bg: #FFFFFF;
+    --input-border: #CED4DA;
+    --input-focus: #0066CC;
+    
+    /* Legacy variables for backward compatibility */
+    --text: var(--text-primary);
+    --text-muted: var(--text-secondary);
+    --text-nav: var(--text-primary);
+    --border: var(--border-light);
+    --bg: var(--bg-primary);
+    --bg-subtle: var(--bg-secondary);
+    --shadow: var(--shadow-md);
+    --shadow-hover: var(--shadow-lg);
+    --radius: 14px;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: var(--text);
-    background: var(--bg);
+    color: var(--text-primary);
+    background: var(--bg-primary);
 }
 
 /* Container */
@@ -39,10 +81,10 @@ body {
 .site-header {
     position: sticky;
     top: 0;
-    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
     backdrop-filter: blur(8px);
-    border-bottom: 2px solid var(--border);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-bottom: 2px solid var(--border-light);
+    box-shadow: 0 2px 10px var(--shadow-sm);
     z-index: 100;
     padding: 0;
 }
@@ -59,7 +101,7 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #000000;  /* Pure black for maximum contrast */
+    color: var(--text-primary);  /* Use theme-aware text color */
     font-weight: 800;  /* Increased from 700 */
     font-size: 1.5rem;
     transition: transform 0.2s;
@@ -132,7 +174,7 @@ body {
 
 .btn-primary {
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
     padding: 10px 20px;
     border-radius: 999px;
     text-decoration: none;
@@ -197,7 +239,7 @@ main {
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #000000;  /* Pure black for maximum contrast */
+    color: var(--text-primary);  /* Use theme-aware text color */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
     backdrop-filter: blur(5px);
@@ -251,7 +293,7 @@ main {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: 12px;
     margin-top: 8px;
@@ -327,7 +369,7 @@ main {
 }
 
 .category-card {
-    background: white;
+    background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 30px;
@@ -382,7 +424,7 @@ main {
 
 .prompt-count {
     background: #111;
-    color: white;
+    color: var(--text-inverse);
     padding: 6px 16px;
     border-radius: 999px;
     font-size: 0.85rem;
@@ -517,7 +559,7 @@ footer nav a {
 }
 
 footer nav a:hover {
-    color: white;
+    color: var(--text-inverse);
     text-decoration: underline;
 }
 
@@ -557,7 +599,7 @@ a:hover {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--bg-primary);
         border-bottom: 1px solid var(--border);
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         padding: 20px;
@@ -636,7 +678,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
     border: none;
     padding: 15px 40px;
     border-radius: 999px;
@@ -671,7 +713,7 @@ a:hover {
     width: 50px;
     height: 50px;
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
     border: none;
     border-radius: 50%;
     font-size: 24px;
@@ -757,7 +799,7 @@ a:hover {
 
 /* Main Prompt Content Container */
 .prompt-content {
-    background: white;
+    background: var(--bg-primary);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 40px;
@@ -925,7 +967,7 @@ a:hover {
 }
 
 .related-card {
-    background: white;
+    background: var(--bg-primary);
     border: 2px solid var(--border);
     border-radius: var(--radius);
     padding: 25px;
@@ -994,7 +1036,7 @@ a:hover {
 
 .related-card:hover .category-tag {
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
 }
 
 /* Variables Section */
@@ -1025,7 +1067,7 @@ a:hover {
     align-items: flex-start;
     gap: 10px;
     padding: 10px;
-    background: white;
+    background: var(--bg-primary);
     border-radius: 8px;
     border: 1px solid #fde68a;
 }
@@ -1101,7 +1143,7 @@ a:hover {
 }
 
 .example-code {
-    background: white;
+    background: var(--bg-primary);
     padding: 15px;
     border-radius: 8px;
     font-family: 'Monaco', 'Courier New', monospace;
@@ -1131,37 +1173,37 @@ a:hover {
 /* Category-specific affiliate themes */
 .affiliate-section.theme-business {
     background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-coding {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-content {
     background: linear-gradient(135deg, #6B4423 0%, #8B5A2B 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-everyday {
     background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-health {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-money {
     background: linear-gradient(135deg, #00c853 0%, #00e676 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .affiliate-section.theme-relationships {
     background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
-    color: white;
+    color: var(--text-inverse);
 }
 
 /* Themed sections - text adjustments */
@@ -1172,7 +1214,7 @@ a:hover {
 .affiliate-section.theme-health h2,
 .affiliate-section.theme-money h2,
 .affiliate-section.theme-relationships h2 {
-    color: white;
+    color: var(--text-inverse);
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -1202,7 +1244,7 @@ a:hover {
 
 /* Affiliate product card */
 .affiliate-product {
-    background: white;
+    background: var(--bg-primary);
     padding: 25px;
     border-radius: 12px;
     margin-top: 20px;
@@ -1244,7 +1286,7 @@ a:hover {
     margin-top: 15px;
     padding: 14px 35px;
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
@@ -1261,7 +1303,7 @@ a:hover {
 /* Special CTA colors for themed sections */
 .affiliate-section.theme-business .affiliate-cta,
 .affiliate-section.theme-money .affiliate-cta {
-    background: white;
+    background: var(--bg-primary);
     color: #2e7d32;
 }
 
@@ -1304,7 +1346,7 @@ a:hover {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.95);
-    color: white;
+    color: var(--text-inverse);
     padding: 20px;
     z-index: 10000;
     animation: slideUp 0.3s ease-out;
@@ -1357,7 +1399,7 @@ a:hover {
 
 .cookie-accept {
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .cookie-accept:hover {
@@ -1368,7 +1410,7 @@ a:hover {
 
 .cookie-reject {
     background: transparent;
-    color: white;
+    color: var(--text-inverse);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -1448,7 +1490,7 @@ a:hover {
 }
 
 .toast {
-    background: white;
+    background: var(--bg-primary);
     border-radius: 8px;
     padding: 16px 20px;
     margin-bottom: 10px;
@@ -1619,7 +1661,7 @@ a:hover {
     top: -10px;
     right: -10px;
     background: #28a745;
-    color: white;
+    color: var(--text-inverse);
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -1696,7 +1738,7 @@ a:hover {
 }
 
 .confirm-modal-content {
-    background: white;
+    background: var(--bg-primary);
     border-radius: 12px;
     padding: 30px;
     max-width: 400px;
@@ -1747,7 +1789,7 @@ a:hover {
 
 .btn-confirm {
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .btn-confirm:hover {
@@ -1775,7 +1817,7 @@ a:hover {
 }
 
 .progress-modal-content {
-    background: white;
+    background: var(--bg-primary);
     border-radius: 12px;
     padding: 30px;
     max-width: 500px;
@@ -1908,7 +1950,7 @@ a:hover {
 }
 
 .user-menu-toggle:hover {
-    background: white;
+    background: var(--bg-primary);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -1917,7 +1959,7 @@ a:hover {
     height: 28px;
     border-radius: 50%;
     background: var(--primary);
-    color: white;
+    color: var(--text-inverse);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1938,7 +1980,7 @@ a:hover {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
-    background: white;
+    background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -1980,7 +2022,7 @@ a:hover {
 /* Favorite Button Styles */
 .favorite-btn {
     padding: 10px 20px;
-    background: white;
+    background: var(--bg-primary);
     border: 2px solid var(--border);
     border-radius: 6px;
     cursor: pointer;

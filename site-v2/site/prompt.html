@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompt — FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="./">
+        <img src="./assets/logo.svg" alt="FreePromptHub" />
+        <span>FreePromptHub</span>
+      </a>
+      <nav class="menu">
+        <a href="./prompts.html">Prompts</a>
+        <a href="./submit.html">Submit</a>
+        <a href="./about.html">About</a>
+        <button id="themeToggle" class="ghost">Theme</button>
+      </nav>
+    </header>
+
+    <main class="prompt-detail">
+      <article class="card">
+        <h1 id="title">Loading...</h1>
+        <div class="meta">
+          <span id="model" class="badge"></span>
+          <span id="category" class="badge"></span>
+          <span id="tags" class="chips"></span>
+        </div>
+        <pre id="content" class="prompt"></pre>
+        <div class="actions">
+          <button id="copyBtn" class="btn primary">Copy Prompt</button>
+          <a id="openModel" class="btn" target="_blank" rel="noopener">Open in Model</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> FreePromptHub</div>
+    </footer>
+
+    <script type="module" src="./js/prompt.js"></script>
+  </body>
+  </html>
+

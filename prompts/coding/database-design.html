@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Design & Architecture Planner | Free Prompt Hub</title>
+    <meta name="description" content="Create efficient, scalable database schemas with proper relationships and optimization">
+    <meta name="keywords" content="database design, SQL, schema design, data modeling, database architecture">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Database Design & Architecture Planner | Free Prompt Hub">
+    <meta property="og:description" content="Create efficient, scalable database schemas with proper relationships and optimization">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freeprompt.hub/prompts/coding/database-design.html">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="../../css/prompt-page.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../../manifest.json">
+    
+    <!-- Analytics -->
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            enhanced_ecommerce: true,
+            custom_map: {
+                'custom_parameter_1': 'prompt_category',
+                'custom_parameter_2': 'affiliate_product'
+            }
+        });
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    
+    <!-- Hotjar Tracking -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    <!-- Conversion Tracker -->
+    <script src="../../js/conversion-tracker.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-brand">
+                <a href="../../index.html">
+                    <h1>🚀 Free Prompt Hub</h1>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../../index.html">Home</a>
+                <a href="../index.html">All Prompts</a>
+                <a href="../../about.html">About</a>
+                <div class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+                    <div class="theme-toggle-slider">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="../../index.html">Home</a> → 
+            <a href="../index.html">Prompts</a> → 
+            <a href="index.html">Coding</a> → 
+            <span>Database Design & Architecture Planner</span>
+        </nav>
+
+        <!-- Prompt Header -->
+        <section class="prompt-header">
+            <div class="prompt-meta">
+                <span class="category-badge coding">Coding</span>
+                <div class="prompt-stats">
+                    <span class="views">👀 2,847 views</span>
+                    <span class="copies">📋 1,203 copies</span>
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐ <span>4.9/5</span>
+                    </div>
+                </div>
+            </div>
+            <h1>Database Design & Architecture Planner</h1>
+            <p class="prompt-description">Create efficient, scalable database schemas with proper relationships and optimization</p>
+        </section>
+
+        <!-- Prompt Display -->
+        <section class="prompt-display">
+            <div class="prompt-toolbar">
+                <button class="copy-btn" onclick="copyPrompt()" id="copyBtn">
+                    📋 Copy Prompt
+                </button>
+                <button class="share-btn" onclick="sharePrompt()">
+                    🔗 Share
+                </button>
+                <select class="tone-selector" onchange="adjustTone(this.value)">
+                    <option value="default">Default Tone</option>
+                    <option value="professional">Professional</option>
+                    <option value="casual">Casual</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+            </div>
+            
+            <div class="prompt-content" id="promptContent">
+Design a database schema for my [PROJECT TYPE] application:
+
+**Application Requirements:**
+- Project: [DESCRIBE APPLICATION]
+- Expected users: [NUMBER/TYPE]
+- Data types: [USER DATA/TRANSACTIONS/CONTENT/etc.]
+- Key features: [MAIN FUNCTIONALITY]
+- Performance needs: [READ/WRITE PATTERNS]
+
+**Database Analysis:**
+1. **Entity Identification**
+   - Core entities and their attributes
+   - Relationships between entities
+   - Business rules and constraints
+
+2. **Schema Design**
+   - Primary and foreign key relationships
+   - Normalization level recommendations
+   - Index strategies for performance
+   - Data type selections
+
+3. **Performance Optimization**
+   - Query patterns and optimization
+   - Caching strategies
+   - Scaling considerations (vertical/horizontal)
+   - Read replica recommendations
+
+4. **Security & Compliance**
+   - Data encryption requirements
+   - Access control patterns
+   - Backup and recovery strategy
+   - Compliance considerations (GDPR, etc.)
+
+**Deliverables:**
+- Entity Relationship Diagram (ERD) description
+- SQL CREATE TABLE statements
+- Sample queries for common operations
+- Migration strategy for existing data
+- Performance monitoring recommendations
+
+**Technology Recommendations:**
+- Database engine selection (MySQL, PostgreSQL, etc.)
+- ORM framework suggestions
+- Connection pooling configuration
+- Monitoring and backup tools
+
+Include both the ideal design and practical implementation steps for a [SMALL/MEDIUM/LARGE] scale application.
+            </div>
+        </section>
+
+        <!-- Usage Tips -->
+        <section class="usage-tips">
+            <h3>💡 How to Use This Prompt</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>🎯 Personalize</h4>
+                    <p>Replace [brackets] with your specific details</p>
+                </div>
+                <div class="tip-card">
+                    <h4>🔄 Iterate</h4>
+                    <p>Ask follow-up questions to refine the response</p>
+                </div>
+                <div class="tip-card">
+                    <h4>📋 Context</h4>
+                    <p>Provide background info for better results</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Prompts -->
+        <section class="related-prompts">
+            <h3>🔗 Related Prompts</h3>
+            <div class="prompt-grid">
+                <!-- These will be populated with related prompts from the same category -->
+            </div>
+        </section>
+        
+                <!-- Affiliate Recommendation Section -->
+        <section class="affiliate-recommendation" style="margin: 40px 0; padding: 30px; background: var(--bg-secondary); border-radius: var(--radius); border-left: 4px solid var(--primary);">
+            <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.3rem;">🚀 Works 10x Better With</h3>
+            <div class="affiliate-product" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div class="product-info" style="flex: 1; min-width: 300px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">The Genius Wave</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 10px; line-height: 1.5;">Brain enhancement audio for focus and creativity</p>
+                    <div class="social-proof" style="font-size: 0.9rem; color: var(--text-tertiary); margin-bottom: 15px;">
+                        ⭐ Used by 47,000+ people | ✅ 60-day guarantee | 🔥 Limited-time bonus
+                    </div>
+                </div>
+                <div class="cta-section" style="text-align: center;">
+                    <div class="price-tag" style="background: var(--success); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; display: inline-block;">
+                        Save 70% Today!
+                    </div>
+                    <a href="https://0e8c9e1jnhrmcvc5tkmt63yr1r.hop.clickbank.net" class="btn-affiliate" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">
+                        Get Instant Access →
+                    </a>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 8px;">
+                        ⏰ Offer expires in 24 hours
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Free Prompt Hub</h4>
+                    <p>Professional AI prompts for everyone</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <a href="../business/">Business</a>
+                    <a href="../coding/">Coding</a>
+                    <a href="../content/">Content</a>
+                    <a href="../money/">Money</a>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <a href="../health/">Health</a>
+                    <a href="../relationships/">Relationships</a>
+                    <a href="../everyday/">Everyday</a>
+                    <a href="../ai-art/">AI Art</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="../../privacy-policy.html">Privacy</a>
+                    <a href="../../terms-of-service.html">Terms</a>
+                    <a href="../../affiliate-disclosure.html">Affiliates</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Free Prompt Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/theme-toggle.js"></script>
+    <script src="../../js/copy-functionality.js"></script>
+    <script src="../../js/prompt-enhancements.js"></script>
+    
+    <script>
+        // Initialize conversion tracking
+        if (typeof ConversionTracker !== 'undefined') {
+            const tracker = new ConversionTracker();
+            
+            // Track page view with category
+            tracker.trackEvent('page_view', {
+                category: 'coding',
+                prompt_name: 'database-design',
+                affiliate_product: 'the-genius-wave'
+            });
+            
+            // Track scroll depth
+            tracker.trackScrollDepth();
+            
+            // Track time on page  
+            tracker.trackTimeOnPage();
+        }
+    </script>
+</body>
+</html>

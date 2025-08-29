@@ -1,0 +1,13 @@
+{
+  "slug": "team-update",
+  "category": "business",
+  "title": "Team Update Writer",
+  "description": "Write team updates that people actually read. Keep everyone aligned without boring them to death.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Write a team update that keeps everyone aligned and motivated without wasting their time with fluff.\n\nUPDATE CONTEXT:\n- Update Type: [Weekly/Monthly/Project/Quarterly]\n- Team Size: [NUMBER OF PEOPLE]\n- Audience: [Team only/Department/Company-wide]\n- Tone Needed: [Celebratory/Serious/Urgent/Regular]\n\nPERIOD COVERED:\n- Timeframe: [DATES COVERED]\n- Major Milestones: [WHAT GOT DONE]\n- Challenges Faced: [PROBLEMS ENCOUNTERED]\n- Upcoming Deadlines: [WHAT'S COMING]\n\nWINS TO HIGHLIGHT:\n- Big Achievements: [MAJOR SUCCESSES]\n- Team Shoutouts: [WHO TO RECOGNIZE]\n- Customer Wins: [POSITIVE FEEDBACK]\n- Metrics Hit: [NUMBERS ACHIEVED]\n\nISSUES TO ADDRESS:\n- Current Problems: [WHAT'S BROKEN]\n- Help Needed: [WHERE WE'RE STUCK]\n- Resource Gaps: [WHAT WE LACK]\n- Decisions Needed: [WHAT TO DECIDE]\n\nKEY METRICS:\n- Performance Data: [RELEVANT NUMBERS]\n- Compared to Goal: [AHEAD/BEHIND BY HOW MUCH]\n- Trend Direction: [IMPROVING/DECLINING]\n- Action Needed: [IF BEHIND]\n\nLOOKING AHEAD:\n- Next Week/Month: [IMMEDIATE PRIORITIES]\n- Key Decisions: [WHAT NEEDS DECIDING]\n- Dependencies: [WHAT WE NEED FROM OTHERS]\n- Risks to Watch: [POTENTIAL PROBLEMS]\n\nCreate:\n1. Email subject line that gets opened\n2. Executive summary (3 bullet points)\n3. Full update with sections\n4. Wins and recognition section\n5. Challenges and solutions\n6. Metrics dashboard\n7. Action items with owners\n8. Calendar of upcoming events\n9. Q&A or feedback request\n10. Slack/Teams message version\n\nFormat for:\n- Quick scanning (bullets and bold)\n- Mobile reading (short paragraphs)\n- Action orientation (clear next steps)\n- Engagement (questions to consider)\n\nKeep it under 2 minutes reading time."
+}

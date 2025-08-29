@@ -1,0 +1,13 @@
+{
+  "slug": "buy-used-car",
+  "category": "everyday",
+  "title": "Buy Used Car Smart",
+  "description": "Buy a used car without getting scammed. Know what to check, what to ask, and how to negotiate the best deal.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "lifestyle prompts"
+  ],
+  "prompt": "Help me buy a used car without getting scammed. Give me everything I need to inspect, verify, and negotiate like a pro.\n\nCAR DETAILS:\n- Make/Model/Year: [CAR INFO]\n- Asking Price: $[AMOUNT]\n- Mileage: [MILES]\n- Seller Type: [Dealer/Private/Online]\n- Location: [WHERE YOU'RE LOOKING]\n\nYOUR SITUATION:\n- Budget: $[MAX YOU CAN SPEND]\n- Cash/Financing: [HOW YOU'LL PAY]\n- Trade-in: [YES/NO - DETAILS]\n- Timeline: [WHEN YOU NEED IT]\n- Must-haves: [NON-NEGOTIABLES]\n- Nice-to-haves: [PREFERENCES]\n\nCAR HISTORY:\n- VIN Number: [IF YOU HAVE IT]\n- Carfax/AutoCheck: [ORDERED/NEED TO]\n- Number of Owners: [IF KNOWN]\n- Accident History: [IF KNOWN]\n- Service Records: [AVAILABLE/MISSING]\n\nYOUR KNOWLEDGE:\n- Car Experience: [Expert/Some/None]\n- Mechanical Skills: [CAN DIY/NEED HELP]\n- Inspection Options: [MECHANIC AVAILABLE?]\n- Test Drive Experience: [CONFIDENT/NERVOUS]\n\nRED FLAGS YOU'VE NOTICED:\n- Seller Behavior: [PUSHY/EVASIVE/NORMAL]\n- Price: [SUSPICIOUS LOW/FAIR/HIGH]\n- Condition: [TOO GOOD/REASONABLE]\n- Story: [MAKES SENSE/SKETCHY]\n\nCreate:\n1. Pre-purchase inspection checklist\n2. Test drive checklist and route plan\n3. Questions to ask seller (with follow-ups)\n4. Red flags to watch for\n5. Price negotiation strategy\n6. VIN check and history report guide\n7. Mechanic inspection request\n8. Purchase paperwork checklist\n9. Payment safety guidelines\n10. Post-purchase immediate to-dos\n\nAlso include:\n- Market value research sources\n- Common scams for this car model\n- Insurance quote preparation\n- DMV transfer requirements\n- First 30-day maintenance items\n- Warranty considerations\n\nMake it specific to my experience level and situation."
+}

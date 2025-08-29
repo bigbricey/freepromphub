@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit a Prompt — FreePromptHub</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="./">
+        <img src="./assets/logo.svg" alt="FreePromptHub" />
+        <span>FreePromptHub</span>
+      </a>
+      <nav class="menu">
+        <a href="./prompts.html">Prompts</a>
+        <a class="active" href="./submit.html">Submit</a>
+        <a href="./about.html">About</a>
+        <button id="themeToggle" class="ghost">Theme</button>
+      </nav>
+    </header>
+
+    <main class="submit-page">
+      <form id="form" class="card form">
+        <h1>Share a Great Prompt</h1>
+        <label>Title<input required id="title" /></label>
+        <label>Model<select id="model">
+          <option>GPT-4o</option><option>Claude 3.5</option><option>Llama 3</option><option>Gemini</option>
+        </select></label>
+        <label>Category<select id="category">
+          <option>Code</option><option>Writing</option><option>Research</option><option>Productivity</option><option>Design</option>
+        </select></label>
+        <label>Tags (space or comma separated)<input id="tags" placeholder="#seo #typescript #ux"/></label>
+        <label>Prompt<textarea id="content" rows="10" required placeholder="Paste your prompt..." ></textarea></label>
+        <div class="actions">
+          <button class="btn primary" type="submit">Create JSON</button>
+          <button class="btn" type="button" id="copyBtn">Copy JSON</button>
+        </div>
+        <details>
+          <summary>Preview JSON</summary>
+          <pre id="preview" class="prompt"></pre>
+        </details>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> FreePromptHub</div>
+    </footer>
+
+    <script type="module" src="./js/submit.js"></script>
+  </body>
+  </html>
+

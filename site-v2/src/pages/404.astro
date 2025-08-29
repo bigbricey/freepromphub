@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const title = 'Page Not Found — FreePromptHub';
+const description = 'The page you requested was not found.';
+---
+<Base {title} {description} canonical="https://www.freeprompthub.com/404">
+  <meta name="robots" content="noindex, nofollow" />
+  <Header />
+  <main class="container py-16">
+    <div class="card">
+      <h1 class="text-2xl font-bold mb-2">404 — Not Found</h1>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">We couldn’t find that page.</p>
+      <a class="btn-primary" href="/">Go Home</a>
+    </div>
+  </main>
+  <Footer />
+</Base>
+

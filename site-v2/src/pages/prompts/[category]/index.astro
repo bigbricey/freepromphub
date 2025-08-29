@@ -1,0 +1,41 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const dataRoot = path.join(import.meta.dirname, '../../../data/prompts');
+  if (!fs.existsSync(dataRoot)) return [];
+  const categories = fs.readdirSync(dataRoot, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name);
+  return categories.map(c => ({ params: { category: c } }));
+}
+
+const { category } = Astro.params;
+const title = `${category} Prompts — FreePromptHub`;
+const description = `Browse ${category} prompts.`;
+
+const dir = path.join(import.meta.dirname, '../../../data/prompts', category);
+const items = fs.existsSync(dir) ? fs.readdirSync(dir)
+  .filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) : [];
+---
+<Base {title} {description} canonical={`https://www.freeprompthub.com/prompts/${category}`}>
+  <Header />
+  <main class="container py-10">
+    <h1 class="text-2xl font-bold mb-6 capitalize">{category} Prompts</h1>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {items.map(it => (
+        <a class="card" href={`/prompts/${category}/${it.slug}`}>
+          <h3 class="font-bold">{it.title}</h3>
+          <p class="text-gray-600 dark:text-gray-300">{it.description}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Base>
+

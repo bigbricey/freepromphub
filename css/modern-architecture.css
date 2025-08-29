@@ -1,0 +1,470 @@
+/* Modern CSS Architecture for FreePromptHub - 2025 Standards */
+
+/* CSS @layer for proper cascade control */
+@layer reset, base, theme, layout, components, utilities, overrides;
+
+/* CSS @property declarations for enhanced custom properties */
+@property --hue-primary {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 213;
+}
+
+@property --saturation-primary {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 100%;
+}
+
+@property --lightness-primary {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 40%;
+}
+
+@property --animation-duration {
+  syntax: '<time>';
+  inherits: true;
+  initial-value: 0.3s;
+}
+
+@property --animation-easing {
+  syntax: '<custom-ident>';
+  inherits: true;
+  initial-value: ease-out;
+}
+
+/* Reset Layer */
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    /* Remove animations for people who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+            scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+/* Base Layer with Modern Color System */
+@layer base {
+    :root {
+        /* Color system using HSL with @property support */
+        --primary: hsl(var(--hue-primary) var(--saturation-primary) var(--lightness-primary));
+        --primary-hover: hsl(var(--hue-primary) var(--saturation-primary) calc(var(--lightness-primary) - 5%));
+        --primary-active: hsl(var(--hue-primary) var(--saturation-primary) calc(var(--lightness-primary) - 10%));
+        
+        /* Using color-mix() for dynamic color variations */
+        --primary-50: color-mix(in srgb, var(--primary) 10%, white);
+        --primary-100: color-mix(in srgb, var(--primary) 20%, white);
+        --primary-200: color-mix(in srgb, var(--primary) 30%, white);
+        --primary-600: color-mix(in srgb, var(--primary) 80%, black);
+        --primary-700: color-mix(in srgb, var(--primary) 70%, black);
+        --primary-800: color-mix(in srgb, var(--primary) 60%, black);
+        --primary-900: color-mix(in srgb, var(--primary) 50%, black);
+        
+        /* Semantic colors with color-mix */
+        --success: hsl(142 76% 36%);
+        --success-bg: color-mix(in srgb, var(--success) 15%, white);
+        --warning: hsl(38 92% 50%);
+        --warning-bg: color-mix(in srgb, var(--warning) 15%, white);
+        --error: hsl(0 84% 60%);
+        --error-bg: color-mix(in srgb, var(--error) 15%, white);
+        
+        /* Typography scale */
+        --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+        --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+        --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+        --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+        --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+        --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
+        --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+        
+        /* Spacing scale */
+        --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+        --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+        --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+        --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+        --space-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+        --space-2xl: clamp(3rem, 2.4rem + 3vw, 4.5rem);
+        
+        /* Animation properties */
+        --transition-fast: var(--animation-duration) var(--animation-easing);
+        --transition-normal: calc(var(--animation-duration) * 1.5) var(--animation-easing);
+        --transition-slow: calc(var(--animation-duration) * 2) var(--animation-easing);
+        
+        /* Border radius system */
+        --radius-sm: 0.25rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1rem;
+        --radius-full: 9999px;
+    }
+
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        color-scheme: light dark;
+    }
+
+    body {
+        background: light-dark(hsl(0 0% 100%), hsl(222 84% 5%));
+        color: light-dark(hsl(222 84% 5%), hsl(210 40% 98%));
+        transition: background-color var(--transition-normal);
+    }
+}
+
+/* Theme Layer with prefers-color-scheme support */
+@layer theme {
+    /* Light theme (default) */
+    :root {
+        --bg-canvas: hsl(0 0% 100%);
+        --bg-subtle: hsl(210 20% 98%);
+        --bg-surface: hsl(210 20% 96%);
+        --text-primary: hsl(222 84% 5%);
+        --text-secondary: hsl(215 20% 25%);
+        --text-tertiary: hsl(215 15% 45%);
+        --border-subtle: hsl(210 20% 92%);
+        --border-default: hsl(210 18% 87%);
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    /* Dark theme with prefers-color-scheme */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --hue-primary: 213;
+            --saturation-primary: 85%;
+            --lightness-primary: 65%;
+            
+            --bg-canvas: hsl(222 84% 5%);
+            --bg-subtle: hsl(215 28% 9%);
+            --bg-surface: hsl(215 32% 12%);
+            --text-primary: hsl(210 40% 98%);
+            --text-secondary: hsl(215 20% 85%);
+            --text-tertiary: hsl(215 15% 65%);
+            --border-subtle: hsl(215 32% 17%);
+            --border-default: hsl(215 28% 22%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+        }
+    }
+
+    /* Manual theme override support */
+    [data-theme="light"] {
+        color-scheme: light;
+        --bg-canvas: hsl(0 0% 100%);
+        --bg-subtle: hsl(210 20% 98%);
+        --bg-surface: hsl(210 20% 96%);
+        --text-primary: hsl(222 84% 5%);
+        --text-secondary: hsl(215 20% 25%);
+        --text-tertiary: hsl(215 15% 45%);
+    }
+
+    [data-theme="dark"] {
+        color-scheme: dark;
+        --bg-canvas: hsl(222 84% 5%);
+        --bg-subtle: hsl(215 28% 9%);
+        --bg-surface: hsl(215 32% 12%);
+        --text-primary: hsl(210 40% 98%);
+        --text-secondary: hsl(215 20% 85%);
+        --text-tertiary: hsl(215 15% 65%);
+    }
+}
+
+/* Layout Layer with Container Queries */
+@layer layout {
+    .container {
+        max-width: min(1200px, 100vw - var(--space-lg));
+        margin-inline: auto;
+        padding-inline: var(--space-md);
+    }
+
+    /* CSS Container Queries for responsive components */
+    .card-container {
+        container-type: inline-size;
+        container-name: card;
+    }
+
+    @container card (width >= 400px) {
+        .card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-md);
+        }
+    }
+
+    .grid-responsive {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        gap: var(--space-md);
+    }
+
+    /* Modern CSS Grid with subgrid support */
+    @supports (grid-template-rows: subgrid) {
+        .grid-responsive {
+            grid-template-rows: subgrid;
+        }
+    }
+
+    /* Flexible layouts with logical properties */
+    .stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .cluster {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        align-items: center;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-lg);
+    }
+
+    .sidebar > :first-child {
+        flex-basis: 250px;
+        flex-grow: 1;
+    }
+
+    .sidebar > :last-child {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: 50%;
+    }
+}
+
+/* Components Layer */
+@layer components {
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid transparent;
+        border-radius: var(--radius-md);
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+        line-height: 1.5;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        user-select: none;
+        
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        &:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        
+        &:hover:not(:disabled) {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        &:active {
+            background: var(--primary-active);
+            transform: translateY(0);
+        }
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+        
+        &:hover:not(:disabled) {
+            background: var(--primary-50);
+        }
+    }
+
+    /* Card component with container queries */
+    .card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: var(--space-lg);
+        box-shadow: var(--shadow-sm);
+        transition: box-shadow var(--transition-fast);
+        container-type: inline-size;
+        
+        &:hover {
+            box-shadow: var(--shadow-md);
+        }
+    }
+
+    /* Modern search component */
+    .search-modern {
+        position: relative;
+        
+        input {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+            background: var(--bg-canvas);
+            color: var(--text-primary);
+            font-size: var(--font-size-base);
+            transition: border-color var(--transition-fast);
+            
+            &:focus {
+                outline: 0;
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+            }
+        }
+    }
+}
+
+/* Utilities Layer */
+@layer utilities {
+    /* Screen reader only */
+    .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+        
+        &:focus {
+            position: static !important;
+            width: auto !important;
+            height: auto !important;
+            padding: inherit !important;
+            margin: inherit !important;
+            overflow: visible !important;
+            clip: auto !important;
+            white-space: inherit !important;
+        }
+    }
+
+    /* Focus management */
+    .focus-ring {
+        &:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+    }
+
+    /* Animation utilities */
+    .animate-fade-in {
+        animation: fadeIn var(--transition-normal) var(--animation-easing);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(0.5rem);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        :root {
+            --border-default: currentColor;
+            --text-secondary: var(--text-primary);
+        }
+        
+        .btn {
+            border-width: 2px;
+        }
+    }
+
+    /* Reduced data usage */
+    @media (prefers-reduced-data: reduce) {
+        * {
+            animation-duration: 0s !important;
+            transition-duration: 0s !important;
+        }
+        
+        img {
+            loading: lazy;
+        }
+    }
+}
+
+/* Override Layer for critical fixes */
+@layer overrides {
+    /* Force focus styles for accessibility */
+    *:focus-visible {
+        outline: max(2px, 0.15rem) solid var(--primary) !important;
+        outline-offset: max(2px, 0.15rem) !important;
+    }
+    
+    /* Ensure sufficient color contrast */
+    @media (prefers-contrast: high) {
+        * {
+            border-color: currentColor !important;
+        }
+    }
+}

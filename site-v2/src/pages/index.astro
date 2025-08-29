@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import categories from "../data/categories.json";
+const title = 'FreePromptHub — Free AI Prompts that actually work';
+const description = 'Browse high-quality prompts organized by category. No sign-up required.';
+---
+<Base {title} {description} canonical="https://www.freeprompthub.com/">
+  <Header />
+  <main class="container py-10">
+    <section class="text-center mb-10">
+      <h1 class="text-3xl font-extrabold mb-2">Free AI Prompts</h1>
+      <p class="text-gray-600 dark:text-gray-300">Quality prompts for business, content, coding, and more.</p>
+      <p class="mt-4"><a href="/search" class="btn-primary">Search Prompts</a></p>
+    </section>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {categories.map(c => (
+        <a class="card" href={`/prompts/${c.slug}`}>
+          <h3 class="font-bold text-lg">{c.name}</h3>
+          <p class="text-gray-600 dark:text-gray-300">{c.description}</p>
+        </a>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</Base>
+

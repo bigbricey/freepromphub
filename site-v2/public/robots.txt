@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.freeprompthub.com/sitemap.xml
+Sitemap: https://www.freeprompthub.com/sitemap-prompts.xml
+
+# Prevent indexing of error pages
+Disallow: /404
+

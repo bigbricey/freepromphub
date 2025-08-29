@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const title = 'About — FreePromptHub';
+const description = 'What FreePromptHub is and how to use it.';
+---
+<Base {title} {description} canonical="https://www.freeprompthub.com/about">
+  <Header />
+  <main class="container py-10">
+    <article class="prose dark:prose-invert max-w-none">
+      <h1>About FreePromptHub</h1>
+      <p>FreePromptHub provides curated prompts across practical categories. This v2 site is rebuilt for speed, SEO, and maintainability.</p>
+    </article>
+  </main>
+  <Footer />
+</Base>
+

@@ -1,0 +1,13 @@
+{
+  "slug": "instagram-caption",
+  "category": "content",
+  "title": "Instagram Caption Writer",
+  "description": "Instagram Caption Writer - Create engaging captions that get likes and comments. Perfect captions for any photo in seconds.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "content creation prompts"
+  ],
+  "prompt": "Help me write Instagram captions that get engagement and sound authentic.\n\nPHOTO DETAILS:\nWhat's in the photo: [Describe your photo]\nMood/Vibe: [Happy / Chill / Inspirational / Funny / Nostalgic / Adventure]\nContext: [Where you are, what you're doing, who you're with]\n\nMY STYLE:\nHow I usually write: [Casual / Poetic / Funny / Motivational / Real talk]\nEmojis: [Lots / Some / None]\nLength preference: [Short and sweet / Medium / Tell a story]\n\nGive me 5 different caption options:\n\n1. THE GENUINE ONE\nWrite something real and relatable. Like I'm talking to a friend. Include:\n- Honest thought or feeling\n- Maybe a question to encourage comments\n- 2-3 relevant emojis max\n\n2. THE FUNNY ONE\nMake people smile or laugh:\n- Clever observation or pun\n- Self-deprecating humor (if appropriate)\n- Unexpected twist\n- Emoji for emphasis\n\n3. THE INSPIRATIONAL ONE\nSomething uplifting but not cheesy:\n- Personal lesson learned\n- Encouragement without preaching\n- Authentic, not generic quote\n- Feel-good vibes\n\n4. THE STORYTELLER\nMini story about the moment:\n- Set the scene (2-3 sentences)\n- What happened or what I realized\n- How it made me feel\n- Leave them wanting more\n\n5. THE SIMPLE ONE\nJust vibes, minimal words:\n- One short sentence or phrase\n- Let the photo speak\n- Perfect emoji combo\n- Sometimes less is more\n\nFor each caption, also suggest:\n- 3-5 relevant hashtags that aren't too basic\n- Best time to post this type of content\n- What kind of engagement to expect\n\nKeep it authentic to how people actually talk. No corporate speak, no fake positivity, no cringe. Make it sound like ME, not a bot.\n\nExtra options if needed:\n- Add a call-to-action that doesn't feel pushy\n- Include a question that people want to answer\n- Reference current trends if relevant\n- Location tag suggestion if it fits"
+}

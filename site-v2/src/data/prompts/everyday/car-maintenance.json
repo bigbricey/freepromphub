@@ -1,0 +1,13 @@
+{
+  "slug": "car-maintenance",
+  "category": "everyday",
+  "title": "Car Maintenance Planner",
+  "description": "Keep your car running without getting ripped off at the shop. Know what needs fixing and what can wait.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "lifestyle prompts"
+  ],
+  "prompt": "Create a personalized car maintenance plan that saves me money and keeps my car running. Tell me what's urgent vs what can wait.\n\nMY CAR:\n- Year/Make/Model: [VEHICLE INFO]\n- Current Mileage: [MILES]\n- Age: [YEARS OLD]\n- Driving Per Year: [ANNUAL MILES]\n- Warranty Status: [ACTIVE/EXPIRED]\n\nCURRENT ISSUES:\n- Warning Lights: [WHICH ONES]\n- Noises: [DESCRIBE SOUNDS]\n- Performance Issues: [WHAT'S WRONG]\n- Visual Problems: [LEAKS/SMOKE/WEAR]\n- Recent Repairs: [WHAT WAS DONE]\n\nMAINTENANCE HISTORY:\n- Oil Changes: [LAST DATE/MILEAGE]\n- Tires: [AGE/CONDITION]\n- Brakes: [LAST REPLACED]\n- Battery: [AGE]\n- Major Services: [WHAT AND WHEN]\n\nDRIVING STYLE:\n- Usage: [Commute/Highway/City/Mixed]\n- Climate: [HOT/COLD/MODERATE]\n- Storage: [GARAGE/OUTSIDE]\n- Load: [HEAVY/LIGHT]\n\nBUDGET:\n- Monthly Budget: $[FOR MAINTENANCE]\n- Emergency Fund: $[AVAILABLE]\n- DIY Ability: [NONE/BASIC/ADVANCED]\n- Trusted Mechanic: [YES/NO]\n\nGOALS:\n- Keep How Long: [YEARS PLANNED]\n- Resale Value: [IMPORTANT/NOT]\n- Safety Priority: [HIGH/MEDIUM]\n- Cost Priority: [MINIMIZE/COMFORTABLE]\n\nCreate:\n1. Immediate fixes needed (safety critical)\n2. 3-month maintenance schedule\n3. 12-month maintenance calendar\n4. Cost estimates for each service\n5. DIY vs shop recommendations\n6. Money-saving tips specific to my car\n7. Warning signs to watch for\n8. Preventive maintenance checklist\n9. Shop questions to avoid ripoffs\n10. Emergency kit recommendations\n\nInclude:\n- What can be delayed without damage\n- Generic vs OEM parts guidance\n- Common scams for my car model\n- YouTube tutorials for DIY items\n- When to get second opinions"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "business-contract",
+  "category": "business",
+  "title": "Business Contract Generator",
+  "description": "Create contracts that protect your business without expensive lawyers. Get paid and avoid disputes with clear agreements.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Help me create a simple but legally sound contract for my business. Make it clear enough that both parties understand exactly what's expected.\n\nCONTRACT TYPE:\n- Type of Agreement: [Service/Sales/Partnership/NDA/Freelance/Rental]\n- Your Role: [Service provider/Seller/Contractor/Landlord]\n- Other Party: [Client/Customer/Partner/Tenant]\n- Contract Value: $[AMOUNT]\n- Duration: [One-time/Monthly/Project length]\n\nSCOPE OF WORK:\n- What You're Providing: [DETAILED DESCRIPTION]\n- Deliverables: [SPECIFIC ITEMS/SERVICES]\n- Timeline: [START DATE - END DATE]\n- Milestones: [KEY DATES]\n\nPAYMENT TERMS:\n- Payment Amount: $[TOTAL]\n- Payment Schedule: [Upfront/Net 30/Installments]\n- Late Payment Penalty: [%/FLAT FEE]\n- Accepted Payment Methods: [CHECK/ACH/CARD]\n- Refund Policy: [CONDITIONS]\n\nIMPORTANT PROTECTIONS:\n- Who Owns the Work: [You/Client/Shared]\n- Liability Limits: [MAXIMUM LIABILITY]\n- Confidentiality Needed: [Yes/No - DETAILS]\n- Right to Use in Portfolio: [Yes/No]\n- Cancellation Terms: [NOTICE PERIOD]\n\nSPECIFIC CONCERNS:\n- Past Problems: [ISSUES YOU'VE HAD BEFORE]\n- Industry Standards: [COMMON PRACTICES]\n- Special Circumstances: [UNIQUE ASPECTS]\n- State/Country: [JURISDICTION]\n\nGenerate:\n1. Complete contract with all sections\n2. Key terms summary (bullet points)\n3. Payment schedule table\n4. Scope of work details\n5. Termination clauses\n6. Dispute resolution process\n7. Intellectual property rights\n8. Liability and indemnification\n9. Force majeure clause\n10. Signature block format\n\nAlso provide:\n- Red flags to watch for from other party\n- Common negotiation points\n- What to do if they want changes\n- How to enforce if they don't pay\n\nMake it professional but readable at 8th grade level."
+}

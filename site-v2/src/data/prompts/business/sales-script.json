@@ -1,0 +1,13 @@
+{
+  "slug": "sales-script",
+  "category": "business",
+  "title": "Sales Script Generator",
+  "description": "Close more deals with sales scripts that handle objections and guide conversations to yes. Stop winging it and start winning.",
+  "tags": [
+    "ChatGPT prompts",
+    "Claude prompts",
+    "free prompts",
+    "business prompts"
+  ],
+  "prompt": "Create a complete sales script that converts leads into customers. Make it natural and conversational, not robotic or pushy.\n\nSALES CONTEXT:\n- Product/Service: [WHAT YOU'RE SELLING]\n- Price: $[AMOUNT]\n- Sales Method: [Phone/In-person/Video call/Email]\n- Average Deal Size: $[AMOUNT]\n- Sales Cycle Length: [TIME FROM LEAD TO CLOSE]\n\nTARGET CUSTOMER:\n- Who They Are: [JOB TITLE/DEMOGRAPHIC]\n- Main Problem: [WHAT KEEPS THEM UP AT NIGHT]\n- Current Solution: [WHAT THEY USE NOW]\n- Budget Authority: [Decision maker/Influencer/End user]\n\nCOMMON OBJECTIONS:\n1. [OBJECTION 1 - e.g., \"Too expensive\"]\n2. [OBJECTION 2 - e.g., \"Need to think about it\"]\n3. [OBJECTION 3 - e.g., \"Happy with current solution\"]\n4. [OBJECTION 4 - e.g., \"Not the right time\"]\n\nYOUR ADVANTAGES:\n- Unique Selling Points: [WHAT MAKES YOU DIFFERENT]\n- Success Stories: [BRIEF CASE STUDY]\n- Guarantees/Risk Reversal: [WHAT YOU OFFER]\n\nSALES GOALS:\n- Call Objective: [Book demo/Close sale/Get commitment]\n- Ideal Outcome: [WHAT SUCCESS LOOKS LIKE]\n- Minimum Acceptable: [FALLBACK GOAL]\n\nCreate:\n1. Opening hook (first 10 seconds)\n2. Qualifying questions to ask\n3. Problem agitation talking points\n4. Solution presentation framework\n5. Benefit statements (not features)\n6. Social proof dropping points\n7. Trial close questions\n8. Objection handling scripts (word-for-word)\n9. Closing sequences (3 different approaches)\n10. Follow-up plan if they say \"not yet\"\n\nInclude:\n- Exact words to say\n- Transition phrases between sections\n- Questions to maintain engagement\n- Voice tone guidance\n- When to pause/listen\n- Email templates for follow-up"
+}

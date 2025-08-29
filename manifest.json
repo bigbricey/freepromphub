@@ -3,10 +3,19 @@
   "short_name": "FreePromptHub",
   "description": "Free AI prompts for ChatGPT, Claude, and more. No signup required.",
   "start_url": "/",
+  "id": "freeprompthub-app",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#ffffff",
   "theme_color": "#0066CC",
   "orientation": "portrait-primary",
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
   "icons": [
     {
       "src": "/favicon.svg",
@@ -27,7 +36,82 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["productivity", "utilities", "education"],
+  "shortcuts": [
+    {
+      "name": "Search Prompts",
+      "short_name": "Search",
+      "description": "Search through 150+ AI prompts",
+      "url": "/search",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Business Prompts",
+      "short_name": "Business",
+      "description": "Professional business prompts",
+      "url": "/prompts/business/",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Coding Prompts",
+      "short_name": "Coding",
+      "description": "Development and programming prompts",
+      "url": "/prompts/coding/",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/share",
+      "accept": {
+        "text/plain": [".txt"],
+        "text/markdown": [".md"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+freeprompthub",
+      "url": "/share?url=%s"
+    }
+  ],
+  "categories": ["productivity", "utilities", "education", "business"],
   "lang": "en-US",
-  "dir": "ltr"
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Browse 150+ professional AI prompts"
+    },
+    {
+      "src": "/screenshot-narrow.png", 
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Search and copy prompts instantly"
+    }
+  ],
+  "iarc_rating_id": "e58c174a-81d0-5bb2-b81d-79d5c7b7ddb2"
 }
