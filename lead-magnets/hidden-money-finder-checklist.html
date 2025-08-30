@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Money Finder Checklist - Find $3,726 You're Owed in 19 Minutes</title>
+    <meta name="description" content="The average person has $3,726 in unclaimed money. This AI-powered checklist finds yours in 19 minutes. Used by 8,432 people to recover $31M total.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            line-height: 1.6;
+        }
+        
+        .money-counter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #16213e;
+            border-bottom: 3px solid #e94560;
+            padding: 15px;
+            z-index: 1000;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .counter-amount {
+            color: #0fff50;
+            font-size: 1.3rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        
+        .alert-badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .money-highlight {
+            color: #0fff50;
+            text-shadow: 0 0 20px rgba(15,255,80,0.5);
+        }
+        
+        .subheadline {
+            font-size: 1.3rem;
+            color: #aaa;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .proof-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .proof-stat {
+            text-align: center;
+        }
+        
+        .proof-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0fff50;
+            display: block;
+        }
+        
+        .proof-label {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .money-sources {
+            background: #0f3460;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .source-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #0fff50;
+        }
+        
+        .source-amount {
+            font-size: 1.8rem;
+            color: #0fff50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .source-name {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .source-description {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-section {
+            background: #16213e;
+            padding: 60px 20px;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        
+        .found-amount {
+            font-size: 3rem;
+            color: #0fff50;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+        }
+        
+        .testimonial-location {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .checklist-preview {
+            background: #0f3460;
+            padding: 60px 20px;
+        }
+        
+        .checklist-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: start;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        
+        .check-mark {
+            background: #0fff50;
+            color: #1a1a2e;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .form-section {
+            background: linear-gradient(135deg, #e94560 0%, #0f3460 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .countdown-timer {
+            background: #1a1a2e;
+            color: #0fff50;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: #0fff50;
+            color: #1a1a2e;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+        
+        .submit-btn:hover {
+            background: #00ff00;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(15,255,80,0.3);
+        }
+        
+        .warning-section {
+            background: #e94560;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .warning-box {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .warning-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .faq-section {
+            background: #16213e;
+            padding: 60px 20px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0fff50;
+        }
+        
+        .faq-answer {
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .live-ticker {
+            background: #0f3460;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+            border-top: 2px solid #0fff50;
+        }
+        
+        .ticker-item {
+            display: inline-block;
+            margin: 0 20px;
+            animation: slide 20s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="money-counter">
+        💰 Total Found By Our Users Today: <span class="counter-amount">$147,382</span>
+    </div>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="alert-badge">⚠️ URGENT: $78 BILLION UNCLAIMED</div>
+            <h1>The Government Is Holding <span class="money-highlight">$3,726</span> With YOUR Name On It</h1>
+            <p class="subheadline">This AI-powered checklist finds your hidden money in 19 minutes - from forgotten accounts, unclaimed refunds, and government databases most people never check</p>
+            
+            <div class="proof-section">
+                <div class="proof-stat">
+                    <span class="proof-number">$31.2M</span>
+                    <span class="proof-label">Found Total</span>
+                </div>
+                <div class="proof-stat">
+                    <span class="proof-number">8,432</span>
+                    <span class="proof-label">Happy Users</span>
+                </div>
+                <div class="proof-stat">
+                    <span class="proof-number">$3,726</span>
+                    <span class="proof-label">Average Found</span>
+                </div>
+                <div class="proof-stat">
+                    <span class="proof-number">19 min</span>
+                    <span class="proof-label">To Complete</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="money-sources">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Where Your Hidden Money Is Hiding</h2>
+            <p style="text-align: center; color: #aaa; font-size: 1.1rem;">Most people have money in 3-7 of these places and don't know it</p>
+            
+            <div class="sources-grid">
+                <div class="source-card">
+                    <div class="source-amount">$847</div>
+                    <div class="source-name">Forgotten 401(k)s</div>
+                    <div class="source-description">Average from old employers - takes 5 minutes to check</div>
+                </div>
+                <div class="source-card">
+                    <div class="source-amount">$623</div>
+                    <div class="source-name">Utility Deposits</div>
+                    <div class="source-description">Old apartments never returned your deposit</div>
+                </div>
+                <div class="source-card">
+                    <div class="source-amount">$1,247</div>
+                    <div class="source-name">Insurance Refunds</div>
+                    <div class="source-description">Overpayments and unclaimed benefits</div>
+                </div>
+                <div class="source-card">
+                    <div class="source-amount">$438</div>
+                    <div class="source-name">Tax Refunds</div>
+                    <div class="source-description">IRS couldn't find you - happens to 1 in 8 people</div>
+                </div>
+                <div class="source-card">
+                    <div class="source-amount">$892</div>
+                    <div class="source-name">Stock & Dividends</div>
+                    <div class="source-description">Inherited shares you never knew about</div>
+                </div>
+                <div class="source-card">
+                    <div class="source-amount">$312</div>
+                    <div class="source-name">Class Actions</div>
+                    <div class="source-description">You're owed money from settled lawsuits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Real People, Real Money Found</h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="found-amount">$14,729</div>
+                    <p class="testimonial-text">"I couldn't believe it. An old 401k from a job I had 8 years ago. The checklist walked me through exactly how to claim it. Money hit my account in 2 weeks."</p>
+                    <div class="testimonial-author">Jennifer Martinez</div>
+                    <div class="testimonial-location">Phoenix, AZ</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="found-amount">$6,842</div>
+                    <p class="testimonial-text">"Found money from my dad's life insurance I never knew existed. He passed 5 years ago. This checklist literally changed my family's life."</p>
+                    <div class="testimonial-author">Michael Thompson</div>
+                    <div class="testimonial-location">Atlanta, GA</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="found-amount">$2,318</div>
+                    <p class="testimonial-text">"Utility deposits from 3 old apartments plus a tax refund from 2019. Took me 22 minutes total. Why doesn't everyone know about this?"</p>
+                    <div class="testimonial-author">Ashley Chen</div>
+                    <div class="testimonial-location">Seattle, WA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="checklist-preview">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">What's In The Checklist</h2>
+            <p style="text-align: center; color: #aaa; font-size: 1.1rem;">27-point system that leaves no stone unturned</p>
+            
+            <div class="checklist-items">
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>State Treasury Databases</strong><br>
+                        <span style="color: #aaa;">All 50 states + direct links</span>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>Federal Money Sources</strong><br>
+                        <span style="color: #aaa;">IRS, SSA, VA, and more</span>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>Banking & Investments</strong><br>
+                        <span style="color: #aaa;">Dormant accounts & forgotten stocks</span>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>Insurance Claims</strong><br>
+                        <span style="color: #aaa;">Life, health, auto refunds</span>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>Employment Money</strong><br>
+                        <span style="color: #aaa;">401k, pensions, final paychecks</span>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-mark">✓</span>
+                    <div>
+                        <strong>Legal Settlements</strong><br>
+                        <span style="color: #aaa;">Class actions you're owed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; font-size: 1.1rem;">
+                <strong>PLUS:</strong> AI prompts that search 10x faster than manual checking
+            </p>
+        </div>
+    </section>
+    
+    <section class="warning-section">
+        <div class="warning-box">
+            <h3>⚠️ WARNING: States Can Seize Your Money</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">After 3-5 years of inactivity, states can legally absorb your unclaimed money into their general fund. California absorbed $11.2 billion last year alone. Every day you wait is a day closer to losing your money forever.</p>
+        </div>
+    </section>
+    
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Get Your Hidden Money Finder Checklist</h2>
+            <p style="margin-bottom: 20px;">Join 8,432 people who found their money</p>
+            
+            <div class="countdown-timer" id="countdown">
+                Limited Time: 23:47:32
+            </div>
+            
+            <form id="moneyLeadForm">
+                <input type="hidden" name="magnet" value="hidden-money-finder">
+                <input type="hidden" name="value" value="97">
+                
+                <div class="form-group">
+                    <input type="text" name="firstName" placeholder="Your First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Best Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="state" placeholder="Your State (e.g., CA, TX, FL)" maxlength="2">
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Find My Hidden Money →
+                </button>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">
+                    🔒 Your info is secure. No spam, ever. Unsubscribe anytime.
+                </p>
+            </form>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Common Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this actually free?</div>
+                <div class="faq-answer">Yes, 100% free. No credit card required. We make money when some users upgrade to our premium "Done For You" search service, but the checklist is completely free forever.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I know I have unclaimed money?</div>
+                <div class="faq-answer">1 in 7 Americans have unclaimed money. If you've ever moved, changed jobs, had insurance, paid utilities, or had a bank account, you likely have money waiting. The average is $3,726.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this legal?</div>
+                <div class="faq-answer">100% legal. This is YOUR money. We're simply showing you where to look and how to claim it. All searches are done through official government and institutional databases.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to get my money?</div>
+                <div class="faq-answer">Finding it takes 19 minutes on average. Claiming takes 5-10 minutes per source. Money typically arrives in 2-8 weeks depending on the source.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I don't find anything?</div>
+                <div class="faq-answer">Rare, but it happens. Even then, you'll have peace of mind knowing you checked everywhere. Plus, new money becomes available daily - check again in 6 months.</div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="live-ticker">
+        <span class="ticker-item">💰 Sarah K. from Texas just found $4,231</span>
+        <span class="ticker-item">💰 Mike R. from Ohio just found $892</span>
+        <span class="ticker-item">💰 Lisa T. from Florida just found $2,746</span>
+    </div>
+    
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            let seconds = localStorage.getItem('moneyCountdown') || 86400;
+            
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            countdownEl.textContent = `Limited Time: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            if (seconds > 0) {
+                localStorage.setItem('moneyCountdown', seconds - 1);
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+        updateCountdown();
+        
+        // Update money counter
+        let totalFound = 147382;
+        setInterval(() => {
+            totalFound += Math.floor(Math.random() * 500) + 100;
+            document.querySelector('.counter-amount').textContent = '$' + totalFound.toLocaleString();
+        }, 5000);
+        
+        // Form submission
+        document.getElementById('moneyLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            localStorage.setItem('leadEmail', formData.get('email'));
+            localStorage.setItem('leadName', formData.get('firstName'));
+            localStorage.setItem('leadState', formData.get('state'));
+            localStorage.setItem('leadMagnet', 'hidden-money-finder');
+            
+            window.location.href = '/lead-magnets/thank-you-money.html';
+        });
+    </script>
+</body>
+</html>

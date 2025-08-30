@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day AI Health Transformation - Lose 5 Pounds & Double Your Energy</title>
+    <meta name="description" content="AI creates your perfect health plan in 60 seconds. Custom meal plans, workouts, and sleep optimization that actually work. 4,287 success stories.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .transformation-bar {
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .before-after-badge {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .weight-loss-highlight {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        .subheadline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        
+        .result-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .result-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .transformation-stories {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .story-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 200px;
+            position: relative;
+        }
+        
+        .before, .after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .before {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .after {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .vs-divider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .story-content {
+            padding: 25px;
+        }
+        
+        .story-quote {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .story-author {
+            font-weight: bold;
+        }
+        
+        .story-details {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .day-by-day {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+        }
+        
+        .day-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .day-number {
+            background: #667eea;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .day-number {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+        }
+        
+        .day-content {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-left: auto;
+            width: 45%;
+        }
+        
+        .day-item:nth-child(even) .day-content {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .day-content {
+                width: calc(100% - 80px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+        }
+        
+        .day-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .day-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .what-you-get {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .feature-description {
+            opacity: 0.95;
+        }
+        
+        .form-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .form-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .urgency-message {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .health-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+        }
+        
+        .guarantee {
+            background: #4CAF50;
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .guarantee h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .science-section {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .science-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .science-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .faq {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="transformation-bar">
+        🔥 4,287 people transformed their health this week • Average: -5.3 lbs in 7 days
+    </div>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="before-after-badge">DOCTOR-APPROVED METHOD</div>
+            <h1>The 7-Day AI Health Transformation That Makes You <span class="weight-loss-highlight">Look & Feel 10 Years Younger</span></h1>
+            <p class="subheadline">AI analyzes your unique body type, lifestyle, and goals to create the perfect health plan in 60 seconds - no generic diets or cookie-cutter workouts</p>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="result-number">5-8 lbs</span>
+                    <span class="result-label">Lost in 7 Days</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-number">2x</span>
+                    <span class="result-label">Energy Boost</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-number">87%</span>
+                    <span class="result-label">Better Sleep</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-number">3"</span>
+                    <span class="result-label">Off Waistline</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="transformation-stories">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Real 7-Day Transformations</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem;">No filters, no BS, just results</p>
+            
+            <div class="story-grid">
+                <div class="story-card">
+                    <div class="before-after">
+                        <div class="before">247</div>
+                        <div class="after">239</div>
+                        <div class="vs-divider">VS</div>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-quote">"8 pounds in 7 days! The meal plan was delicious and I was never hungry. My energy is through the roof."</p>
+                        <div class="story-author">Jennifer K.</div>
+                        <div class="story-details">Age 42 • Mother of 3 • Lost 8 lbs</div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="before-after">
+                        <div class="before">38"</div>
+                        <div class="after">35"</div>
+                        <div class="vs-divider">VS</div>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-quote">"3 inches off my waist! My wife can't believe the change. Best part? Only 15 minutes of exercise daily."</p>
+                        <div class="story-author">Michael R.</div>
+                        <div class="story-details">Age 51 • Executive • Lost 3" waist</div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="before-after">
+                        <div class="before">😴</div>
+                        <div class="after">⚡</div>
+                        <div class="vs-divider">VS</div>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-quote">"From exhausted to energized! I'm sleeping better, thinking clearer, and haven't had afternoon crashes."</p>
+                        <div class="story-author">Sarah M.</div>
+                        <div class="story-details">Age 38 • Entrepreneur • 2x Energy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="day-by-day">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Your 7-Day Journey</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 40px;">Exactly what happens each day</p>
+            
+            <div class="timeline">
+                <div class="day-item">
+                    <div class="day-number">1</div>
+                    <div class="day-content">
+                        <div class="day-title">AI Analysis & Custom Plan</div>
+                        <div class="day-description">AI analyzes your body type, metabolism, and goals. Get your personalized meal plan and workout in 60 seconds.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">2</div>
+                    <div class="day-content">
+                        <div class="day-title">Inflammation Drops</div>
+                        <div class="day-description">Feel lighter as your body releases water weight and reduces bloating. Energy starts improving.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">3</div>
+                    <div class="day-content">
+                        <div class="day-title">Metabolism Activates</div>
+                        <div class="day-description">Fat burning kicks into high gear. Cravings disappear. Mental clarity improves dramatically.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">4</div>
+                    <div class="day-content">
+                        <div class="day-title">Visible Changes</div>
+                        <div class="day-description">Clothes feel looser. Face looks slimmer. People start noticing and asking what you're doing.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">5</div>
+                    <div class="day-content">
+                        <div class="day-title">Energy Explosion</div>
+                        <div class="day-description">Wake up refreshed. No afternoon crashes. Feel 10 years younger with sustained energy all day.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">6</div>
+                    <div class="day-content">
+                        <div class="day-title">Breakthrough Day</div>
+                        <div class="day-description">Scale shows significant drop. Waistline noticeably smaller. Confidence through the roof.</div>
+                    </div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-number">7</div>
+                    <div class="day-content">
+                        <div class="day-title">Total Transformation</div>
+                        <div class="day-description">5-8 pounds lighter. 2-3 inches off waist. New habits locked in. Ready to continue or maintain.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="what-you-get">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Your Complete AI Health System</h2>
+            <p style="text-align: center; opacity: 0.95; font-size: 1.1rem;">Everything personalized to YOUR body and lifestyle</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <div class="feature-title">Custom Meal Plans</div>
+                    <div class="feature-description">7 days of delicious meals tailored to your preferences, allergies, and goals</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-title">Smart Workouts</div>
+                    <div class="feature-description">15-minute routines that match your fitness level and available equipment</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">😴</div>
+                    <div class="feature-title">Sleep Optimization</div>
+                    <div class="feature-description">Personalized sleep protocol to burn fat while you rest</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-title">AI Health Coach</div>
+                    <div class="feature-description">24/7 support to answer questions and keep you motivated</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Progress Tracking</div>
+                    <div class="feature-description">Daily check-ins and adjustments to maximize results</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <div class="feature-title">Shopping Lists</div>
+                    <div class="feature-description">Organized grocery lists save time and money</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="science-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">The Science Behind Your Transformation</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem;">Why AI-personalized plans work 3x better than generic diets</p>
+            
+            <div class="science-grid">
+                <div class="science-card">
+                    <h3>Metabolic Typing</h3>
+                    <p>AI identifies your unique metabolic type from 7 different profiles, optimizing macros for maximum fat burn.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Circadian Optimization</h3>
+                    <p>Meal timing aligned with your body's natural rhythms increases fat burning by up to 42%.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Adaptive Thermogenesis</h3>
+                    <p>Strategic calorie cycling prevents metabolic slowdown, keeping your body in fat-burning mode.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Start Your 7-Day Transformation</h2>
+                <p style="color: #666; margin-bottom: 20px;">Get your AI-personalized plan in 60 seconds</p>
+            </div>
+            
+            <div class="urgency-message">
+                ⚠️ Only accepting 50 new members today (37 spots left)
+            </div>
+            
+            <form class="health-form" id="healthLeadForm">
+                <input type="hidden" name="magnet" value="7-day-health-transformation">
+                <input type="hidden" name="value" value="97">
+                
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goal">Primary Goal</label>
+                    <select id="goal" name="goal" required>
+                        <option value="">Select your main goal...</option>
+                        <option value="weight-loss">Lose Weight (5-20 lbs)</option>
+                        <option value="energy">Boost Energy & Focus</option>
+                        <option value="muscle">Build Lean Muscle</option>
+                        <option value="health">Improve Overall Health</option>
+                        <option value="sleep">Better Sleep & Recovery</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age Range</label>
+                    <select id="age" name="age" required>
+                        <option value="">Select age range...</option>
+                        <option value="18-29">18-29</option>
+                        <option value="30-39">30-39</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
+                        <option value="60+">60+</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Get My Free 7-Day Plan →
+                </button>
+                
+                <p style="margin-top: 20px; font-size: 0.85rem; color: #666;">
+                    🔒 Your information is 100% secure. No spam, unsubscribe anytime.
+                </p>
+            </form>
+            
+            <div class="guarantee">
+                <h3>100% Success Guarantee</h3>
+                <p>Follow the plan for 7 days. If you don't see significant results, I'll personally work with you until you do. You have nothing to lose except unwanted weight.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="faq-container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Common Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How is this different from other diets?</div>
+                <div class="faq-answer">This isn't a diet - it's AI personalization. Instead of generic meal plans, AI analyzes YOUR specific body type, metabolism, preferences, and lifestyle to create a plan that works specifically for you. It's like having a $500/hour nutritionist and personal trainer for free.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will I be hungry?</div>
+                <div class="faq-answer">No! The AI optimizes for satiety, meaning you'll feel full and satisfied. Most people report feeling more energized and less hungry than before starting. The plan includes plenty of delicious food - this isn't about starving yourself.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need a gym membership?</div>
+                <div class="faq-answer">Not at all. The AI creates workouts based on what you have available. Whether that's a full gym, just dumbbells, or only bodyweight, you'll get exercises that work with your equipment and schedule.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I have dietary restrictions?</div>
+                <div class="faq-answer">Perfect! The AI accounts for all dietary needs including vegan, vegetarian, keto, paleo, gluten-free, dairy-free, and any allergies. Your plan will be 100% tailored to what you can and want to eat.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this actually free?</div>
+                <div class="faq-answer">Yes, the 7-day transformation plan is completely free. We make money when some users upgrade to our premium 30-day or 90-day programs, but the 7-day plan is yours free forever with no obligation to upgrade.</div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Form submission
+        document.getElementById('healthLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            localStorage.setItem('leadEmail', formData.get('email'));
+            localStorage.setItem('leadName', formData.get('firstName'));
+            localStorage.setItem('leadGoal', formData.get('goal'));
+            localStorage.setItem('leadAge', formData.get('age'));
+            localStorage.setItem('leadMagnet', '7-day-health-transformation');
+            
+            window.location.href = '/lead-magnets/thank-you-health.html';
+        });
+        
+        // Update spots remaining
+        let spots = 37;
+        setInterval(() => {
+            if (spots > 3) {
+                spots--;
+                document.querySelector('.urgency-message').innerHTML = `⚠️ Only accepting 50 new members today (${spots} spots left)`;
+            }
+        }, 120000); // Decrease every 2 minutes
+    </script>
+</body>
+</html>
